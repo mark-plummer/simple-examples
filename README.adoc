@@ -21,3 +21,7 @@ You must have Antora installed, preferably globally.
 * An easy starting point is to use the antora-schematics example schematic to set up the project with the components needed for the example.
 * Name the directory to clearly describe the examples purpose.
 * Use the pages of the example to clearly describe the effects of the demonstrated configuration.
+
+```
+antora-schematics example --gitPath=- --path=<path-to-example> --components=<comma-separated list of component paths> gitAuthor=<git Author> gitEmail=<gitEmail>
+```
