@@ -1,0 +1,23 @@
+= Simple Examples
+
+This repository contains simple examples of Antora projects showing single features in isolation. They all use the Antora Default UI.
+
+== Beware
+
+In order to demonstrate many features in minimal space, all these projects employ a compressed layout. This works, but is unsuitable for any but the smallest projects.  For any real project, at least the playbook project and the content should be in separate git repositories.
+
+== Prerequisites
+
+You must have Antora installed, preferably globally.
+
+== Usage
+
+* cd `example-directory`
+* antora antora-playbook.yml
+* Examine the results in build/
+
+== Contributing
+
+* An easy starting point is to use the antora-schematics example schematic to set up the project with the components needed for the example.
+* Name the directory to clearly describe the examples purpose.
+* Use the pages of the example to clearly describe the effects of the demonstrated configuration.
