@@ -1,6 +1,5 @@
-name: Component component 
-title: Component component 
+name: SimplestComponent 
+title: Simplest Component 
 version: '1.0' 
-start_page: ROOT:index.adoc 
 nav: 
 - modules/ROOT/nav.adoc

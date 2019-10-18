@@ -1,5 +1,5 @@
-name: Component component1 
-title: Component component1 
+name: Component1 
+title: Component1 
 version: '1.0' 
 start_page: ROOT:index.adoc 
 nav: 
