@@ -23,5 +23,9 @@ You must have Antora installed, preferably globally.
 * Use the pages of the example to clearly describe the effects of the demonstrated configuration.
 
 ```
-antora-schematics example --gitPath=- --path=<path-to-example> --components=<comma-separated list of component paths> gitAuthor=<git Author> gitEmail=<gitEmail>
+antora-schematics example --gitPath=- --path=<path-to-example> --components=<comma-separated list of component paths> [gitAuthor=<git Author> gitEmail=<gitEmail>]
 ```
+
+Currently there is something wrong with the example schematic and it is creating multiple git repos for its output.  For now, leave out the gitAuthor/gitEmail properties and run
+
+find * -name .git|xargs rm -rf
