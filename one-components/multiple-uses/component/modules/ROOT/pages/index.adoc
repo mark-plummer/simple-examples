@@ -1,5 +1,9 @@
-= Component component
+= Multiple Uses Example
 
-== A home page
+This example illustrates consequences of the Antora one-one adoc <> emitted html page correspondence.  In order that the nav tree behave properly, each "use" of a page in the nav tree has to correspond to a unique adoc.  In order to share content, includes are necessary.  To make all uses symmetrical, this example shows the content from a hidden page always using includes.  It is also possible for one use to point to a non-hidden page and all other uses to use include stubs.
 
-And some content.
+To assure all the links are the same, the page included in the stubs is also included here:
+
+include::_included.adoc[leveloffset=+1]
+
+If the flows were in different components, linking to an un-stubbed file would transfer you to the component the original file was in, with that component's navigation.

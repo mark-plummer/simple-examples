@@ -1,0 +1,15 @@
+= Included page
+
+Note what happens to the nav tree depending on which flow this is selected from.
+
+Here are links to the inclusion stubs:
+
+== These always open the nav tree to the expected working flow:
+
+xref::stub1.adoc[xref::stub1.adoc]
+
+xref::stub2.adoc[xref::stub2.adoc]
+
+== There is no way for Antora to decide if this should open broken flow 1 or flow 2:
+
+xref::stub3.adoc[xref::stub3.adoc]

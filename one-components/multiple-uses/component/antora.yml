@@ -1,5 +1,5 @@
-name: Component component 
-title: Component component 
+name: MultipleUses 
+title: Multiple Uses Example 
 version: '1.0' 
 start_page: ROOT:index.adoc 
 nav: 

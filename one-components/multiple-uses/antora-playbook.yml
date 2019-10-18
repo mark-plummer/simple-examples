@@ -1,6 +1,7 @@
 site:
   title: Antora Example one-components/multiple-uses
   url: http://example.com
+  start_page: MultipleUses::index.adoc
 content:
   sources:
   - url: ../../

@@ -1,1 +1,11 @@
 * xref:index.adoc[Home Page]
+* Working
+** Flow One
+*** xref:stub1.adoc[Inclusion stub 1]
+** Flow Two
+*** xref:stub2.adoc[Inclusion stub 2]
+* Broken
+** Flow One
+*** xref:stub3.adoc[Inclusion stub 3]
+** Flow Two
+*** xref:stub3.adoc[Inclusion stub 3]
