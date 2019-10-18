@@ -1,5 +1,5 @@
-= Component component
+= Single, Simplest Component
 
 == A home page
 
-And some content.
+Note there is no site start page: it would be at SimplestComponent/index.html
