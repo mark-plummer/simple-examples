@@ -1,5 +1,25 @@
-= Component component
+= Index.adoc page for UnderscoreInclude sample
 
-== A home page
+== This is in index.adoc
 
-And some content.
+This includes _underscore.adoc in a page already with content:
+
+----
+\include::_underscore.adoc[leveloffset=+1]
+----
+
+include::_underscore.adoc[leveloffset=+1]
+
+The leveloffset is necessary when including a standalone page to avoid an asciidoctor error and peculiar rendering.
+
+== Inclusion of a partial page without level 0 title:
+
+----
+\include::_partial.adoc[]
+----
+
+include::_partial.adoc[]
+
+== Link to page that is only inclusion:
+
+xref:includeunderscore.adoc[xref:includeunderscore.adoc]

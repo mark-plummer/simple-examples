@@ -1,1 +1,2 @@
-* xref:index.adoc[Home Page]
+* xref:index.adoc[Home page with content and inclusions]
+* xref:includeunderscore.adoc[Page with only inclusion]
