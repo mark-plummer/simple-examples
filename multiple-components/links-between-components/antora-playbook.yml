@@ -1,0 +1,13 @@
+site:
+  title: Antora Example multiple-components/links-between-components
+  url: http://example.com
+content:
+  sources:
+  - url: ../../
+    start_path: multiple-components/links-between-components/component1
+  - url: ../../
+    start_path: multiple-components/links-between-components/component2
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
