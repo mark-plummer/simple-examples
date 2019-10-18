@@ -6,4 +6,4 @@ To assure all the links are the same, the page included in the stubs is also inc
 
 include::_included.adoc[leveloffset=+1]
 
-If the flows were in different components, linking to an un-stubbed file would transfer you to the component the original file was in, with that component's navigation.
+If the flows were in different components, linking to an un-stubbed file would transfer you to the component the original file was in, with that component's navigation. This is demonstrated in the multiple-components/links-between-components example.
