@@ -29,3 +29,28 @@ antora-schematics example --gitPath=- --path=<path-to-example> --components=<com
 ```
 
 All new files should be added; if you specify gitAuthor and gitEmail they should also be committed.
+
+== To build everything:
+
+----
+find . -name antora-playbook.yml|xargs -n 1 bash -c 'for filename; do (cd `dirname "$filename"`; antora antora-playbook.yml); done' bash 
+----
+
+== To clean
+----
+find . -name build |xargs rm -rf
+----
+
+=== Catalog
+
+The links will only work locally if you view this page in an asciidoc enabled browser, after building all the projects.
+
+* simplest: minimal example that produces a site with content and navigation link:simplest/build/site/SimplestComponent/1.0/index.html[]. Note there is no site start_page.
+//* tiny: adds a site start page, site.xml, robots.txt
+* One component:
+** Including hidden files whose names start with '_' underscore link:one-components/underscore-include/build/site/UnderscoreInclude/1.0/index.html[]
+** Including the same content in multiple nav positions or flows using include stubs link:one-components/multiple-uses/build/site/index.html[]
+* Multiple components: multiple-components
+** Two components link:multiple-components/two-components/build/site/Component1/1.0/index.html[]
+* Distributed components: distributed-components
+** One component, two source trees link:distributed-components/simple-distributed/build/site/index.html[]. (site start_page)
