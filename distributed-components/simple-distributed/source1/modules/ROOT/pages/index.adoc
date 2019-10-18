@@ -1,4 +1,4 @@
-= Distributed Component part component1
+= Distributed Component part source1
 
 == A home page
 
@@ -6,9 +6,9 @@
 
 This is a simple example of a distributed component.
 
-* One content file is in component1 and one in component2.
-* One navigation file is in component1 and one in component2.
-* All the configuration for the component is in component1's `antora.yml`.
+* One content file is in source1 and one in source2.
+* One navigation file is in source1 and one in source2.
+* All the configuration for the component is in source1's `antora.yml`.
 * Antora errors if you have duplicated a navigation or content file across the multiple sources for the component.
 * Note the component selector (below the nav tree) has only one component listed.
 * The content is one component because the two `antora.yml` files have the same name and version attributes. 

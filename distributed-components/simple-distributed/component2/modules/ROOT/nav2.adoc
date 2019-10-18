@@ -1,2 +1,0 @@
-* nav2.adoc from component2 tree
-** xref:other.adoc[Other Page]

@@ -1,0 +1,14 @@
+= Distributed Component part source2
+
+== Another page from source2
+
+And some content.
+
+Here's a link to the content in the other part:
+
+----
+xref::index.adoc[from the other component source]
+----
+
+xref::index.adoc[from the other component source]
+

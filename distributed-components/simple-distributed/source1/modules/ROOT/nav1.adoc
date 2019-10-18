@@ -1,0 +1,2 @@
+* nav1.adoc from source1 tree
+** xref:index.adoc[Home Page]
