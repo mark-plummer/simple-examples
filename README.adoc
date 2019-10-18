@@ -10,6 +10,8 @@ In order to demonstrate many features in minimal space, all these projects emplo
 
 You must have Antora installed, preferably globally.
 
+Clone this repo locally.
+
 == Usage
 
 * cd `example-directory`
@@ -18,7 +20,7 @@ You must have Antora installed, preferably globally.
 
 == Contributing
 
-* An easy starting point is to use the antora-schematics example schematic to set up the project with the components needed for the example.
+* An easy starting point is to use the antora-schematics example schematic to set up your Antora example with the components it needs. The schematic will create the path, put the antora-playbook.yml file there, and put the components there.
 * Name the directory to clearly describe the examples purpose.
 * Use the pages of the example to clearly describe the effects of the demonstrated configuration.
 
@@ -26,6 +28,4 @@ You must have Antora installed, preferably globally.
 antora-schematics example --gitPath=- --path=<path-to-example> --components=<comma-separated list of component paths> [gitAuthor=<git Author> gitEmail=<gitEmail>]
 ```
 
-Currently there is something wrong with the example schematic and it is creating multiple git repos for its output.  For now, leave out the gitAuthor/gitEmail properties and run
-
-find * -name .git|xargs rm -rf
+All new files should be added; if you specify gitAuthor and gitEmail they should also be committed.
