@@ -1,4 +1,4 @@
-= Component component1
+= Component One
 
 == A home page
 

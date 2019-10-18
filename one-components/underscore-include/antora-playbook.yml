@@ -1,6 +1,7 @@
 site:
   title: Antora Example one-components/underscore-include
   url: http://example.com
+  start_page: UnderscoreInclude::index.adoc
 content:
   sources:
   - url: ../../
