@@ -10,6 +10,6 @@ xref::stub1.adoc[xref::stub1.adoc]
 
 xref::stub2.adoc[xref::stub2.adoc]
 
-== There is no way for Antora to decide if this should open broken flow 1 or flow 2:
+== There is no way for Antora to decide if this should open broken flow one or flow two:
 
 xref::stub3.adoc[xref::stub3.adoc]
