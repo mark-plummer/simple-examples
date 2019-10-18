@@ -1,6 +1,6 @@
-= Index.adoc page for UnderscoreInclude sample
+= Index.adoc page for Underscore Include example
 
-== This is in index.adoc
+== This is rendered from index.adoc
 
 This includes _underscore.adoc in a page already with content:
 
