@@ -1,0 +1,5 @@
+= Distributed Component part component2
+
+== Another page
+
+And some content.

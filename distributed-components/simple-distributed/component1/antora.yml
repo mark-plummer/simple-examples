@@ -1,0 +1,7 @@
+name: SimpleDistributedComponent 
+title: 'Component Title: Simple Distributed Component' 
+version: '1.0' 
+start_page: ROOT:index.adoc 
+nav: 
+- modules/ROOT/nav1.adoc
+- modules/ROOT/nav2.adoc
