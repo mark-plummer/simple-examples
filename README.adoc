@@ -25,7 +25,7 @@ Clone this repo locally.
 * Use the pages of the example to clearly describe the effects of the demonstrated configuration.
 
 ```
-antora-schematics example --gitPath=- --path=<path-to-example> --components=<comma-separated list of component paths> [gitAuthor=<git Author> gitEmail=<gitEmail>]
+antora-schematics example --gitPath=- --path=<path-to-example> --components=<comma-separated list of component paths> [authorName=<git Author> authorEmail=<gitEmail>]
 ```
 
 All new files should be added; if you specify gitAuthor and gitEmail they should also be committed.
@@ -52,5 +52,6 @@ The links will only work locally if you view this page in an asciidoc enabled br
 ** Including the same content in multiple nav positions or flows using include stubs link:one-components/multiple-uses/build/site/index.html[]
 * Multiple components: multiple-components
 ** Two components link:multiple-components/two-components/build/site/Component1/1.0/index.html[]
+** Links between two components link:multiple-components/links-between-components/build/site/index.html[]
 * Distributed components: distributed-components
 ** One component, two source trees link:distributed-components/simple-distributed/build/site/index.html[]. (site start_page)

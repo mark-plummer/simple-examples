@@ -1,5 +1,7 @@
-= Component component1
+= Component One
 
-== A home page
+== Component One home page
 
-And some content.
+xref:Component2::index.adoc[This is a link to the Component Two home page]
+
+Following it shifts to Component Two, including the navigation. This is easy to expect.  Compare with the same link in the navigation, which has the same effect. This may not be expected from the navigation, where one might expect to stay in the same component.

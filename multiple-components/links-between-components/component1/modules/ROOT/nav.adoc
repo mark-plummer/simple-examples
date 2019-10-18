@@ -1,1 +1,3 @@
-* xref:index.adoc[Home Page]
+* xref:index.adoc[Component One Home Page]
+* Possibly surprising that the nav changes to Component Two:
+* xref:Component2::index.adoc[This is a link to the Component Two home page]

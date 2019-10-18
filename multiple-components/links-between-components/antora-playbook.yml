@@ -1,6 +1,7 @@
 site:
   title: Antora Example multiple-components/links-between-components
   url: http://example.com
+  start_page: Component1::index.adoc
 content:
   sources:
   - url: ../../
