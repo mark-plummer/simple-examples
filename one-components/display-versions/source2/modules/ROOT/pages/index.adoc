@@ -1,0 +1,12 @@
+= Display Versions Single Component
+
+== A home page
+
+* In source tree at source2 (referenced from antora-playbook.yml sources)
+* Actual version (for sorting): master
+* Display version: display B (master)
+
+Note that master is handled differently from other versions:
+
+* It is always sorted at the top
+* The content is directly at the component name, rather than under the version, in the generated site.

@@ -1,0 +1,7 @@
+name: DisplayVersionsSingleComponent 
+title: Display Versions Single Component 
+version: baz
+display_version: display E (baz) really long
+start_page: ROOT:index.adoc 
+nav: 
+- modules/ROOT/nav.adoc

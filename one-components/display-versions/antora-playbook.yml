@@ -4,11 +4,15 @@ site:
 content:
   sources:
   - url: ../../
-    start_path: one-components/display-versions/version1
+    start_path: one-components/display-versions/source1
   - url: ../../
-    start_path: one-components/display-versions/version2
+    start_path: one-components/display-versions/source2
   - url: ../../
-    start_path: one-components/display-versions/version3
+    start_path: one-components/display-versions/source3
+  - url: ../../
+    start_path: one-components/display-versions/source4
+  - url: ../../
+    start_path: one-components/display-versions/source5
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable

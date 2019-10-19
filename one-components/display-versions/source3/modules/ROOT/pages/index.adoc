@@ -1,0 +1,7 @@
+= Display Versions Single Component
+
+== A home page
+
+* In source tree at source3 (referenced from antora-playbook.yml sources)
+* Actual version (for sorting): v4.0
+* Display version: display C (v4.0)

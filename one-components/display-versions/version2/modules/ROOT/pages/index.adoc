@@ -1,5 +1,0 @@
-= Component version2
-
-== A home page
-
-And some content.
