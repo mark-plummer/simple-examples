@@ -1,0 +1,5 @@
+= Component version1
+
+== A home page
+
+And some content.
