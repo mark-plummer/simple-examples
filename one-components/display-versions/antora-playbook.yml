@@ -1,7 +1,6 @@
 site:
   title: Antora Example one-components/display-versions
   url: http://example.com
-  start_page: v3.0@DisplayVersionsSingleComponent::index.html
 content:
   sources:
   - url: ../../
