@@ -1,6 +1,7 @@
-name: version1 
-title: Component version1 
-version: '1.0' 
+name: DisplayVersionsSingleComponent 
+title: Display Versions Single Component 
+version: v3.0
+display_version: display A (v3.0)
 start_page: ROOT:index.adoc 
 nav: 
 - modules/ROOT/nav.adoc
