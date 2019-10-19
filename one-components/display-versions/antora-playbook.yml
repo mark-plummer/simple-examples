@@ -1,0 +1,15 @@
+site:
+  title: Antora Example one-components/display-versions
+  url: http://example.com
+content:
+  sources:
+  - url: ../../
+    start_path: one-components/display-versions/version1
+  - url: ../../
+    start_path: one-components/display-versions/version2
+  - url: ../../
+    start_path: one-components/display-versions/version3
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
