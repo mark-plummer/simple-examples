@@ -1,7 +1,7 @@
 name: DisplayVersionsSingleComponent 
 title: Display Versions Single Component 
-version: bar
-display_version: display D (bar) really long
+version: witt
+display_version: display D (witt)
 start_page: ROOT:index.adoc 
 nav: 
 - modules/ROOT/nav.adoc
