@@ -1,0 +1,1 @@
+include::ulam@{page-component-name}::page$index.adoc[]

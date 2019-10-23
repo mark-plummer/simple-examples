@@ -1,0 +1,11 @@
+include::ulam@{page-component-name}::page$index.adoc[]
+
+== Special Features
+
+This is a [.term]*prerelease* version as indicated by the attribute in [.path]_antora.yml_:
+
+----
+prerelease: -prerelease
+----
+
+As a result, even though it is sorted at the top, it is not the '`latest'" and is not used in the absence of a version specification in the site start_page and xref links.

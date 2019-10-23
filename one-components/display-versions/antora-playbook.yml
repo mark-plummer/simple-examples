@@ -18,6 +18,20 @@ content:
     start_path: one-components/display-versions/display-versions/sourcev3
   - url: ../../
     start_path: one-components/display-versions/display-versions/sourcev4
+  - url: ../../
+    start_path: one-components/display-versions/plain-versions/sourcemaster
+  - url: ../../
+    start_path: one-components/display-versions/plain-versions/sourceulam
+  - url: ../../
+    start_path: one-components/display-versions/plain-versions/sourcevenn
+  - url: ../../
+    start_path: one-components/display-versions/plain-versions/sourcewitt
+  - url: ../../
+    start_path: one-components/display-versions/plain-versions/sourcev2
+  - url: ../../
+    start_path: one-components/display-versions/plain-versions/sourcev3
+  - url: ../../
+    start_path: one-components/display-versions/plain-versions/sourcev4
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable

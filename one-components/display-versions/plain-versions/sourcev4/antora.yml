@@ -1,0 +1,6 @@
+name: PlainVersionsSingleComponent 
+title: Plain Versions Single Component 
+version: v4.0
+start_page: ROOT:index.adoc 
+nav: 
+- modules/ROOT/nav.adoc

@@ -1,0 +1,19 @@
+= {page-component-title}
+:page-partial:
+
+== About this page
+
+* In source tree at {page-origin-start-path} (referenced from antora-playbook.yml sources)
+* Actual version (for sorting): {page-component-version}
+* Display version: {page-component-display-version}
+
+=== Latest
+
+`\xref:{page-component-name}::index.adoc[The latest version of this page]`
+
+xref:{page-component-name}::index.adoc[The latest version of this page]
+
+=== Sort order
+
+* All the [.term]`named` versions appear before all the [.term]`semantic` versions
+* The [.term]`semantic` versions are sorted irrespective of a leading "`v`"
