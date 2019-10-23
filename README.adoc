@@ -25,11 +25,12 @@ Clone this repo locally.
 * Use the pages of the example to clearly describe the effects of the demonstrated configuration.
 
 ```
-antora-schematics example --gitPath=- --path=<path-to-example> --components=<comma-separated list of component paths> [authorName=<git Author> authorEmail=<gitEmail>]
+antora-schematics example --gitPath=- --path=<path-to-example> --components=<comma-separated list of component paths> [--authorName=<git Author> --authorEmail=<gitEmail>]
 ```
 
-//All new files should be added; if you specify gitAuthor and gitEmail they should also be committed.
-Due to link:https://github.com/isomorphic-git/isomorphic-git/issues/899[isogit init in existing repo overwrites .git/config unconditionally] you should specify --noGit=true and do git operations yourself.
+Specifying "`--authorName=<git Author> --authorEmail=<gitEmail>`" once will put them in .git/config and will be used for subsequent isomorphic-git work.
+In any case, all new files should be added: if the name/email configuration is present they will also be committed.
+To avoid any git activity, use the -noGit=true flag.
 
 == To build everything:
 
@@ -51,9 +52,9 @@ The links will only work locally if you view this page in an asciidoc enabled br
 * One component:
 ** Including hidden files whose names start with '_' underscore link:one-components/underscore-include/build/site/index.html[]
 ** Including the same content in multiple nav positions or flows using include stubs link:one-components/multiple-uses/build/site/index.html[]
-** Version sorting and display versions for one component link:one-components/display-versions/build/site/index.html[]
 * Multiple components: multiple-components
 ** Two components link:multiple-components/two-components/build/site/index.html[]
 ** Links between two components link:multiple-components/links-between-components/build/site/index.html[]
+** Version sorting, prerelease, and versionless for two similar copies of one component, one with plain versions and one with explicit display versions link:multiple-components/versions/build/site/index.html[]
 * Distributed components: distributed-components
 ** One component, two source trees link:distributed-components/simple-distributed/build/site/index.html[]. (site start_page)
