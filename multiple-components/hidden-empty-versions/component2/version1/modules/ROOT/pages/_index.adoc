@@ -1,5 +1,5 @@
 = {page-component-title}
 
-== A home page
+== A home page compoment2/version1
 
 And some content.
