@@ -1,1 +1,4 @@
 * xref:index.adoc[Home Page]
+* xref:stubc1v2.adoc[Included from Component 1 Version 2]
+* xref:stubc2v1.adoc[Included from Component 2 Version 1]
+* xref:stubc2v2.adoc[Included from Component 2 Version 2]
