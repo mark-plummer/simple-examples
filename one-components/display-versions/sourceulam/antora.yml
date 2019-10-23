@@ -1,7 +1,7 @@
 name: DisplayVersionsSingleComponent 
 title: Display Versions Single Component 
-version: venn
-display_version: display B (venn)
+version: ulam
+display_version: display C (ulam)
 start_page: ROOT:index.adoc 
 nav: 
 - modules/ROOT/nav.adoc

@@ -1,0 +1,16 @@
+include::ulam@{page-component-name}::page$index.adoc[]
+
+== Special features:
+
+This uses the reserved word [.term]*master* as version, so the version is left out of the urls for this component.
+
+----
+DisplayVersionsSingleComponent/index.html
+----
+
+v.s. e.g.
+
+----
+DisplayVersionsSingleComponent/venn/index.html
+----
+

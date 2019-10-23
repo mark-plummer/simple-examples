@@ -1,7 +1,8 @@
 name: DisplayVersionsSingleComponent 
 title: Display Versions Single Component 
 version: witt
-display_version: display D (witt)
+display_version: display A (witt)
+prerelease: -prerelease
 start_page: ROOT:index.adoc 
 nav: 
 - modules/ROOT/nav.adoc

@@ -5,15 +5,19 @@ site:
 content:
   sources:
   - url: ../../
-    start_path: one-components/display-versions/source1
+    start_path: one-components/display-versions/sourcemaster
   - url: ../../
-    start_path: one-components/display-versions/source2
+    start_path: one-components/display-versions/sourceulam
   - url: ../../
-    start_path: one-components/display-versions/source3
+    start_path: one-components/display-versions/sourcevenn
   - url: ../../
-    start_path: one-components/display-versions/source4
+    start_path: one-components/display-versions/sourcewitt
   - url: ../../
-    start_path: one-components/display-versions/source5
+    start_path: one-components/display-versions/sourcev2
+  - url: ../../
+    start_path: one-components/display-versions/sourcev3
+  - url: ../../
+    start_path: one-components/display-versions/sourcev4
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable

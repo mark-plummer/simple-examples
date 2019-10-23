@@ -1,9 +1,1 @@
-= {page-component-title}
-
-== A home page
-
-* In source tree at {page-origin-start-path} (referenced from antora-playbook.yml sources)
-* Actual version (for sorting): {page-component-version}
-* Display version: {page-component-display-version}
-
-"really long" is included in the display version to force each version onto one line to make the sort order clear.
+include::ulam@{page-component-name}::page$index.adoc[]
