@@ -4,16 +4,16 @@ site:
 content:
   sources:
   - url: ../../
-    branches: issue-504-hidden-versions
+    branches: issue-503-hidden-versions
     start_path: multiple-components/hidden-empty-versions/component1/version1
   - url: ../../
-    branches: issue-504-hidden-versions
+    branches: issue-503-hidden-versions
     start_path: multiple-components/hidden-empty-versions/component1/version2
   - url: ../../
-    branches: issue-504-hidden-versions
+    branches: issue-503-hidden-versions
     start_path: multiple-components/hidden-empty-versions/component2/version1
   - url: ../../
-    branches: issue-504-hidden-versions
+    branches: issue-503-hidden-versions
     start_path: multiple-components/hidden-empty-versions/component2/version2
 ui:
   bundle:
