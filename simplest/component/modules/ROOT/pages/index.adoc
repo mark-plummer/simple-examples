@@ -2,4 +2,4 @@
 
 == A home page
 
-Note there is no site start page: it would be at SimplestComponent/index.html
+Note there is no site start page: it would be at simplest-component/index.html

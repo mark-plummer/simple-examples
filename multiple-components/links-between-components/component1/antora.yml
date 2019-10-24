@@ -1,4 +1,4 @@
-name: Component1 
+name: component1
 title: Component One 
 version: '1.0' 
 start_page: ROOT:index.adoc 

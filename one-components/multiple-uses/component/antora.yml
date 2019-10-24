@@ -1,4 +1,4 @@
-name: MultipleUses 
+name: multiple-uses
 title: Multiple Uses Example 
 version: '1.0' 
 start_page: ROOT:index.adoc 

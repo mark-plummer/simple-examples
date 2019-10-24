@@ -47,7 +47,7 @@ find . -name build |xargs rm -rf
 
 The links will only work locally if you view this page in an asciidoc enabled browser, after building all the projects.
 
-* simplest: minimal example that produces a site with content and navigation link:simplest/build/site/SimplestComponent/1.0/index.html[]. Note there is no site start_page.
+* simplest: minimal example that produces a site with content and navigation link:simplest/build/site/simplest-component/1.0/index.html[]. Note there is no site start_page.
 //* tiny: adds a site start page, site.xml, robots.txt
 * One component:
 ** Including hidden files whose names start with '_' underscore link:one-components/underscore-include/build/site/index.html[]

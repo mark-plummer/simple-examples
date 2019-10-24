@@ -1,4 +1,4 @@
-name: SimpleDistributedComponent 
+name: simple-distributed-component
 title: 'Component Title: Simple Distributed Component' 
 version: '1.0' 
 start_page: ROOT:index.adoc 

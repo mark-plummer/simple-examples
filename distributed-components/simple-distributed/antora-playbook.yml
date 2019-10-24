@@ -1,7 +1,7 @@
 site:
   title: Antora Example distributed-components/simple-distributed
   url: http://example.com
-  start_page: SimpleDistributedComponent::index.adoc
+  start_page: simple-distributed-component::index.adoc
 content:
   sources:
   - url: ../../
