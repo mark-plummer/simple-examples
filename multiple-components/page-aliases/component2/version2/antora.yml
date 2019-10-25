@@ -1,6 +1,6 @@
 name: component2
-title: Component 2 
-version: v1 
+title: Component 2
+version: v2
 start_page: ROOT:index.adoc 
 nav: 
 - modules/ROOT/nav.adoc

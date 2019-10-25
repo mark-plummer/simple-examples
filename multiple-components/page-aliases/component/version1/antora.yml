@@ -1,6 +1,0 @@
-name: component/version1 
-title: Component component/version1 
-version: '1.0' 
-start_page: ROOT:index.adoc 
-nav: 
-- modules/ROOT/nav.adoc
