@@ -1,0 +1,17 @@
+site:
+  title: Antora Example multiple-components/page-aliases
+  url: http://example.com
+content:
+  sources:
+  - url: ../../
+    start_path: multiple-components/page-aliases/component/version1
+  - url: ../../
+    start_path: multiple-components/page-aliases/component1/version2
+  - url: ../../
+    start_path: multiple-components/page-aliases/component2/version1
+  - url: ../../
+    start_path: multiple-components/page-aliases/component2/version21
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
