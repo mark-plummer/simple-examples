@@ -1,5 +1,5 @@
 = {page-component-title}
-:page-aliases: master@component1:{page-module}:{page-relative}
+:page-aliases: master@{page-component-name}:{page-module}:{page-relative}
 
 == A home page
 
