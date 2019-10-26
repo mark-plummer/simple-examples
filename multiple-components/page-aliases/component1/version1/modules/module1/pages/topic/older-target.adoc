@@ -1,0 +1,34 @@
+= {page-component-title}
+:page-aliases: topic/older-target-source-1.adoc,module2:topic/older-target-source-2.adoc,v4@:topic/older-target-source-3.adoc,v4@module2:topic/older-target-source-4.adoc,master@component1::topic/older-target-source-5.adoc,component2::topic/older-target-source-6.adoc,v3@component2::topic/older-target-source-7.adoc,component3::topic/older-target-source-8.adoc
+
+== A topic page in an older version (v1) in a module.
+
+page-aliases: {page-aliases}
+
+What do partial page ids in the alias produce?
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+== Links
+
+link:older-target-source-1.html[direct link for :topic/older-target-source-1.adoc to static bounce page]
+
+link:../../module2/topic/older-target-source-2.html[direct link for module2:topic/older-target-source-2.adoc to static bounce page]
+
+link:../../../v4/module1/topic/older-target-source-3.html[direct link for v4@:topic/older-target-source-3.adoc to static bounce page]
+
+link:../../../v4/module2/topic/older-target-source-4.html[direct link for v4@module2:topic/older-target-source-4.adoc to static bounce page]
+
+link:../../../topic/older-target-source-5.html[direct link for master@component1::topic/older-target-source-5.adoc to static bounce page (versionless: source in ROOT module)]
+
+link:../../../../component2/v2/topic/older-target-source-6.html[direct link for component2::topic/older-target-source-6.adoc to static bounce page (latest version, ROOT module)]
+
+link:../../../../component2/v3/topic/older-target-source-7.html[direct link for v3@component2::topic/older-target-source-7.adoc to static bounce page (specified version, ROOT module)]
+
+link:../../../../component3/topic/older-target-source-8.html[direct link for component3::topic/older-target-source-8.adoc to static bounce page (unknown component implies 'master' version)]

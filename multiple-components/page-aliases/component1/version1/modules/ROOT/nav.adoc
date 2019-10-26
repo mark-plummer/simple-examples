@@ -1,1 +1,2 @@
 * xref:index.adoc[Home Page]
+* xref:module1:topic/older-target.adoc[All the possible partial alias specifications for relocation]

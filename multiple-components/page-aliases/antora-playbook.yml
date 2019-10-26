@@ -16,4 +16,7 @@ ui:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
 urls:
+  html_extension_style: default
   redirect_facility: static
+output:
+  clean: true
