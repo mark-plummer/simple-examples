@@ -1,12 +1,16 @@
 = {page-component-title}
 :page-aliases: master@{page-component-name}:{page-module}:{page-relative}
 
-== A home page
+== A topic page
 
-And some content.
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
 
 page-relative: {page-relative}
 
-page-module: {page-module}
+link:../../../module1/topic/topic.html[direct link link:../../../module1/topic/topic.html to static bounce page]
 
 xref::master@component1:{page-module}:{page-relative}[link to alias master@component1:{page-module}:{page-relative}]

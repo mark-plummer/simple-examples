@@ -1,12 +1,16 @@
 = {page-component-title}
-:page-aliases: master@component1:{page-module}:{page-relative}
+:page-aliases: master@{page-component-name}:{page-module}:{page-relative}
 
 == A home page
 
-And some content.
+page-component-name: {page-component-name}
 
-page-relative: {page-relative}
+page-component-version: {page-component-version}
 
 page-module: {page-module}
 
-xref::master@component1:{page-module}:{page-relative}[link to alias master@component1:{page-module}:{page-relative}]
+page-relative: {page-relative}
+
+link:../index.html[direct link link:../index.html to static bounce page]
+
+xref::master@component1:{page-module}:{page-relative}[xref link to alias master@component1:{page-module}:{page-relative}]
