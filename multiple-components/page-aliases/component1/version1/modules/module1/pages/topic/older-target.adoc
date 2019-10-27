@@ -23,7 +23,7 @@ There are 8 combinations of version, component, and module, and several have dif
 
 === 1. Specifying nothing (except the required relative)
 
-link:older-target-source-1.html[:topic/older-target-source-1.adoc]
+link:older-target-source-1.html[topic/older-target-source-1.adoc]
 
 The version, component, and module are determined from the target page (this).
 
