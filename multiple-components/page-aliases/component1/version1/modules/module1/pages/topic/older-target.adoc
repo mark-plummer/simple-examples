@@ -1,5 +1,6 @@
 = {page-component-title}
-:page-aliases: topic/older-target-source-1.adoc,module2:topic/older-target-source-2.adoc,v4@:topic/older-target-source-3.adoc,v4@module2:topic/older-target-source-4.adoc,master@component1::topic/older-target-source-5.adoc,component2::topic/older-target-source-6.adoc,v3@component2::topic/older-target-source-7.adoc,component3::topic/older-target-source-8.adoc
+:page-aliases: topic/older-target-source-1.adoc,module2:topic/older-target-source-2.adoc,component2::topic/older-target-source-3a.adoc,component3::topic/older-target-source-3b.adoc,v4@:topic/older-target-source-4.adoc,v3@component2::topic/older-target-source-5a.adoc,master@component1::topic/older-target-source-5b.adoc,v4@module2:topic/older-target-source-6.adoc,component2:module2:topic/older-target-source-7a.adoc,component3:module2:topic/older-target-source-7b.adoc,v4@component3:module3:topic/older-target-source-8.adoc
+
 
 == A topic page in an older version (v1) in a module.
 
@@ -17,18 +18,74 @@ page-relative: {page-relative}
 
 == Links
 
-link:older-target-source-1.html[direct link for :topic/older-target-source-1.adoc to static bounce page]
+Specifying relative is required.
+There are 8 combinations of version, component, and module, and several have different effects based on whether the component is otherwise present in the site.
 
-link:../../module2/topic/older-target-source-2.html[direct link for module2:topic/older-target-source-2.adoc to static bounce page]
+=== 1. Specifying only relative
 
-link:../../../v4/module1/topic/older-target-source-3.html[direct link for v4@:topic/older-target-source-3.adoc to static bounce page]
+link:older-target-source-1.html[:topic/older-target-source-1.adoc]
 
-link:../../../v4/module2/topic/older-target-source-4.html[direct link for v4@module2:topic/older-target-source-4.adoc to static bounce page]
+The version, component, and module determined from the target page (this).
 
-link:../../../topic/older-target-source-5.html[direct link for master@component1::topic/older-target-source-5.adoc to static bounce page (versionless: source in ROOT module)]
+=== 2. Specifying only module
 
-link:../../../../component2/v2/topic/older-target-source-6.html[direct link for component2::topic/older-target-source-6.adoc to static bounce page (latest version, ROOT module)]
+link:../../module2/topic/older-target-source-2.html[module2:topic/older-target-source-2.adoc]
 
-link:../../../../component2/v3/topic/older-target-source-7.html[direct link for v3@component2::topic/older-target-source-7.adoc to static bounce page (specified version, ROOT module)]
+The version and component determined from the target page (this).
 
-link:../../../../component3/topic/older-target-source-8.html[direct link for component3::topic/older-target-source-8.adoc to static bounce page (unknown component implies 'master' version)]
+=== 3. Specifying only component
+==== 3.a. Existing component
+
+link:../../../../component2/v2/topic/older-target-source-3a.html[component2::topic/older-target-source-3a.adoc]
+
+The version is the [.term]*latest* for that component and module is ROOT.
+
+==== 3.b. Otherwise unknown component
+
+link:../../../../component3/topic/older-target-source-3b.html[component3::topic/older-target-source-3b.adoc]
+
+Since there is no information about possible versions for this component, the version is the "`versionless`" "`master`".
+The module is ROOT
+
+=== 4 Specifying only version
+
+link:../../../v4/module1/topic/older-target-source-4.html[v4@:topic/older-target-source-4.adoc]
+
+The component and module are determined from the target page (this).
+
+=== 5. Specifying version and component, not module
+==== 5.a. Regular version
+
+link:../../../../component2/v3/topic/older-target-source-5a.html[v3@component2::topic/older-target-source-5a.adoc]
+
+The module is ROOT. The regular version appears in the URL.
+
+==== 5.b. Special "`versionless`" master version
+link:../../../topic/older-target-source-5b.html[master@component1::topic/older-target-source-5b.adoc]
+
+The module is ROOT. The  "`versionless`" "`master`" version causes the version to be ommitted from the URL.
+
+=== 6 Specifying version and module, not component
+
+link:../../../v4/module2/topic/older-target-source-6.html[v4@module2:topic/older-target-source-6.adoc]
+
+The component is determined from the target page (this).
+
+=== 7. Specifying component and module, not version
+==== 7.a Existing component
+
+link:../../../../component2/v2/module2/topic/older-target-source-7a.html[component2:module2:topic/older-target-source-7b.adoc]
+
+The version is the [.term]*latest* for that component.
+
+==== 7.b. Otherwise unknown component
+
+link:../../../../component3/module2/topic/older-target-source-7b.html[component3:module2:topic/older-target-source-7b.adoc]
+
+Since there is no information about possible versions for this component, the version is the "`versionless`" "`master`".
+
+=== 8. Specifying version, component, and module
+
+link:../../../../component3/v4/module3/topic/older-target-source-8.html[v4@component3:module3:topic/older-target-source-8.adoc]
+
+Everything is specified in the alias, so no interpolation takes place.
