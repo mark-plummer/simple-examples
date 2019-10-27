@@ -1,0 +1,16 @@
+= xref target page
+
+== Page information
+
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+== Return link
+
+xref:v1@component1::index.adoc[v1@component1::index.adoc]

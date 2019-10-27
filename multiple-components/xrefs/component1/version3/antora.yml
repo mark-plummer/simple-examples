@@ -1,6 +1,7 @@
-name: component1/version3 
-title: Component component1/version3 
-version: '1.0' 
+name: component1
+title: Component One
+version: v3
+prerelease: -prerelease
 start_page: ROOT:index.adoc 
 nav: 
 - modules/ROOT/nav.adoc

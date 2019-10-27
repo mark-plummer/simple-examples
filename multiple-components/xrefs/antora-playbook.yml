@@ -4,17 +4,17 @@ site:
 content:
   sources:
   - url: ../../
-    start_path: multiple-components/xrefs/component/version1
+    start_path: multiple-components/xrefs/component1/version1
   - url: ../../
     start_path: multiple-components/xrefs/component1/version2
+  - url: ../../
+    start_path: multiple-components/xrefs/component1/version3
   - url: ../../
     start_path: multiple-components/xrefs/component2/version1
   - url: ../../
     start_path: multiple-components/xrefs/component2/version2
   - url: ../../
     start_path: multiple-components/xrefs/component2/version3
-  - url: ../../
-    start_path: multiple-components/xrefs/component1/version3
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable

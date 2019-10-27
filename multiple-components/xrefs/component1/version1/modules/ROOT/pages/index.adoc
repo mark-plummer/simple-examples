@@ -1,5 +1,67 @@
-= {page-component-title}
+= xrefs with all possible substitutions
 
-== A home page
+== Page information
 
-And some content.
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+== xref examples
+
+Relative is always required.
+For an xref, the family is always `page` and is normally ommitted.
+
+== 1. Nothing (only the required relative)
+
+xref:topic/topic-1.adoc[topic/topic-1.adoc]
+
+The version, component, and module are determined from this page.
+
+== 2. Specifying only module
+
+xref:module1:topic/topic-2.adoc[module1:topic/topic-2.adoc]
+
+The version and component are determined from this page.
+
+== 3. Specifying only component
+
+xref:component2::topic/topic-3.adoc[component2::topic/topic-3.adoc]
+
+The version is the [.term]*latest* for that component.
+Since in component2 version v3 is prerelease, the latest version is v2.
+The module is ROOT.
+
+== 4. Specifying only version
+
+xref:v2@:topic/topic-4.adoc[v2@:topic/topic-4.adoc]
+
+The component and module are determined from this page.
+
+== 5. Specifying version and component, not module
+
+xref:v3@component2::topic/topic-5.adoc[v3@component2::topic/topic-5.adoc]
+
+The module is ROOT.
+
+== 6. Specifying version and module, not component
+
+xref:v3@module1:topic/topic-6.adoc[v3@:module1:topic/topic-6.adoc]
+
+The component is determined from this page.
+
+== 7. Specifying component and module, not version
+
+xref:component2:module1:topic/topic-7.adoc[component2:module1:topic/topic-7.adoc]
+
+The version is the [.term]*latest* for that component.
+Since in component2 version v3 is prerelease, the latest version is v2.
+
+== 8. Specifying version, component, and module
+
+xref:v1@component2:module1:topic/topic-8.adoc[v1@component2:module1:topic/topic-8.adoc]
+
+Everything is specified in the xref, so no interpolation takes place.
