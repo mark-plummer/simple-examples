@@ -1,1 +1,2 @@
 * xref:index.adoc[Home Page]
+* xref:new-module:/topic/topic.adoc[Changed module example]

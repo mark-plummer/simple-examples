@@ -1,0 +1,1 @@
+:page-aliases: v2@{page-component-name}:old-module:{page-relative}
