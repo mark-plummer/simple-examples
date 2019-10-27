@@ -13,4 +13,4 @@ page-relative: {page-relative}
 
 == Return link
 
-xref:v1@component1::index.adoc[v1@component1::index.adoc]
+xref:v1@component1::index.adoc#_6_specifying_version_and_module_not_component[v1@component1::index.adoc#_6_specifying_version_and_module_not_component]
