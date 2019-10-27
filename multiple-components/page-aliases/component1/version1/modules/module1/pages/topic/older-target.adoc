@@ -19,33 +19,35 @@ page-relative: {page-relative}
 == Links
 
 Specifying relative is required.
-There are 8 combinations of version, component, and module, and several have different effects based on whether the component is otherwise present in the site.
+There are 8 combinations of version, component, and module, and several have different effects based on whether the component is otherwise present in the site and whether the version is specified to be "`master`".
 
-=== 1. Specifying only relative
+=== 1. Specifying nothing (except the required relative)
 
 link:older-target-source-1.html[:topic/older-target-source-1.adoc]
 
-The version, component, and module determined from the target page (this).
+The version, component, and module are determined from the target page (this).
 
 === 2. Specifying only module
 
 link:../../module2/topic/older-target-source-2.html[module2:topic/older-target-source-2.adoc]
 
-The version and component determined from the target page (this).
+The version and component are determined from the target page (this).
 
 === 3. Specifying only component
 ==== 3.a. Existing component
 
 link:../../../../component2/v2/topic/older-target-source-3a.html[component2::topic/older-target-source-3a.adoc]
 
-The version is the [.term]*latest* for that component and module is ROOT.
+The version is the [.term]*latest* for that component.
+Since in component2 version v3 is prerelease, the latest version is v2.
+The module is ROOT.
 
 ==== 3.b. Otherwise unknown component
 
 link:../../../../component3/topic/older-target-source-3b.html[component3::topic/older-target-source-3b.adoc]
 
-Since there is no information about possible versions for this component, the version is the "`versionless`" "`master`".
-The module is ROOT
+Since there is no information about possible versions for this component, the version is the "`versionless`" "`master`", causing the version segment to be omitted from the URL.
+The module is ROOT.
 
 === 4 Specifying only version
 
@@ -58,12 +60,14 @@ The component and module are determined from the target page (this).
 
 link:../../../../component2/v3/topic/older-target-source-5a.html[v3@component2::topic/older-target-source-5a.adoc]
 
-The module is ROOT. The regular version appears in the URL.
+The regular version appears in the URL.
+The module is ROOT.
 
 ==== 5.b. Special "`versionless`" master version
 link:../../../topic/older-target-source-5b.html[master@component1::topic/older-target-source-5b.adoc]
 
-The module is ROOT. The  "`versionless`" "`master`" version causes the version to be ommitted from the URL.
+The  "`versionless`" "`master`" version causes the version segment to be omitted from the URL.
+The module is ROOT.
 
 === 6 Specifying version and module, not component
 
@@ -74,15 +78,16 @@ The component is determined from the target page (this).
 === 7. Specifying component and module, not version
 ==== 7.a Existing component
 
-link:../../../../component2/v2/module2/topic/older-target-source-7a.html[component2:module2:topic/older-target-source-7b.adoc]
+link:../../../../component2/v2/module2/topic/older-target-source-7a.html[component2:module2:topic/older-target-source-7a.adoc]
 
 The version is the [.term]*latest* for that component.
+Since in component2 version v3 is prerelease, the latest version is v2.
 
 ==== 7.b. Otherwise unknown component
 
 link:../../../../component3/module2/topic/older-target-source-7b.html[component3:module2:topic/older-target-source-7b.adoc]
 
-Since there is no information about possible versions for this component, the version is the "`versionless`" "`master`".
+Since there is no information about possible versions for this component, the version is the "`versionless`" "`master`", causing the version segment to be omitted from the URL.
 
 === 8. Specifying version, component, and module
 

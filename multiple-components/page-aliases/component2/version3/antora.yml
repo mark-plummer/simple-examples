@@ -1,0 +1,7 @@
+name: component2
+title: Component 2
+version: v3
+prerelease: -prerelease
+start_page: ROOT:index.adoc 
+nav: 
+- modules/ROOT/nav.adoc
