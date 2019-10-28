@@ -2,3 +2,4 @@
 * xref:topic/topic.adoc[ROOT topic page]
 * xref:module1:topic/topic.adoc[module1 topic page]
 * xref:rename/new-name.adoc[renamed page]
+* xref:rename/new name with spaces.adoc[renamed page with spaces]

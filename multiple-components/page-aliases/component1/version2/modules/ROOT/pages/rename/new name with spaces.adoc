@@ -1,0 +1,16 @@
+= {page-component-title}
+:page-aliases: :rename/old name with spaces.adoc
+
+== A topic page
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+link:old%20name%20with%20spaces.html[direct link link:old%20name%20with%20spaces.htm]
+
+
