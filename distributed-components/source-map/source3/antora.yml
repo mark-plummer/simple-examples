@@ -1,3 +1,5 @@
 name: component 
 title: Component with source maps 
 version: '1.0' 
+source_map:
+  '.': modules/module2

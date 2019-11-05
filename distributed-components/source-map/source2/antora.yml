@@ -3,3 +3,4 @@ title: Component with source maps
 version: '1.0' 
 source_map:
   module1: modules/module1
+  module3: modules/module3
