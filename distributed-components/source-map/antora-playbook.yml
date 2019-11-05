@@ -2,7 +2,7 @@ site:
   title: Antora Example distributed-components/source-map
   url: http://example.com
 content:
-  branches: source-map-experiment
+  branches: issue-520-source-map-experiment
   sources:
   - url: ../../
     start_path: distributed-components/source-map/source1
