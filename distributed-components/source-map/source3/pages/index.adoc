@@ -2,4 +2,9 @@
 
 == A home page
 
-And some content.
+This includes an example from a non-antora project structure:
+
+[source,text]
+----
+include::example$example.txt[]
+----

@@ -1,0 +1,5 @@
+name: component 
+title: Component with source maps 
+version: '1.0' 
+source_map:
+  not/an/antora/module/structure: modules/module2/examples

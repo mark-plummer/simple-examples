@@ -1,0 +1,1 @@
+This is some text from the example1 source at a path of not/an/antora/module/structure/example.txt
