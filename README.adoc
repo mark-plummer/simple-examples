@@ -59,3 +59,4 @@ The links will only work locally if you view this page in an asciidoc enabled br
 ** Xref examples showing the 8 possibilities and their effects link:multiple-components/xrefs/build/site/component1/v1/index.html[]
 * Distributed components: distributed-components
 ** One component, two source trees link:distributed-components/simple-distributed/build/site/index.html[]. (site start_page)
+** Source map example showing several examples of source_map in antora.yml for different parts of a distributed component link:distributed-components/source-map/build/site/component/1.0/index.html[]
