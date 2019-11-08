@@ -1,0 +1,15 @@
+site:
+  title: Antora Example multiple-components/shared-content-xrefs
+  url: http://example.com
+content:
+  sources:
+  - url: ../../
+    start_path: multiple-components/shared-content-xrefs/shared
+  - url: ../../
+    start_path: multiple-components/shared-content-xrefs/component1
+  - url: ../../
+    start_path: multiple-components/shared-content-xrefs/component2
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
