@@ -1,1 +1,1 @@
-* xref:index.adoc[Home Page]
+* xref:start.adoc[Start page not mentioned in component descriptor but with explicit alias]

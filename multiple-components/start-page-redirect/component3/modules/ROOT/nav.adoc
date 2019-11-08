@@ -1,1 +1,2 @@
-* xref:index.adoc[Home Page]
+* xref:module1:start.adoc[start Page]
+* xref:other.adoc[other page]
