@@ -1,0 +1,17 @@
+site:
+  title: Antora Example multiple-components/start-page-redirect
+  url: http://example.com
+content:
+  sources:
+  - url: ../../
+    start_path: multiple-components/start-page-redirect/component1
+  - url: ../../
+    start_path: multiple-components/start-page-redirect/component2
+  - url: ../../
+    start_path: multiple-components/start-page-redirect/component3
+  - url: ../../
+    start_path: multiple-components/start-page-redirect/component4
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
