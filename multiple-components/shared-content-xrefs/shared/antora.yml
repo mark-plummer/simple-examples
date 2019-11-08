@@ -1,0 +1,6 @@
+name: shared 
+title: Component shared 
+version: '1.0' 
+start_page: ROOT:index.adoc 
+nav: 
+- modules/ROOT/nav.adoc
