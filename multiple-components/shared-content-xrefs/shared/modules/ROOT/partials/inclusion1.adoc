@@ -1,0 +1,22 @@
+= This is shared inclusion1
+
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+
+== Links
+
+=== A link to the expected page for inclusion2:
+
+xref::page2.adoc[xref::page2.adoc]
+
+=== A link to the expected page for topic/topicinclusion1:
+
+xref::topic1/topicpage1.adoc[xref::topic1/topicpage1.adoc]
