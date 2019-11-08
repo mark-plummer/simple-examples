@@ -2,6 +2,7 @@ site:
   title: Antora Example multiple-components/start-page-redirect
   url: http://example.com
 content:
+  branches: issue-379-start-page-auto-redirect
   sources:
   - url: ../../
     start_path: multiple-components/start-page-redirect/component1
@@ -15,3 +16,5 @@ ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+output:
+  clean: true
