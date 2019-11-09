@@ -1,6 +1,16 @@
 = {page-component-title}
 :page-partial:
 
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative} 
+
 == About this page
 
 * In source tree at {page-origin-start-path} (referenced from antora-playbook.yml sources)

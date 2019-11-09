@@ -1,8 +1,16 @@
 = Distributed Component part source2
 
-== Another page from source2
+== Page Coordinates
 
-And some content.
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative} 
+
+== Another page from source2
 
 Here's a link to the content in the other part:
 

@@ -1,1 +1,2 @@
-* xref:index.adoc[Home Page]
+* xref:index.adoc[Home Page (no links)]
+* xref::topic/topic-5.adoc[linked topic 5 page]

@@ -1,6 +1,7 @@
 site:
   title: Antora Example multiple-components/xrefs
   url: http://example.com
+  start_page: v1@component1::index.adoc
 content:
   sources:
   - url: ../../
@@ -19,3 +20,5 @@ ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+output:
+  clean: true

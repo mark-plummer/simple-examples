@@ -1,5 +1,18 @@
 = {page-component-title}
 
-== A home page
+== Page Coordinates
 
-And some content.
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative} 
+
+page-aliases: {page-aliases}
+
+== Page Aliases
+
+The page-aliases project demonstrates all possible forms of page references in the page-aliases attribute
+

@@ -1,7 +1,7 @@
 = {page-component-title}
 :page-aliases: :rename/old-name.adoc
 
-== A topic page
+== Page Coordinates
 
 page-component-name: {page-component-name}
 
@@ -9,8 +9,14 @@ page-component-version: {page-component-version}
 
 page-module: {page-module}
 
-page-relative: {page-relative}
+page-relative: {page-relative} 
+
+page-aliases: {page-aliases}
+
+== A topic page
 
 link:old-name.html[direct link link:old-name.html to static bounce page]
+
+An xref to an alias currently is not computed:
 
 xref::old-name.adoc[link to alias xref::old-name.adoc]

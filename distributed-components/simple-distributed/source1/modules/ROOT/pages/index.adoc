@@ -1,6 +1,14 @@
 = Distributed Component part source1
 
-== A home page
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative} 
 
 == A simple distributed component
 

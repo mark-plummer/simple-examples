@@ -1,5 +1,15 @@
 include::ulam@{page-component-name}::page$index.adoc[]
 
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative} 
+
 == Special features:
 
 This uses the reserved word [.term]*master* as version, so the version is left out of the urls for this component.

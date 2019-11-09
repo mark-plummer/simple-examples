@@ -1,7 +1,6 @@
 = xref target page
 
-== Page information
-
+== Page Coordinates
 
 page-component-name: {page-component-name}
 
@@ -9,7 +8,7 @@ page-component-version: {page-component-version}
 
 page-module: {page-module}
 
-page-relative: {page-relative}
+page-relative: {page-relative} 
 
 == Return link
 

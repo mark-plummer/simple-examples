@@ -1,5 +1,15 @@
 include::ulam@{page-component-name}::page$index.adoc[]
 
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative} 
+
 == Special Features
 
 This is a [.term]*prerelease* version as indicated by the attribute in [.path]_antora.yml_:

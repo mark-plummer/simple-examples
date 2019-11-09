@@ -1,5 +1,17 @@
 = Included page
 
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative} 
+
+== Inclusion stubs and Navigation
+
 Note what happens to the nav tree depending on which flow this is selected from.
 
 Here are links to the inclusion stubs:
