@@ -1,1 +1,9 @@
-* xref:index.adoc[Home Page]
+* xref:index.adoc[Explanation]
+* Pages included into module1 (links working)
+** xref:module1:page1.adoc[Page 1]
+** xref:module1:page2.adoc[Page 2]
+** xref:module1:topic1/topicpage1.adoc[Topic Page 1]
+* Pages included into module2/submodule (links broken)
+** xref:module2:submodule/page1.adoc[Page 1]
+** xref:module2:submodule/page2.adoc[Page 2]
+** xref:module2:submodule/topic1/topicpage1.adoc[Topic Page 1]

@@ -16,7 +16,7 @@ page-relative: {page-relative}
 Component 1 includes the three pages from the shared component in a similar structure as in the source component.
 As these pages are not intended to appear standalone, they are `partials` in the shared component.
 The shared component has these pages in the ROOT module, and they are included into the ROOT module in this component.
-Each page has three links to the other two pages:
+Each page has three links to each of the other two pages:
 
 * To the page itself.
 * To the section for the links to the first of the linked pages.
