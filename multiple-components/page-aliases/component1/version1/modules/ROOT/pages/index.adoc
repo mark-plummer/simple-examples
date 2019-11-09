@@ -10,7 +10,7 @@ page-module: {page-module}
 
 page-relative: {page-relative} 
 
-page-aliases: {page-aliases}
+page-aliases: (none)
 
 == Page Aliases
 
