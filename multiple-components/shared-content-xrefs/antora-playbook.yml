@@ -1,6 +1,7 @@
 site:
   title: Antora Example multiple-components/shared-content-xrefs
   url: http://example.com
+  start_page: component1::index.adoc
 content:
   sources:
   - url: ../../

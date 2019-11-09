@@ -1,4 +1,4 @@
-* xref:index.adoc[Home Page]
+* xref:index.adoc[Explanation]
 * xref:page1.adoc[Page 1]
 * xref:page2.adoc[Page 2]
 * xref:topic1/topicpage1.adoc[Topic Page 1]

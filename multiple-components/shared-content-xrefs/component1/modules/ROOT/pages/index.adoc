@@ -11,6 +11,17 @@ page-module: {page-module}
 page-relative: {page-relative}
 
 
-== A page
+== Shared content with xrefs
 
-And some content.
+Component 1 includes the three pages from the shared component in a similar structure as in the source component.
+As these pages are not intended to appear standalone, they are `partials` in the shared component.
+The shared component has these pages in the ROOT module, and they are included into the ROOT module in this component.
+Each page has three links to the other two pages:
+
+* To the page itself.
+* To the section for the links to the first of the linked pages.
+* To the section for the links to the second of the linked pages.
+
+The links between pages use the coordinates of the page expected to include them, although the links are in the included pages.
+As a partial is not itself a page, it is not possible for an xref to point to a partial itself.
+Instead, it can point to a page that includes the partial.

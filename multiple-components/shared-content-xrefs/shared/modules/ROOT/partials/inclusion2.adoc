@@ -18,7 +18,27 @@ page-relative: {page-relative}
 
 xref::page1.adoc[xref::page1.adoc]
 
+[#link11]
+=== A link to the expected page for inclusion1, section link1:
+
+xref::page1.adoc#link1[xref::page1.adoc#link1]
+
+[#link12]
+=== A link to the expected page for inclusion1, section link2:
+
+xref::page1.adoc#link2[xref::page1.adoc#link2]
+
 [#link2]
 === A link to the expected page for topic/topicinclusion1:
 
 xref::topic1/topicpage1.adoc[xref::topic1/topicpage1.adoc]
+
+[#link21]
+=== A link to the expected page for topic1/topicinclusion1, section link1:
+
+xref::topic1/topicpage1.adoc#link1[xref::topic1/topicpage1.adoc#link1]
+
+[#link22]
+=== A link to the expected page for inclusion2topic1/topicinclusion1, section link2:
+
+xref::topic1/topicpage1.adoc#link2[xref::topic1/topicpage1.adoc#link2]
