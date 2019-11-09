@@ -1,0 +1,4 @@
+* xref:index.adoc[Explanation]
+* xref:page1.adoc[Page 1]
+* xref:topic1/page2.adoc[Page 2 as a topic]
+* xref:topicpage1.adoc[Topic Page 1 as a top level page]

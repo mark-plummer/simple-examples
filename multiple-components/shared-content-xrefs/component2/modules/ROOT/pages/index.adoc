@@ -13,13 +13,13 @@ page-relative: {page-relative}
 
 == Shared content with xrefs
 
-Component 2 includes the three pages from the shared component in a similar structure as in the source component, twice.
-As these pages are not intended to appear standalone, they are `partials` in the shared component.
-The shared component has these pages in the ROOT module, and they are included once into module1 in this component, successfully.
+Component 2 includes the three well-organized pages from the `shared` component in a similar structure as in the source component, twice.
+As these pages are not intended to appear standalone, they are `partials` in the `shared` component.
+The shared component has these pages in the `ROOT` module, and they are included once into `module1` in this component, successfully.
 
 === A limitation
 
-The three shared pages are also included again into a topic `submodule` in module2.
+The three shared pages are also included again into a topic `submodule` in `module2`.
 In this case, the pages appear but the links do not resolve properly.
 For the xref links in the included partials to work, the position in the module must match the expectations expressed in the xrefs.
 

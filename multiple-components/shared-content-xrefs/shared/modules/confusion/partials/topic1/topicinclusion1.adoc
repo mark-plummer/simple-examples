@@ -1,0 +1,45 @@
+= This is shared topic/topicinclusion1
+
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+
+== Links
+
+[#link1]
+=== A link to the expected page for inclusion1:
+
+xref::page1.adoc[xref::page1.adoc]
+
+[#link11]
+=== A link to the expected page for inclusion1, section link1:
+
+xref::page1.adoc#link1[xref::page1.adoc#link1]
+
+[#link12]
+=== A link to the expected page for inclusion1, section link2:
+
+xref::page1.adoc#link2[xref::page1.adoc#link2]
+
+[#link2]
+=== A link to the expected page for inclusion2:
+
+xref::topic1/page2.adoc[xref:topic1/:page2.adoc]
+
+[#link21]
+=== A link to the expected page for inclusion2, section link1:
+
+xref::topic1/page2.adoc#link1[xref::topic1/page2.adoc#link1]
+
+[#link22]
+=== A link to the expected page for inclusion2, section link2:
+
+xref::topic1/page2.adoc#link2[xref::topic1/page2.adoc#link2]
+

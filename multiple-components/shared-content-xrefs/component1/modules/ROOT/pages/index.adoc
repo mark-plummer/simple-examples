@@ -1,5 +1,11 @@
 = {page-component-title}
 
+== Overall note on structure
+
+This project demonstrates how to share multiple pages between projects or components, and how to set up xrefs between the pages.
+For simplicity everything is in one project, however a more likely scenario would be two projects, `component1` plus `shared` and `component2` plus `shared`.
+The `confusion` component is included to demonstrate that it is possible to have different directory structures between the partials in the shared component and the consuming component.
+
 == Page Coordinates
 
 page-component-name: {page-component-name}
@@ -10,12 +16,11 @@ page-module: {page-module}
 
 page-relative: {page-relative}
 
-
 == Shared content with xrefs
 
-Component 1 includes the three pages from the shared component in a similar structure as in the source component.
-As these pages are not intended to appear standalone, they are `partials` in the shared component.
-The shared component has these pages in the ROOT module, and they are included into the ROOT module in this component.
+Component 1 includes the three well-organized pages from the `shared` component in a similar structure as in the source component.
+As these pages are not intended to appear standalone, they are `partials` in the `shared` component.
+The shared component has these pages in the `ROOT` module, and they are included into the `ROOT` module in this component.
 Each page has three links to each of the other two pages:
 
 * To the page itself.

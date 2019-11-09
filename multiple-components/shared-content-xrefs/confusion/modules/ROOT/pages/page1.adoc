@@ -1,0 +1,1 @@
+include::1.0@shared:confusion:partial$inclusion1.adoc[]

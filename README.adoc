@@ -57,5 +57,6 @@ The links will only work locally if you view this page in an asciidoc enabled br
 ** Links between two components link:multiple-components/links-between-components/build/site/index.html[]
 ** Version sorting, prerelease, and versionless for two similar copies of one component, one with plain versions and one with explicit display versions link:multiple-components/versions/build/site/index.html[]
 ** Xref examples showing the 8 possibilities and their effects link:multiple-components/xrefs/build/site/component1/v1/index.html[]
+** Including shared content into several components demonstrating xrefs between partials link:multiple-components/shared-content-xrefs/build/site/index.html[]
 * Distributed components: distributed-components
 ** One component, two source trees link:distributed-components/simple-distributed/build/site/index.html[]. (site start_page)

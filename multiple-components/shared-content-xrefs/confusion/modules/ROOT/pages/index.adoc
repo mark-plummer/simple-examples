@@ -1,0 +1,33 @@
+= {page-component-title}
+
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+== Don't do this
+
+It is highly advisable to use the same structure for your shared partials as for the pages that include them.
+The `Confusion` component illustrates that this is not necessary.
+The inclusions for page1 and topicpage1 are in different relative locations in the `shared` component and the `confusion` component that includes them.
+
+== Confused shared content with xrefs
+
+The `Confusion` component includes three pages from the `shared` component `confusion` module in a dissimilar structure as in the source component.
+As these pages are not intended to appear standalone, they are `partials` in the shared component.
+The shared component has these pages in the `confusion` module, and they are included into the `ROOT` module in this component.
+Each page has three links to each of the other two pages:
+
+* To the page itself.
+* To the section for the links to the first of the linked pages.
+* To the section for the links to the second of the linked pages.
+
+The links between pages use the coordinates of the page expected to include them, although the links are in the included pages.
+As a partial is not itself a page, it is not possible for an xref to point to a partial itself.
+Instead, it can point to a page that includes the partial.
+

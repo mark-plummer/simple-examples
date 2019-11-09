@@ -1,0 +1,1 @@
+include::1.0@shared:confusion:partial$topic1/topicinclusion1.adoc[]
