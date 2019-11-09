@@ -4,9 +4,9 @@ site:
   start_page: simple-distributed-component::index.adoc
 content:
   sources:
-  - url: ../../
+  - url: ./../../
     start_path: distributed-components/simple-distributed/source1
-  - url: ../../
+  - url: ./../../
     start_path: distributed-components/simple-distributed/source2
 ui:
   bundle:

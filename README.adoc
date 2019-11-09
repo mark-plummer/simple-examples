@@ -35,7 +35,7 @@ To avoid any git activity, use the -noGit=true flag.
 == To build everything:
 
 ----
-find . -name antora-playbook.yml|xargs -n 1 bash -c 'for filename; do (cd `dirname "$filename"`; antora antora-playbook.yml); done' bash 
+find . -name antora-playbook.yml|xargs -n 1 antora
 ----
 
 == To clean

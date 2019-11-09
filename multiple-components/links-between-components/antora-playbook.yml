@@ -4,9 +4,9 @@ site:
   start_page: component1::index.adoc
 content:
   sources:
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/links-between-components/component1
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/links-between-components/component2
 ui:
   bundle:

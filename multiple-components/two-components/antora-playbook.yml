@@ -1,12 +1,12 @@
 site:
-  title: Antora Example
+  title: Antora Example multiple-components/two-components
   url: http://example.com
   start_page: component1::index.adoc
 content:
   sources:
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/two-components/component1
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/two-components/component2
 ui:
   bundle:

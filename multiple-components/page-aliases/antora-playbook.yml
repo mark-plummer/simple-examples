@@ -4,15 +4,15 @@ site:
   start_page: component1::index.adoc
 content:
   sources:
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/page-aliases/component1/version1
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/page-aliases/component1/version2
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/page-aliases/component2/version1
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/page-aliases/component2/version2
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/page-aliases/component2/version3
 ui:
   bundle:

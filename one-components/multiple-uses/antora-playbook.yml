@@ -4,7 +4,7 @@ site:
   start_page: multiple-uses::index.adoc
 content:
   sources:
-  - url: ../../
+  - url: ./../../
     start_path: one-components/multiple-uses/component
 ui:
   bundle:

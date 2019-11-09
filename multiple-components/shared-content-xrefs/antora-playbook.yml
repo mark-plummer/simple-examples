@@ -4,13 +4,13 @@ site:
   start_page: component1::index.adoc
 content:
   sources:
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/shared-content-xrefs/shared
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/shared-content-xrefs/component1
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/shared-content-xrefs/component2
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/shared-content-xrefs/confusion
 ui:
   bundle:

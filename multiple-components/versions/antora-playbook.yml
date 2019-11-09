@@ -4,33 +4,33 @@ site:
   start_page: display-versions-single-component::index.adoc
 content:
   sources:
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/display-versions/sourcemaster
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/display-versions/sourceulam
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/display-versions/sourcevenn
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/display-versions/sourcewitt
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/display-versions/sourcev2
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/display-versions/sourcev3
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/display-versions/sourcev4
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/plain-versions/sourcemaster
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/plain-versions/sourceulam
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/plain-versions/sourcevenn
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/plain-versions/sourcewitt
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/plain-versions/sourcev2
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/plain-versions/sourcev3
-  - url: ../../
+  - url: ./../../
     start_path: multiple-components/versions/plain-versions/sourcev4
 ui:
   bundle:

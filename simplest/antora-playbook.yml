@@ -3,7 +3,7 @@ site:
   url: http://example.com
 content:
   sources:
-  - url: ../
+  - url: ./../
     start_path: simplest/component
 ui:
   bundle:
