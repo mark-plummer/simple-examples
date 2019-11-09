@@ -13,10 +13,12 @@ page-relative: {page-relative}
 
 == Links
 
+[#link1]
 === A link to the expected page for inclusion1:
 
 xref::page1.adoc[xref::page1.adoc]
 
+[#link2]
 === A link to the expected page for topic/topicinclusion1:
 
 xref::topic1/topicpage1.adoc[xref::topic1/topicpage1.adoc]
