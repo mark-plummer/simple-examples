@@ -1,0 +1,18 @@
+= {page-component-title}
+
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+
+== A Component with no ROOT module
+
+While much Antora documentation is written so as to suggest that a ROOT module is needed in a component, it isn't.
+There may be no obvious use case for having no ROOT module, but it's still useful to know it the omission works.
+Note that the path to the pages has the explicit module name in it.
