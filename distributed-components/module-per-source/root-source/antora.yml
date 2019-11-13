@@ -1,6 +1,8 @@
-name: root-source 
-title: Component root-source 
+name: component1 
+title: Distributed Component 1 
 version: '1.0' 
 start_page: ROOT:index.adoc 
 nav: 
 - modules/ROOT/nav.adoc
+- modules/module1/nav.adoc
+- modules/module2/nav.adoc

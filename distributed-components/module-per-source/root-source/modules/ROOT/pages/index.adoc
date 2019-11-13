@@ -11,6 +11,9 @@ page-module: {page-module}
 page-relative: {page-relative}
 
 
-== A page
+== Organizing a distributed component
 
-And some content.
+A distributed component is assembled from any number of sources where the antora.yml component descriptors share the same component name and version.
+As long as you avoid name collisions in the content, any organization is possible.
+A convenient layout is to put each module into one source; a source may contain several modules, but all source for a given module is entirely within a single source.
+This project illustrates this layout choice.

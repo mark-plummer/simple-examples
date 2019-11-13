@@ -1,6 +1,2 @@
-name: module2-source 
-title: Component module2-source 
+name: component1
 version: '1.0' 
-start_page: ROOT:index.adoc 
-nav: 
-- modules/ROOT/nav.adoc
