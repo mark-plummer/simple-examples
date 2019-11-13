@@ -13,4 +13,4 @@ page-relative: {page-relative}
 
 == A page
 
-This page is from module1-source.
+This page is from module2-source.

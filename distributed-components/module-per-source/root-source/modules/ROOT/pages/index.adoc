@@ -17,3 +17,5 @@ A distributed component is assembled from any number of sources where the antora
 As long as you avoid name collisions in the content, any organization is possible.
 A convenient layout is to put each module into one source; a source may contain several modules, but all source for a given module is entirely within a single source.
 This project illustrates this layout choice.
+
+This page is from root-source.

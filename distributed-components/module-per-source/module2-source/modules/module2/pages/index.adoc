@@ -13,4 +13,4 @@ page-relative: {page-relative}
 
 == A page
 
-And some content.
+This page is from module2-3-source.
