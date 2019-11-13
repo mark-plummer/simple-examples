@@ -1,0 +1,26 @@
+= {page-component-title}
+
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+
+== Additional Page Information
+
+The site path for this page is `component/1.0/topic1/topic1-module.html`
+
+=== ROOT module pages
+
+* xref:ROOT:topic1/topic1.adoc[`xref:ROOT:topic1/topic1.adoc`, a topic page in the ROOT module]
+* xref:ROOT:topic1/subtopic1/subtopic1.adoc[`xref:ROOT:topic1/subtopic1/subtopic1.adoc`, a subtopic page in the ROOT mdoule]
+
+=== topic1 module pages
+
+* xref:topic1-module.adoc[`xref:topic1-module.adoc`, a top level-page in the topic1 module (this page)]
+* xref:subtopic1/topic1-module-subtopic1.adoc[`xref:subtopic1/topic1-module-subtopic1.adoc`, a topic page in the topic1 module]

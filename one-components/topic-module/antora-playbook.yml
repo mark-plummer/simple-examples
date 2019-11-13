@@ -1,6 +1,7 @@
 site:
   title: Antora Example one-components/topic-module
   url: http://example.com
+  start_page: component::index.adoc
 content:
   sources:
   - url: ./../../

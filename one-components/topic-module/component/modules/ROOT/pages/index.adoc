@@ -11,6 +11,27 @@ page-module: {page-module}
 page-relative: {page-relative}
 
 
-== A page
+== Topics and Modules
 
-And some content.
+This example demonstrates the similarities and some differences between topics and modules in a component.
+In a module, the directory structure of `pages` is copied into the url structure of the site, rooted at the module URL.
+For the `ROOT` module, that is the component-version URL.
+For an explicitly named module, that is `<component>/<version>/<module>`.
+Therefore, a `"topic`" directory in the `ROOT` module will be mapped to the same URL base as a module named with the topic name.
+
+In this example, there are:
+
+=== ROOT module pages
+
+* xref:topic1/topic1.adoc[`xref:topic1/topic1.adoc`, a topic page in the ROOT module]
+* xref:topic1/subtopic1/subtopic1.adoc[`xref:topic1/subtopic1/subtopic1.adoc`, a subtopic page in the ROOT mdoule]
+
+=== topic1 module pages
+
+* xref:topic1:topic1-module.adoc[`xref:topic1:topic1-module.adoc`, a top level-page in the topic1 module]
+* xref:topic1:subtopic1/topic1-module-subtopic1.adoc[`xref:topic1:subtopic1/topic1-module-subtopic1.adoc`, a topic page in the topic1 module]
+
+Note that the topic page in the ROOT module and the top level page in the topic1 module end up at the same base URL.
+
+To avoid unnecessary confusion and the likelyhood of collisions, keep all the content that ends up at a path in the same module at the appropriate topic.
+

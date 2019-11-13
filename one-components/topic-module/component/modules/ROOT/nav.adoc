@@ -1,1 +1,8 @@
 * xref:index.adoc[Home Page]
+* topic1 as topic
+** xref:topic1/topic1.adoc[xref:topic1/topic1.adoc]
+** xref:topic1/subtopic1/subtopic1.adoc[xref:topic1/subtopic1/subtopic1.adoc]
+* topic1 as module
+** xref:topic1:topic1-module.adoc[xref:topic1:topic1-module.adoc]
+** xref:topic1:subtopic1/topic1-module-subtopic1.adoc[ xref:topic1:subtopic1/topic1-module-subtopic1.adoc]
+
