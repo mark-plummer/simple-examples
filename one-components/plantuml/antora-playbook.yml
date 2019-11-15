@@ -1,0 +1,11 @@
+site:
+  title: Antora Example one-components/plantuml
+  url: http://example.com
+content:
+  sources:
+  - url: ./../../
+    start_path: one-components/plantuml/component
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
