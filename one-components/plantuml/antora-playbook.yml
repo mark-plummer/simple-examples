@@ -1,6 +1,7 @@
 site:
   title: Antora Example one-components/plantuml
   url: http://example.com
+  start_page: plantuml::index.adoc
 content:
   sources:
   - url: ./../../
@@ -9,3 +10,12 @@ ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+output:
+  clean: true
+asciidoc:
+  extensions:
+    - asciidoctor-plantuml
+  attributes:
+    plantuml-server-url: 'http://www.plantuml.com/plantuml'
+    plantuml-fetch-diagram: true
+    plantuml-default-format: svg

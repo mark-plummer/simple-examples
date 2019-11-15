@@ -1,5 +1,5 @@
-name: component 
-title: Component component 
+name: plantuml 
+title: PlantUML Example
 version: '1.0' 
 start_page: ROOT:index.adoc 
 nav: 

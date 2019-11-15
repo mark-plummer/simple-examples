@@ -4,13 +4,13 @@
 
 === Embedded
 
-[plantuml,target=ab-embedded,format=svg]
+[plantuml,ab-embedded]
 ----
 alice -> bob
 bob -> alice
 ----
 
-[plantuml,target=ab-embedded,format=png]
+[plantuml,ab-embedded,png]
 ----
 alice -> bob
 bob -> alice
@@ -24,7 +24,7 @@ include::partial$ab-all.adoc[]
 
 [plantuml,target=ab-partial,format=svg]
 ----
-include::partial$ab.adoc[]
+include::partial$ab.puml[]
 ----
 
 === Entire Diagram in an example
@@ -33,7 +33,7 @@ include::example$ab-all.puml[]
 
 === Diagram contents in an example
 
-[plantuml,target=ab-example,format=svg]
+[plantuml,ab-example]
 ----
 include::example$ab.puml[]
 ----

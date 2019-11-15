@@ -1,0 +1,5 @@
+[plantuml,ab-example-all]
+----
+alice -> bob
+bob -> alice
+----
