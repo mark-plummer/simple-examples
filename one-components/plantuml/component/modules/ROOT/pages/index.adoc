@@ -24,7 +24,7 @@ include::partial$ab-all.adoc[]
 
 [plantuml,target=ab-partial,format=svg]
 ----
-include::partial$ab.adoc[]
+include::partial$ab.puml[]
 ----
 
 === Entire Diagram in an example
