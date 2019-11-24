@@ -17,5 +17,10 @@ asciidoc:
     - asciidoctor-plantuml
   attributes:
     plantuml-server-url: 'http://www.plantuml.com/plantuml'
-    plantuml-fetch-diagram: true
+#    plantuml-fetch-diagram: true
     plantuml-default-format: svg
+# required:
+    allow-uri-read: true
+#    data-uri: true
+#    inline: true
+    safe: false

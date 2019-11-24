@@ -2,14 +2,32 @@
 
 == Ways of using asciidoctor-plantuml
 
+=== Remotes
+
+.Inline remote svg
+image::http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuKhCoKnELT2rKqZAJ-82OX0JBCRba9gN0bG10000[format=svg,opts=inline]
+
+////
+.data-uri remote svg
+image::http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuKhCoKnELT2rKqZAJ-82OX0JBCRba9gN0bG10000[format=svg,opts=data-uri,safe=false]
+
+.data-uri remote png
+image::http://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhCoKnELT2rKqZAJ-82OX0JBCRba9gN0bG10000[format=png,opts=data-uri]
+
+.data-uri remote png from asciidoctor tests
+image::https://raw.githubusercontent.com/asciidoctor/asciidoctor.js/master/packages/core/spec/fixtures/images/cat.png[format=png,opts=data-uri]
+////
+
 === Embedded
 
+.As svg
 [plantuml,target=ab-embedded,format=svg]
 ----
 alice -> bob
 bob -> alice
 ----
 
+.As png
 [plantuml,target=ab-embedded,format=png]
 ----
 alice -> bob
