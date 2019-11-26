@@ -1,4 +1,5 @@
-[plantuml,ab-partial-all]
+.As svg [plantuml,ab-partial-all-1,svg]
+[plantuml,ab-partial-all-1,svg]
 ----
 alice -> bob
 bob -> alice

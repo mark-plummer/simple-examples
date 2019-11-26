@@ -1,0 +1,51 @@
+= {page-component-title}
+:plantuml-default-format: svg
+
+== Choices for the generated html.
+
+=== Explicit block attributes
+
+`:plantuml-fetch-diagram:` is not yet set on this page, so this uses a remote URL to the plantuml server.
+
+.As svg
+[plantuml]
+----
+alice -> bob
+bob -> alice
+----
+
+`:plantuml-fetch-diagram:` is now set on this page, so any further links will be to downloaded diagrams in `_images`.
+
+:plantuml-fetch-diagram:
+
+.As svg
+[plantuml,target=ab-embedded-e1]
+----
+alice -> bobby
+bobby -> alice
+----
+
+.As svg inline
+[plantuml,options=inline]
+----
+alice -> robert
+robert -> alice
+----
+
+.As svg interactive
+[plantuml,options=interactive]
+----
+alicia -> bob
+bob -> alicia
+----
+
+=== Default page attribute `:plantuml-default-options: inline`
+
+:plantuml-default-options: inline
+
+.As svg inline from page attribute
+[plantuml]
+----
+alice -> robert
+robert -> alice
+----

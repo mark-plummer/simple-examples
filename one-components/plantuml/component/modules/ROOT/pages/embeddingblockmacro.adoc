@@ -1,0 +1,31 @@
+= {page-component-title}
+:plantuml-default-format: svg
+
+== Choices for the generated html.
+
+=== Explicit block attributes
+
+`:plantuml-fetch-diagram:` is not yet set on this page, so this uses a remote URL to the plantuml server.
+
+.As svg
+plantuml::partial$ab.puml[]
+
+`:plantuml-fetch-diagram:` is now set on this page, so any further links will be to downloaded diagrams in `_images`.
+
+:plantuml-fetch-diagram:
+
+.As svg
+plantuml::partial$ab.puml[target=ab-embedded-em1]
+
+.As svg inline
+plantuml::partial$ab.puml[options=inline]
+
+.As svg interactive
+plantuml::partial$ab.puml[options=interactive]
+
+=== Default page attribute `:plantuml-default-options: inline`
+
+:plantuml-default-options: inline
+
+.As svg inline from page attribute
+plantuml::partial$ab.puml[]

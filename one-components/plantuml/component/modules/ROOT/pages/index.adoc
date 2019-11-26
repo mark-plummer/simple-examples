@@ -1,57 +1,28 @@
 = {page-component-title}
 
-== Ways of using asciidoctor-plantuml
+== Ways of using https://github.com/eshepelyuk/asciidoctor-plantuml.js[asciidoctor-plantuml]
 
-=== Remotes
+For this example, you must install asciidoctor-plantuml.js so it is accessible to your Antora installation.
+If you have installed Antora globally, you can run:
 
-.Inline remote svg
-image::http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuKhCoKnELT2rKqZAJ-82OX0JBCRba9gN0bG10000[format=svg,opts=inline]
+```
+npm install -g asciidoctor-plantuml
+```
 
-////
-.data-uri remote svg
-image::http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuKhCoKnELT2rKqZAJ-82OX0JBCRba9gN0bG10000[format=svg,opts=data-uri,safe=false]
+Currently this example only explores plantuml source format diagrams.
+With the exception of `ditaa` source, for which only `png` output is supported, other diagram types should have similar capabilities and configuration.
 
-.data-uri remote png
-image::http://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhCoKnELT2rKqZAJ-82OX0JBCRba9gN0bG10000[format=png,opts=data-uri]
+=== xref:sourcelocation.adoc[Choices for source diagram location]
 
-.data-uri remote png from asciidoctor tests
-image::https://raw.githubusercontent.com/asciidoctor/asciidoctor.js/master/packages/core/spec/fixtures/images/cat.png[format=png,opts=data-uri]
-////
+This page demonstrates the possible locations for the diagram source using a `[plantuml]` block.
 
-=== Embedded
+=== xref:embedding.adoc[Choices for generated html]
 
-.As svg
-[plantuml,target=ab-embedded,format=svg]
-----
-alice -> bob
-bob -> alice
-----
+This page demonstrates some of the choices for the style of generated html. Since `data-uri` is not officially supported by Antora, and currently does not work for `png` impages pending an asciidoctor upgrade, there are no `data-uri` examples.
 
-.As png
-[plantuml,target=ab-embedded,format=png]
-----
-alice -> bob
-bob -> alice
-----
+=== xref:embeddingblockmacro.adoc[Choices for generated html, using the block macro]
 
-=== Entire Diagram in a partial
+This demonstrates the same choices but using the `plantuml::` block macro with a reference to the diagram source in `partials`
 
-include::partial$ab-all.adoc[]
 
-=== Diagram contents in a partial
 
-[plantuml,target=ab-partial,format=svg]
-----
-include::partial$ab.puml[]
-----
-
-=== Entire Diagram in an example
-
-include::example$ab-all.puml[]
-
-=== Diagram contents in an example
-
-[plantuml,target=ab-example,format=svg]
-----
-include::example$ab.puml[]
-----
