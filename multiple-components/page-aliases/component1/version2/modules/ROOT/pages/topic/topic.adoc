@@ -17,4 +17,6 @@ page-aliases: {page-aliases}
 
 link:../../topic/topic.html[direct link link:../../topic/topic.html to static bounce page]
 
-xref::master@component1:{page-module}:{page-relative}[link to alias master@component1:{page-module}:{page-relative}]
+An xref to an alias currently is not computed:
+
+xref:master@component1:{page-module}:{page-relative}[link to alias master@component1:{page-module}:{page-relative}]

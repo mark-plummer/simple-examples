@@ -1,7 +1,7 @@
 site:
   title: Antora Example multiple-components/page-aliases
   url: http://example.com
-  start_page: component1::index.adoc
+  start_page: v1@component1::index.adoc
 content:
   sources:
   - url: ./../../

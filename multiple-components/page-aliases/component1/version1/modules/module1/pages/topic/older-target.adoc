@@ -22,6 +22,9 @@ What do partial page ids in the alias produce?
 Specifying relative is required.
 There are 8 combinations of version, component, and module, and several have different effects based on whether the component is otherwise present in the site and whether the version is specified to be "`master`".
 
+On this page, the links are of the form `link:<path>` since xrefs to aliases are not currently supported.
+All the links lead back to this page; the alias is shown as the link.
+
 === 1. Specifying nothing (except the required relative)
 
 link:older-target-source-1.html[topic/older-target-source-1.adoc]
