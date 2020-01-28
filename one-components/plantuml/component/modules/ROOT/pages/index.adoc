@@ -9,6 +9,9 @@ If you have installed Antora globally, you can run:
 npm install -g asciidoctor-plantuml
 ```
 
+The html pages in a browser will look rather repetitive.
+It is perhaps more interesting to look at the html source to see the effects of the different configurations.
+
 Currently this example only explores plantuml source format diagrams.
 With the exception of `ditaa` source, for which only `png` output is supported, other diagram types should have similar capabilities and configuration.
 
