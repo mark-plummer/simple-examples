@@ -1,0 +1,65 @@
+= {page-component-title}
+
+== Positional, named, and page/global attribute settings for the plantuml block and block macro
+
+.no set attributes block.
+[plantuml]
+----
+include::partial$ab.puml[]
+----
+
+.no set attributes block macro.
+plantuml::partial$ab.puml[]
+
+.target named attribute, without plantuml-fetch-diagrams set, as block.
+[plantuml, target=ab-block]
+----
+include::partial$ab.puml[]
+----
+
+.target named attribute, without plantuml-fetch-diagrams set, as block macro.
+plantuml::partial$ab.puml[target=ab-blockmacro]
+
+.format named attribute, inline, without plantuml-fetch-diagrams set, as block.
+[plantuml, format=svg, options=inline]
+----
+include::partial$ab.puml[]
+----
+
+.format named attribute, inline, without plantuml-fetch-diagrams set, as block macro.
+plantuml::partial$ab.puml[format=svg, options=inline]
+
+.format named attribute, without plantuml-fetch-diagrams set, as block.
+[plantuml, format=svg]
+----
+include::partial$ab.puml[]
+----
+
+.format named attribute, without plantuml-fetch-diagrams set, as block macro.
+plantuml::partial$ab.puml[format=svg]
+
+=== Simplest
+
+:plantuml-default-format: svg
+:plantuml-default-options: inline
+
+[plantuml]
+----
+include::partial$ab.puml[]
+----
+
+.no set attributes block macro.
+plantuml::partial$ab.puml[]
+
+
+=== With fetched diagrams (plantuml-fetch-diagram set)
+
+.format named attribute, without plantuml-fetch-diagrams set, as block.
+[plantuml, format=svg]
+----
+include::partial$ab.puml[]
+----
+
+.format named attribute, without plantuml-fetch-diagrams set, as block macro.
+plantuml::partial$ab.puml[format=svg]
+
