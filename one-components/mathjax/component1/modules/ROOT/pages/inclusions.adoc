@@ -1,0 +1,22 @@
+= Including pages with stem content
+:stem:
+:a: a
+:b: b
+:sqroot: sqrt
+:expr: sqrt(9) = 3
+:x: x
+:y: y
+:frac: \frac
+:expr: v=\frac{{x}}{x^2+y^2}
+
+== Limitations
+
+* The top level including page must include the '`:stem:`' declaration and all attribute definitions used.
+* To avoid interference between formats, either use only one format or use the explicit block and macro format names.
+* Since the attribute definitions must all be repeated on the including page, collisions may occur.
+For instance here, there are two definitions of '`expr`', and the second one is used in the asciimath attribute substitution example.
+This inadvertently shows that asciimath can properly interpret some latexmath, however relying on this is apt to produce unexpected results.
+
+include::asciimath.adoc[leveloffset=+1]
+
+include::latexmath.adoc[leveloffset=+1]

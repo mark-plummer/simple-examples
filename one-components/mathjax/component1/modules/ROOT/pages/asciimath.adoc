@@ -1,0 +1,69 @@
+= Asciimath using explicit block and macro names
+:stem: latexmath
+:a: a
+:b: b
+:sqroot: sqrt
+:expr: sqrt(9) = 3
+
+== Configuration
+
+* The `:stem:` attribute in the document header specifies latexmath.
+* In these examples, use of asciimath is signaled using the explicit '`asciimath`' block and macro name notation.
+
+== Examples
+
+=== Asciimath block
+
+A matrix followed by some square roots can be written as 
+
+[asciimath]
+++++
+[[a,b],[c,d]]((n),(k))
+sqrt(4) = 2
+sqrt(9) = 3
+++++
+
+=== Inline in a paragraph
+
+Some text might suddenly need to show some matrix calculations, such as asciimath:[[[a,b\],[c,d\]\]((n),(k))].
+
+=== Inline, using attribute substitution
+
+If you are not interested in exciting formulae such as asciimath:a[[[{a},{b}\],[c,d\]\]((n),(k))], perhaps you would find the more mundane asciimath:a[{sqroot}(4) = 2] or even asciimath:a[{expr}] more to your taste.
+
+=== Lists
+
+
+* A matrix can be written as asciimath:[[[a,b\],[c,d\]\]((n),(k))].
+** A square root looks like asciimath:[sqrt(4) = 2]
+* Another square root looks like asciimath:[sqrt(9) = 3]
+
+=== Section headings
+
+== A matrix can be written as asciimath:[[[a,b\],[c,d\]\]((n),(k))].
+
+=== A square root looks like asciimath:[sqrt(4) = 2].
+
+==== Another square root looks like asciimath:[sqrt(9) = 3].
+
+=== Tables
+
+
+.Math Table
+[cols="3*",options="header,footer"]
+|===
+|Header matrix: asciimath:[[[a,b\],[c,d\]\]((n),(k))]
+|Header square root: asciimath:[sqrt(4) = 2]
+|Header square root: asciimath:[sqrt(9) = 3]
+
+|A matrix can be written as asciimath:[[[a,b\],[c,d\]\]((n),(k))].
+|A square root looks like asciimath:[sqrt(4) = 2]
+|Another square root looks like asciimath:[sqrt(9) = 3]
+
+|Footer matrix: asciimath:[[[a,b\],[c,d\]\]((n),(k))]
+|Footer square root: asciimath:[sqrt(4) = 2]
+|Footer square root: asciimath:[sqrt(9) = 3]
+
+|===
+
+

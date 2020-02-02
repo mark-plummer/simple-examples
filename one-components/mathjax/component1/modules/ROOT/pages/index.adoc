@@ -1,16 +1,17 @@
 = {page-component-title}
 
-== Page Coordinates
+== asciidoctor-mathjax extension examples in Antora
 
-page-component-name: {page-component-name}
+This example shows different ways of using the asciidoctor-mathjax.js extension in Antora.
 
-page-component-version: {page-component-version}
+xref:stem-asciimath.adoc[Asciimath (default) format using '`stem`' notation]
 
-page-module: {page-module}
+xref:stem-latexmath.adoc[Latexmath format using '`stem`' notation]
 
-page-relative: {page-relative}
+xref:asciimath.adoc[Asciimath using '`asciimath`' notation]
 
+xref:latexmath.adoc[Latexmath using '`latexmath`' notation]
 
-== A page
+xref:mixed.adoc[Using both asciimath and latexmath on the same page]
 
-And some content.
+xref:inclusions.adoc[Including pages with stem content]

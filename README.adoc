@@ -55,6 +55,7 @@ The links will only work locally if you view this page in an asciidoc enabled br
 ** Including hidden files whose names start with '_' underscore link:one-components/underscore-include/build/site/index.html[]
 ** Including the same content in multiple nav positions or flows using include stubs link:one-components/multiple-uses/build/site/index.html[]
 ** Using the asciidoctor-plantuml.js extension, demonstrating especially inline/interactive svg link:one-components/plantuml/build/site/index.html[]
+** Using the asciidoctor-mathjax.js extension for server-side stem rendering link:one-components/mathjax/build/site/index.html[]
 * Multiple components: multiple-components
 ** Two components link:multiple-components/two-components/build/site/index.html[]
 ** Links between two components link:multiple-components/links-between-components/build/site/index.html[]

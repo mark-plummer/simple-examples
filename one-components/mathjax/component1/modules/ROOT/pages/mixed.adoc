@@ -1,0 +1,111 @@
+= Asciimath and Latexmath on the same page using explicit block and macro names
+:stem: latexmath
+:a: a
+:b: b
+:sqroot: sqrt
+:expr1: sqrt(9) = 3
+:x: x
+:y: y
+:frac: \frac
+:expr2: v=\frac{{x}}{x^2+y^2}
+
+
+== Configuration
+
+* The `:stem:` attribute in the document header specifies latexmath.
+* In these examples, use of asciimath or latexmath is signaled using the explicit '`asciimath`' or '`latexmath`' block and macro name notation.
+This explicit specification will always work, even through included pages.
+Relying on different document attribute values may not work with inclusions.
+
+== Asciimath Examples
+
+=== Asciimath block
+
+A matrix followed by some square roots can be written as 
+
+[asciimath]
+++++
+[[a,b],[c,d]]((n),(k))
+sqrt(4) = 2
+sqrt(9) = 3
+++++
+
+=== Inline in a paragraph
+
+Some text might suddenly need to show some matrix calculations, such as asciimath:[[[a,b\],[c,d\]\]((n),(k))].
+
+=== Inline, using attribute substitution
+
+If you are not interested in exciting formulae such as asciimath:a[[[{a},{b}\],[c,d\]\]((n),(k))], perhaps you would find the more mundane asciimath:a[{sqroot}(4) = 2] or even asciimath:a[{expr1}] more to your taste.
+
+=== Lists
+
+
+* A matrix can be written as asciimath:[[[a,b\],[c,d\]\]((n),(k))].
+** A square root looks like asciimath:[sqrt(4) = 2]
+* Another square root looks like asciimath:[sqrt(9) = 3]
+
+== Latexmath Examples
+
+=== Latexmath block
+
+Some vector components are
+
+[latexmath]
+++++
+u=\frac{-y}{x^2+y^2}\,,\quad
+v=\frac{x}{x^2+y^2}\,,\quad\text{and}\quad
+w=0\,.
+++++
+
+=== Inline in a paragraph
+
+Some text might suddenly need to show an integral written as latexmath:[\iint xy^2\,dx\,dy ].
+A fraction looks like latexmath:[u=\frac{-y}{x^2+y^2}].
+Another fraction looks like latexmath:[v=\frac{x}{x^2+y^2}].
+
+
+=== Inline, using attribute substitution
+
+If you are not interested in exciting formulae such as latexmath:a[\iint {x}{y}^2\,dx\,dy ], perhaps you would find the more mundane latexmath:a[u={frac}{-y}{x^2+y^2}] or even latexmath:a[{expr2}] more to your taste.
+
+=== Lists
+
+
+* An integral can be written as latexmath:[\iint xy^2\,dx\,dy].
+** A fraction looks like latexmath:[u=\frac{-y}{x^2+y^2}].
+* Another fraction looks like latexmath:[v=\frac{x}{x^2+y^2}].
+
+
+
+== More Asciimath examples
+
+=== Section headings
+
+== A matrix can be written as asciimath:[[[a,b\],[c,d\]\]((n),(k))].
+
+=== A square root looks like asciimath:[sqrt(4) = 2].
+
+==== Another square root looks like asciimath:[sqrt(9) = 3].
+
+=== Tables
+
+
+.Math Table
+[cols="3*",options="header,footer"]
+|===
+|Header matrix: asciimath:[[[a,b\],[c,d\]\]((n),(k))]
+|Header square root: asciimath:[sqrt(4) = 2]
+|Header square root: asciimath:[sqrt(9) = 3]
+
+|A matrix can be written as asciimath:[[[a,b\],[c,d\]\]((n),(k))].
+|A square root looks like asciimath:[sqrt(4) = 2]
+|Another square root looks like asciimath:[sqrt(9) = 3]
+
+|Footer matrix: asciimath:[[[a,b\],[c,d\]\]((n),(k))]
+|Footer square root: asciimath:[sqrt(4) = 2]
+|Footer square root: asciimath:[sqrt(9) = 3]
+
+|===
+
+

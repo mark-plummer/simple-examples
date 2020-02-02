@@ -1,0 +1,70 @@
+= Latexmath using stem
+:stem: latexmath
+:x: x
+:y: y
+:frac: \frac
+:expr: v=\frac{{x}}{x^2+y^2}
+
+== Configuration
+
+* asciimath is the default mathjax format, so the document header specifies `:stem: latexmath`.
+* In these examples, stem notation is signaled using the generic '`stem`' notation.
+
+== Examples
+
+=== Stem block
+
+Some vector components are
+
+[stem]
+++++
+u=\frac{-y}{x^2+y^2}\,,\quad
+v=\frac{x}{x^2+y^2}\,,\quad\text{and}\quad
+w=0\,.
+++++
+
+=== Inline in a paragraph
+
+Some text might suddenly need to show an integral written as stem:[\iint xy^2\,dx\,dy ].
+A fraction looks like stem:[u=\frac{-y}{x^2+y^2}].
+Another fraction looks like stem:[v=\frac{x}{x^2+y^2}].
+
+
+=== Inline, using attribute substitution
+
+If you are not interested in exciting formulae such as stem:a[\iint {x}{y}^2\,dx\,dy ], perhaps you would find the more mundane stem:a[u={frac}{-y}{x^2+y^2}] or even stem:a[{expr}] more to your taste.
+
+=== Lists
+
+
+* An integral can be written as stem:[\iint xy^2\,dx\,dy].
+** A fraction looks like stem:[u=\frac{-y}{x^2+y^2}].
+* Another fraction looks like stem:[v=\frac{x}{x^2+y^2}].
+
+=== Section headings
+
+== An integral can be written as stem:[\iint xy^2\,dx\,dy].
+
+=== A fraction looks like stem:[u=\frac{-y}{x^2+y^2}].
+
+==== Another fraction looks like stem:[v=\frac{x}{x^2+y^2}].
+
+=== Tables
+
+
+.Math Table
+[cols="3*",options="header,footer"]
+|===
+|Header integral can be written as stem:[\iint xy^2\,dx\,dy ].
+|Header fraction looks like stem:[u=\frac{-y}{x^2+y^2}].
+|Header another fraction looks like stem:[v=\frac{x}{x^2+y^2}].
+
+|An integral can be written as stem:[\iint xy^2\,dx\,dy ].
+|A fraction looks like stem:[u=\frac{-y}{x^2+y^2}].
+|Another fraction looks like stem:[v=\frac{x}{x^2+y^2}].
+
+|Footer integral can be written as stem:[\iint xy^2\,dx\,dy ].
+|Footer fraction looks like stem:[u=\frac{-y}{x^2+y^2}].
+|Footer another fraction looks like stem:[v=\frac{x}{x^2+y^2}].
+
+|===

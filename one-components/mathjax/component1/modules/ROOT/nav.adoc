@@ -1,1 +1,17 @@
-* xref:index.adoc[Home Page]
+* xref:index.adoc[Serverside Mathjax rendering in Antora]
+
+* Using stem block and macro notation
+
+** xref:stem-asciimath.adoc[Asciimath (default) format using '`stem`' notation]
+
+** xref:stem-latexmath.adoc[Latexmath format using '`stem`' notation]
+
+* Using explicit format block and macro notation
+
+** xref:asciimath.adoc[Asciimath using '`asciimath`' notation]
+
+** xref:latexmath.adoc[Latexmath using '`latexmath`' notation]
+
+* xref:mixed.adoc[Using both asciimath and latexmath on the same page]
+
+* xref:inclusions.adoc[Including pages with stem content]

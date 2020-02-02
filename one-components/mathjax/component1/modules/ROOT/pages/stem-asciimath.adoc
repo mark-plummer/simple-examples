@@ -1,0 +1,69 @@
+= Asciimath using stem
+:stem:
+:a: a
+:b: b
+:sqroot: sqrt
+:expr: sqrt(9) = 3
+
+== Configuration
+
+* asciimath is the default mathjax format, so including the `:stem:` attribute in the document header is sufficient.
+* In these examples, stem notation is signaled using the generic '`stem`' notation.
+
+== Examples
+
+=== Stem block
+
+A matrix followed by some square roots can be written as 
+
+[stem]
+++++
+[[a,b],[c,d]]((n),(k))
+sqrt(4) = 2
+sqrt(9) = 3
+++++
+
+=== Inline in a paragraph
+
+Some text might suddenly need to show some matrix calculations, such as stem:[[[a,b\],[c,d\]\]((n),(k))].
+
+=== Inline, using attribute substitution
+
+If you are not interested in exciting formulae such as stem:a[[[{a},{b}\],[c,d\]\]((n),(k))], perhaps you would find the more mundane stem:a[{sqroot}(4) = 2] or even stem:a[{expr}] more to your taste.
+
+=== Lists
+
+
+* A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
+** A square root looks like stem:[sqrt(4) = 2]
+* Another square root looks like stem:[sqrt(9) = 3]
+
+=== Section headings
+
+== A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
+
+=== A square root looks like stem:[sqrt(4) = 2].
+
+==== Another square root looks like stem:[sqrt(9) = 3].
+
+=== Tables
+
+
+.Math Table
+[cols="3*",options="header,footer"]
+|===
+|Header matrix: stem:[[[a,b\],[c,d\]\]((n),(k))]
+|Header square root: stem:[sqrt(4) = 2]
+|Header square root: stem:[sqrt(9) = 3]
+
+|A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
+|A square root looks like stem:[sqrt(4) = 2]
+|Another square root looks like stem:[sqrt(9) = 3]
+
+|Footer matrix: stem:[[[a,b\],[c,d\]\]((n),(k))]
+|Footer square root: stem:[sqrt(4) = 2]
+|Footer square root: stem:[sqrt(9) = 3]
+
+|===
+
+

@@ -1,0 +1,70 @@
+= Latexmath using explicit block and macro names
+:stem: asciimath
+:x: x
+:y: y
+:frac: \frac
+:expr: v=\frac{{x}}{x^2+y^2}
+
+== Configuration
+
+* The document header specifies `:stem: asciimath`.
+* In these examples, use of latexmath is signaled using the explicit '`latexmath`' block and macro name notation.
+
+== Examples
+
+=== Latexmath block
+
+Some vector components are
+
+[latexmath]
+++++
+u=\frac{-y}{x^2+y^2}\,,\quad
+v=\frac{x}{x^2+y^2}\,,\quad\text{and}\quad
+w=0\,.
+++++
+
+=== Inline in a paragraph
+
+Some text might suddenly need to show an integral written as latexmath:[\iint xy^2\,dx\,dy ].
+A fraction looks like latexmath:[u=\frac{-y}{x^2+y^2}].
+Another fraction looks like latexmath:[v=\frac{x}{x^2+y^2}].
+
+
+=== Inline, using attribute substitution
+
+If you are not interested in exciting formulae such as latexmath:a[\iint {x}{y}^2\,dx\,dy ], perhaps you would find the more mundane latexmath:a[u={frac}{-y}{x^2+y^2}] or even latexmath:a[{expr}] more to your taste.
+
+=== Lists
+
+
+* An integral can be written as latexmath:[\iint xy^2\,dx\,dy].
+** A fraction looks like latexmath:[u=\frac{-y}{x^2+y^2}].
+* Another fraction looks like latexmath:[v=\frac{x}{x^2+y^2}].
+
+=== Section headings
+
+== An integral can be written as latexmath:[\iint xy^2\,dx\,dy].
+
+=== A fraction looks like latexmath:[u=\frac{-y}{x^2+y^2}].
+
+==== Another fraction looks like latexmath:[v=\frac{x}{x^2+y^2}].
+
+=== Tables
+
+
+.Math Table
+[cols="3*",options="header,footer"]
+|===
+|Header integral can be written as latexmath:[\iint xy^2\,dx\,dy ].
+|Header fraction looks like latexmath:[u=\frac{-y}{x^2+y^2}].
+|Header another fraction looks like latexmath:[v=\frac{x}{x^2+y^2}].
+
+|An integral can be written as latexmath:[\iint xy^2\,dx\,dy ].
+|A fraction looks like latexmath:[u=\frac{-y}{x^2+y^2}].
+|Another fraction looks like latexmath:[v=\frac{x}{x^2+y^2}].
+
+|Footer integral can be written as latexmath:[\iint xy^2\,dx\,dy ].
+|Footer fraction looks like latexmath:[u=\frac{-y}{x^2+y^2}].
+|Footer another fraction looks like latexmath:[v=\frac{x}{x^2+y^2}].
+
+|===
