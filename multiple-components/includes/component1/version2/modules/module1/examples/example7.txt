@@ -1,0 +1,1 @@
+This is included from v2@component1:module1:examples$example7.txt

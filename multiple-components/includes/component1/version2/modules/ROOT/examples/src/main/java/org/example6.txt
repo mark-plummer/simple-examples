@@ -1,0 +1,1 @@
+This is included from v2@component1:ROOT:examples$src/main/java/org/example6.txt

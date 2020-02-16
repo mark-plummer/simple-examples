@@ -1,6 +1,6 @@
-name: component2/master 
-title: Component component2/master 
-version: '1.0' 
-start_page: ROOT:index.adoc 
-nav: 
+name: component2
+title: Component Two
+version: master
+start_page: ROOT:index.adoc
+nav:
 - modules/ROOT/nav.adoc
