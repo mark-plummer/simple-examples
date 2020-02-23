@@ -8,8 +8,20 @@ page-component-version: {page-component-version}
 
 page-module: {page-module}
 
-page-relative: {page-relative} 
+page-relative: {page-relative}
 
 == Return link
 
 xref:v1@component1::index.adoc#_2_specifying_only_module[v1@component1::index.adoc#_2_specifying_only_module]
+
+Experimental links: a demonstration of link:https://gitlab.com/antora/antora/issues/575[ref::relative.adoc[\] syntax has unexpected meaning.]
+
+Both these links lead to the index page in this module.
+There is some expectation that the double-colon form should lead to the ROOT module.
+However, the ambiguity might lead one to conclude that disallowing this unique double-colon form is best.
+
+* xref::index.adoc[xref::index.adoc]
+
+
+* xref:index.adoc[xref:index.adoc]
+
