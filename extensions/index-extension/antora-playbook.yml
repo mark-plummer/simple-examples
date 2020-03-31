@@ -1,0 +1,11 @@
+site:
+  title: Antora Example extensions/index-extension
+  url: http://example.com
+content:
+  sources:
+  - url: ./../../
+    start_path: extensions/index-extension/component
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
