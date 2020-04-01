@@ -1,10 +1,13 @@
 site:
-  title: Antora Example extensions/index-extension
+  title: Antora Index Asciidoctor Extension Example
   url: http://example.com
 content:
   sources:
   - url: ./../../
     start_path: extensions/index-extension/component
+asciidoc:
+  extensions:
+    - "@djencks/antora-index-asciidoctor-extension"
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable

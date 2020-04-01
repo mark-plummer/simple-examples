@@ -11,6 +11,45 @@ page-module: {page-module}
 page-relative: {page-relative}
 
 
-== A page
+== Examples of `indexList` block macro
 
-And some content.
+Next we expect a list:
+
+* this is a first list item
+
+indexList::[level=1]
+
+* this is a second list item
+** this is a sub item
+*** third level
+
+indexList::[level=1]
+
+* this is a second list item
+** this is a sub item
+*** third level
+
+indexList::[level=2]
+
+* this is a second list item
+** this is a sub item
+*** third level
+
+indexList::[level=3]
+
+* this is a second list item
+** this is a sub item
+*** third level
+
+indexList::[level=4]
+
+this is not a list item
+
+* next should be separate
+
+indexList::[module=module1]
+
+next has relative filter
+
+indexList::[component=*,version=*,module=*,relative=topic*/*.adoc]
+

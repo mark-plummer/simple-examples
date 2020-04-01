@@ -1,0 +1,11 @@
+{
+  "description": "Antora Index Asciidoctor Extension Example",
+  "scripts": {
+    "build": "node_modules/.bin/antora antora-playbook.yml --stacktrace --fetch"
+  },
+  "devDependencies": {
+    "@antora/cli": "^2.3.0-beta.1",
+    "@antora/site-generator-default": "^2.3.0-beta.1",
+    "@djencks/antora-index-asciidoctor-extension": "git+file:///Users/david/projects/antora/plugins/antora-index-extension/.git"
+  }
+}
