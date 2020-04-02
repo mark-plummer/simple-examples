@@ -1,6 +1,8 @@
 = {page-component-title}
+:description: Index page
 
 == Page Coordinates
+
 
 page-component-name: {page-component-name}
 
@@ -25,19 +27,19 @@ indexList::[level=1]
 
 indexList::[level=1]
 
-* this is a second list item
+* this is a third list item
 ** this is a sub item
 *** third level
 
 indexList::[level=2]
 
-* this is a second list item
+* this is a fourth list item
 ** this is a sub item
 *** third level
 
 indexList::[level=3]
 
-* this is a second list item
+* this is a fifth list item
 ** this is a sub item
 *** third level
 

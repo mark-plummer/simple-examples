@@ -1,1 +1,2 @@
 * xref:index.adoc[Home Page]
+* xref:table.adoc[Table page]

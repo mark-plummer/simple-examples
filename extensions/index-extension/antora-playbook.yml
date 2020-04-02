@@ -1,6 +1,7 @@
 site:
   title: Antora Index Asciidoctor Extension Example
   url: http://example.com
+  start_page: component::index.adoc
 content:
   sources:
   - url: ./../../
