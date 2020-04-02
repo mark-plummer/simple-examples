@@ -5,7 +5,7 @@ site:
 content:
   sources:
   - url: ./../../
-    start_path: one-components/plantuml/component
+    start_path: extensions/plantuml-extension/component
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
@@ -20,5 +20,5 @@ asciidoc:
 #    plantuml-server-url: 'http://localhost:8080/plantuml'
 #    plantuml-fetch-diagram: true
 #    plantuml-default-format: svg
-    allow-uri-read: true
-    safe: false
+#    allow-uri-read: true
+#    safe: false

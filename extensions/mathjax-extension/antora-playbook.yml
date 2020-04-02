@@ -5,7 +5,7 @@ site:
 content:
   sources:
   - url: ./../../
-    start_path: one-components/mathjax/component1
+    start_path: extensions/mathjax-extension/component1
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
