@@ -1,5 +1,6 @@
 = Title {page-component-name} {page-component-version} {page-module} {page-relative}
-
+:page-name: page3
+:mod2: 1
 
 == Page Coordinates
 

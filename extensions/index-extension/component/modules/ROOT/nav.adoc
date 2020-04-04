@@ -1,2 +1,3 @@
 * xref:index.adoc[Home Page]
 * xref:table.adoc[Table page]
+* xref:count.adoc[Counter page]

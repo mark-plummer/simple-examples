@@ -1,4 +1,6 @@
 = Title {page-relative}
+:page-name: page1
+:mod2: 1
 
 
 == Page Coordinates

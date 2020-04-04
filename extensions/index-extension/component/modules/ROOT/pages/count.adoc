@@ -1,0 +1,36 @@
+= {page-component-title}
+
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+
+== Examples of `indexCount` inline macro
+
+count of pages indexCount:[] in this component version module
+
+count of pages indexCount:[module=*] in all modules
+
+count of pages indexCount:[module=module1] in module1
+
+count of pages indexCount:[relative=topicA/**] in topicA
+
+count of pages with description indexCount:[module=*,attributes=description] in all modules
+
+count of pages with mod2=1 indexCount:[module=module1,attributes="mod2=1"] in module1
+
+== Examples of `indexUniqueCount` inline macro
+
+count of doctitle values indexUniqueCount:[unique=doctitle] in this component version module
+
+count of page-name values indexUniqueCount:[unique=page-name] in this component version module
+
+count of page-name values indexUniqueCount:[unique=page-name,module=*] in this component version, all modules
+
+count of page-name values for pages with mod2=1 indexUniqueCount:[unique=page-name,module=module1,attributes="mod2=1"] in module1

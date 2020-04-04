@@ -1,5 +1,6 @@
 = Title {page-component-name} {page-component-version} {page-module} {page-relative}
 :description: Page A5
+:page-name: page5
 
 == Page Coordinates
 
