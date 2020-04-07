@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "antora antora-playbook.yml --fetch --stacktrace"
+  },
+  "devDependencies": {
+    "@djencks/asciidoctor-mathjax": "^0.0.6"
+  }
+}

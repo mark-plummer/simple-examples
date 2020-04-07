@@ -16,37 +16,48 @@ xref:mixed.adoc[Using both asciimath and latexmath on the same page]
 
 xref:inclusions.adoc[Including pages with stem content]
 
+xref:tables.adoc[Stem content in asciidoc table cells]
+
 == Installation and usage
 
-asciidoctor-mathjax.js was developed against asciidoctor 2.10 and certainly works with Antora upgraded to asciidoctor 2, but also appears to work with Antora 2.3.0-alpha.1 and presumably other recent versions.
+The simplest way to install this extension is to add a package.json file to your Antora doc project, next to the playbook.
 
-So far `asciidoctor-mathjax.js` is not available through npm.
+Here is a minimal example:
 
-This project does not include a package.json file, but the most convenient way to make the extension available to antora building this project is to install it in one of the following ways.
-This will generate a package.json file for you.
-If you are developing asciidoctor-mathjax.js yourself, with this as a test, you may be able to link to your clone using a yarn workspace instead of a local installation.
+[source,json]
+{
+  "devDependencies": {
+    "@djencks/asciidoctor-mathjax": "^0.0.5"
+  }
+}
 
-=== Local build of asciidoctor-mathjax.js
+This example also installs Antora and provides a build sript:
 
-1. Clone the `https://gitlab.com/djencks/asciidoctor-mathjax.js.git` git repo into a suitable location.
-2. Run `yarn install`.
-3. Run `yarn pack`.
-This will generate `asciidoctor-mathjax-v0.0.1.tgz`
-4. Change to this project directory.
-5. Run `yarn add path/to/asciidoctor-mathjax-v0.0.1.tgz`.
-6. Run `yarn`.
-7. Run `antora antora-playbook.yml`.
+[source,json]
+{
+  "private": true,
+  "scripts": {
+    "build": "node_modules/.bin/antora antora-playbook.yml --fetch --stacktrace"
+  },
+  "devDependencies": {
+    "@antora/cli": "^2.2.0"
+    "@antora/site-generator-default": "^2.2.0"
+    "@djencks/asciidoctor-mathjax": "^0.0.5"
+  }
+}
 
-I have had problems with yarn caching so that re-running yarn add with a different copy of the same-located-and-named tgz reinstalls the old version.
-I think that renaming the tgz on each add may solve this.
+With either of these, the dependencies will be installed by running `npm i`.
+With the second, your project may be built by running `npm run build`
 
-=== Using the ci-build tgz
+To configure use of this asciidoctor extension in your project, mention it in your playbook:
 
-This should add this module to your project:
-```
-yarn add https://gitlab.com/djencks/asciidoctor-mathjax.js/-/jobs/artifacts/master/raw/asciidoctor-mathjax-v0.0.1.tgz?job=bundle-stable
-```
-Check for the current version: `v0.0.1` is the initial upload and may no longer be current.
+[source,yml]
+----
+asciidoc:
+  extensions:
+  - "@djencks/asciidoctor-mathjax"
+----
+
 
 === Building this example Antora doc project
 

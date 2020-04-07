@@ -15,3 +15,5 @@
 * xref:mixed.adoc[Using both asciimath and latexmath on the same page]
 
 * xref:inclusions.adoc[Including pages with stem content]
+
+* xref:tables.adoc[Stem content in asciidoc table cells]

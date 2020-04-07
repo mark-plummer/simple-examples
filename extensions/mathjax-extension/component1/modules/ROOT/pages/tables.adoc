@@ -1,0 +1,139 @@
+= Tables with asciidoc cells
+
+Tables with asciidoc cells have some poorly documented features relating to attributes defined in cells.
+
+* Header cells are never considered "main content cells" and cannot be asciidoc, even if the column is.
+Attributes cannot be defined in such cells
+* Generally attributes defined outside the table cannot be overridden or redefined in a cell.
+* Attributes defined in a cell can be redefined in that cell, and the definition is restricted to that cell.
+
+== Stem defined in document prevents setting in table cells:
+
+:stem: asciimath
+
+.A Plain Math Table
+[cols="3*a"]
+|===
+|A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
+|A square root looks like stem:[sqrt(4) = 2]
+|Another square root looks like stem:[sqrt(9) = 3]
+|===
+
+.A Broken Math Table (stem is defined on page)
+[cols="3*a",options="header,footer"]
+|===
+|:stem: latexmath
+Header integral can be written as stem:[\iint xy^2\,dx\,dy ].
+stem: {stem}
+|:stem: asciimath
+
+stem: {stem}
+Header square root: stem:[sqrt(4) = 2]
+|:stem: latexmath
+Header another fraction looks like stem:[v=\frac{x}{x^2+y^2}].
+stem: {stem}
+
+|A matrix can be written as
+
+:stem: asciimath
+
+stem: {stem}
+stem:[[[a,b\],[c,d\]\]((n),(k))].
+|:stem: latexmath
+A fraction looks like stem:[u=\frac{-y}{x^2+y^2}].
+stem: {stem}
+|
+:stem: asciimath
+stem: {stem}
+Another square root looks like stem:[sqrt(9) = 3]
+
+|:stem: latexmath
+Footer integral can be written as stem:[\iint xy^2\,dx\,dy ].
+|
+:stem: asciimath
+Footer square root: stem:[sqrt(4) = 2]
+|:stem: latexmath
+Footer another fraction looks like stem:[v=\frac{x}{x^2+y^2}].
+
+|===
+
+:stem!:
+
+.A Less Broken Math Table (stem is undefined on page, but header attributes fail)
+[cols="3*a",options="header,footer"]
+|===
+|:stem: latexmath
+Header integral can be written as stem:[\iint xy^2\,dx\,dy ].
+stem: {stem}
+|:stem: asciimath
+
+stem: {stem}
+Header square root: stem:[sqrt(4) = 2]
+|:stem: latexmath
+Header another fraction looks like stem:[v=\frac{x}{x^2+y^2}].
+stem: {stem}
+
+|A matrix can be written as
+
+:stem: asciimath
+
+stem: {stem}
+stem:[[[a,b\],[c,d\]\]((n),(k))].
+|:stem: latexmath
+A fraction looks like stem:[u=\frac{-y}{x^2+y^2}].
+stem: {stem}
+|
+:stem: asciimath
+stem: {stem}
+Another square root looks like stem:[sqrt(9) = 3]
+
+|:stem: latexmath
+Footer integral can be written as stem:[\iint xy^2\,dx\,dy ].
+|
+:stem: asciimath
+Footer square root: stem:[sqrt(4) = 2]
+|:stem: latexmath
+Footer another fraction looks like stem:[v=\frac{x}{x^2+y^2}].
+
+|===
+
+== Attributes defined and used in cells
+
+.Math Table
+[cols="3*a",options="footer"]
+|===
+|:expr: \iint xy^2\,dx\,dy
+An integral can be written as latexmath:a[{expr}].
+|:expr: sqrt(4) = 2
+A square root: asciimath:a[{expr}]
+|:expr: v=\frac{x}{x^2+y^2}
+Another fraction looks like latexmath:a[{expr}].
+
+|A matrix can be written as
+
+:expr: [[a,b\],[c,d\]\]((n),(k))
+
+stem:a[{expr}].
+|:expr: u=\frac{-y}{x^2+y^2}
+A fraction looks like latexmath:a[{expr}].
+|
+:expr: sqrt(9) = 3
+
+* Another square root looks like stem:a[{expr}]
+
+:expr: sqrt(4) = 2
+
+* Another square root looks like stem:a[{expr}]
+* Another square root looks like stem:a[{expr}]
+
+|:expr: \iint xy^2\,dx\,dy
+Footer integral can be written as latexmath:a[{expr}].
+|
+:expr: sqrt(4) = 2
+expr: {expr}
+Footer square root: stem:a[{expr}]
+|:expr: v=\frac{x}{x^2+y^2}
+Footer another fraction looks like latexmath:a[{expr}].
+
+|===
+

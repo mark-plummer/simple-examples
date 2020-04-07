@@ -6,10 +6,11 @@ content:
   sources:
   - url: ./../../
     start_path: extensions/mathjax-extension/component1
+    branches: HEAD
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
 asciidoc:
   extensions:
-  - asciidoctor-mathjax
+  - "@djencks/asciidoctor-mathjax"
