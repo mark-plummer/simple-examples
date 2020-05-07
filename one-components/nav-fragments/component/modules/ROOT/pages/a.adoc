@@ -1,0 +1,7 @@
+= A page
+
+[#x]
+== Section x
+
+[#y]
+== Section y

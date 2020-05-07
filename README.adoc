@@ -54,6 +54,7 @@ The links will only work locally if you view this page in an asciidoc enabled br
 ** A component may lack a ROOT module link:one-components/no-root/build/site/index.html[]
 ** Including hidden files whose names start with '_' underscore link:one-components/underscore-include/build/site/index.html[]
 ** Including the same content in multiple nav positions or flows using include stubs link:one-components/multiple-uses/build/site/index.html[]
+** Fragments in nav files link:one-components/nav-fragments/build/site/index.html[]
 * Multiple components: multiple-components
 ** Two components link:multiple-components/two-components/build/site/index.html[]
 ** Links between two components link:multiple-components/links-between-components/build/site/index.html[]

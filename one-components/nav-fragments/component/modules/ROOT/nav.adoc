@@ -1,0 +1,9 @@
+* xref:index.adoc[Home Page]
+* A
+// ** xref:a.adoc[a]
+** xref:a.adoc#x[a#x]
+** xref:a.adoc#y[a#y]
+* B
+** xref:b.adoc[b]
+** xref:b.adoc#x[b#x]
+** xref:b.adoc#y[b#y]
