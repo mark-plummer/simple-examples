@@ -68,4 +68,4 @@ The links will only work locally if you view this page in an asciidoc enabled br
 * Extensions: extensions
 ** Using the asciidoctor-plantuml.js extension, demonstrating especially inline/interactive svg link:extensions/plantuml-extension/build/site/index.html[]
 ** Using the asciidoctor-mathjax.js extension for server-side stem rendering link:extensions/mathjax-extension/build/site/index.html[]
-** Using the @djencks/antora-index-asciidoctor-extension to create index lists and tables of pages selected from the Antora content catalog link:extensions/index-extension/build/site/index.html[]
+** Using the @djencks/asciidoctor-antora-indexer to create index lists and tables of pages selected from the Antora content catalog link:extensions/index-extension/build/site/index.html[]

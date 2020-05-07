@@ -1,6 +1,7 @@
-= Title {page-component-name} {page-component-version} {page-module} {page-relative}
+= Title component 1.0 ROOT topicA/page5.adoc
 :description: Page A5
 :page-name: page5
+:odd:
 
 == Page Coordinates
 

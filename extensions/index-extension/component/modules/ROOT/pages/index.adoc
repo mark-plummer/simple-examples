@@ -4,11 +4,11 @@
 == Page Coordinates
 
 
-page-component-name: {page-component-name}
+page-component-name: component
 
-page-component-version: {page-component-version}
+page-component-version: 1.0
 
-page-module: {page-module}
+page-module: ROOT
 
 page-relative: {page-relative}
 

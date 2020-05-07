@@ -1,16 +1,17 @@
-= Title {page-component-name} {page-component-version} {page-module} {page-relative}
+= Title component 1.0 module1 page2.adoc
 :page-name: page2
 :mod2: 0
+:even:
 
 == Page Coordinates
 
-page-component-name: {page-component-name}
+page-component-name: component
 
-page-component-version: {page-component-version}
+page-component-version: 1.0
 
-page-module: {page-module}
+page-module: module1
 
-page-relative: {page-relative}
+page-relative: page2.adoc
 
 
 == A page

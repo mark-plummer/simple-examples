@@ -13,9 +13,32 @@ page-relative: {page-relative}
 
 == Examples of `indexTable` block macro
 
+[source,adoc]
+indexTable::[cells="$xref,description"]
+
 [cols="1,1"]
 |===
 |Column 1
 |Column 2
 |===
 indexTable::[cells="$xref,description"]
+
+[source,adoc]
+indexTable::[module=module1,attributes=even,cells="$xref,description"]
+
+[cols="1,1"]
+|===
+|Column 1
+|Column 2
+|===
+indexTable::[module=module1,attributes=even,cells="$xref,description"]
+
+[source,adoc]
+indexTable::[attributes=!odd,cells="$xref,description"]
+
+[cols="1,1"]
+|===
+|Column 1
+|Column 2
+|===
+indexTable::[attributes=!odd,cells="$xref,description"]
