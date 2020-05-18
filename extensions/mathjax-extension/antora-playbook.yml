@@ -12,5 +12,8 @@ ui:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
 asciidoc:
+  attributes:
+    asciidoctor-mathjax-version: '0.0.7'
+    antora-version: '2.3.1'
   extensions:
-  - "@djencks/asciidoctor-mathjax"
+  - '@djencks/asciidoctor-mathjax'

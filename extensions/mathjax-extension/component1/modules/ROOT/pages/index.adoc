@@ -24,25 +24,25 @@ The simplest way to install this extension is to add a package.json file to your
 
 Here is a minimal example:
 
-[source,json]
+[source,json,subs="+attributes"]
 {
   "devDependencies": {
-    "@djencks/asciidoctor-mathjax": "^0.0.5"
+    "@djencks/asciidoctor-mathjax": "^{asciidoctor-mathjax-version}"
   }
 }
 
 This example also installs Antora and provides a build sript:
 
-[source,json]
+[source,json,subs="+attributes"]
 {
   "private": true,
   "scripts": {
     "build": "node_modules/.bin/antora antora-playbook.yml --fetch --stacktrace"
   },
   "devDependencies": {
-    "@antora/cli": "^2.2.0"
-    "@antora/site-generator-default": "^2.2.0"
-    "@djencks/asciidoctor-mathjax": "^0.0.5"
+    "@antora/cli": "^{antora-version}"
+    "@antora/site-generator-default": "^{antora-version}"
+    "@djencks/asciidoctor-mathjax": "^{asciidoctor-mathjax-version}"
   }
 }
 
@@ -55,7 +55,7 @@ To configure use of this asciidoctor extension in your project, mention it in yo
 ----
 asciidoc:
   extensions:
-  - "@djencks/asciidoctor-mathjax"
+  - '@djencks/asciidoctor-mathjax'
 ----
 
 
