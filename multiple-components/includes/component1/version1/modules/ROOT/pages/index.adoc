@@ -60,3 +60,8 @@ include::component2::example$src/main/java/org/example14.txt[]
 include::component2:module1:example$example15.txt[]
 
 include::component2:module1:example$src/main/java/example16.txt[]
+
+
+== Here is an example of including content from a page in another module
+
+include::module1:page$sub-page.adoc[]
