@@ -1,16 +1,15 @@
 = {page-component-title}
 
-WARNING: asciidoctor-plantuml is unmaintained and the latest release (1.5.0) does not reflect the code in the git repo as of the release.
-This example will only show expected results if you build the extension yourself.
+== Ways of using link:https://github.com/Mogztter/asciidoctor-kroki[asciidoctor-kroki]
 
-== Ways of using https://github.com/eshepelyuk/asciidoctor-plantuml.js[asciidoctor-plantuml]
-
-For this example, you must install asciidoctor-plantuml.js so it is accessible to your Antora installation.
+For this example, you must install asciidoctor-kroki so it is accessible to your Antora installation.
 If you have installed Antora globally, you can run:
 
 ```
-npm install -g asciidoctor-plantuml
+npm install -g asciidoctor-kroki
 ```
+
+See the package.json for an alternate more self contained installation method.
 
 The html pages in a browser will look rather repetitive.
 It is perhaps more interesting to look at the html source to see the effects of the different configurations.
