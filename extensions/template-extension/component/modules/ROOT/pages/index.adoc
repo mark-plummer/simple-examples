@@ -1,0 +1,6 @@
+= Capturing Template Extension
+include::partial$README.adoc[tag=intro]
+
+include::partial$README.adoc[tag=installation]
+
+include::partial$README.adoc[tag=usage]

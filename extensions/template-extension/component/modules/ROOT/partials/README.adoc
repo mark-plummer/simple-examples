@@ -1,0 +1,152 @@
+= Asciidoctor.js capturing templates
+//tag::intro[]
+:version: 0.0.1
+
+`@djencks/asciidoctor-template` provides an Asciidoctor.js extension to "capture" asciidoc templates, with "variable" parameters, and register block or inline macro templates to reproduce the content, with provided parameter values.
+The parameter values are isolated from the outside document.
+
+== Installation
+
+Available soon through npm as `@djencks/asciidoctor-template`.
+
+The project git repository is: https://gitlab.com/djencks/asciidoctor-template
+//end::intro[]
+== Usage in Asciidoctor.js
+
+I am not a standalone Asciidoctor.js expert, so I will only quote one of the tests:
+
+[source,js]
+----
+const templateProcessor = require('@djencks/asciidoctor-template')
+const asciidoctor = require('@asciidoctor/core')()
+
+const registry = templateProcessor.register(asciidoctor.Extensions.create())
+const html = asciidoctor.convert(`
+:var1: value of var1
+
+[blockTemplate,test,'var1,var2']
+This is var1: {var1}.
+This is var2: {var2}.
+
+:var2: value of var2
+
+test::[foo,bar]
+
+== section {var1}
+
+var1: {var1}
+
+== section {var2}
+
+var2: {var2}
+`, { extension_registry: registry })
+
+console.log(html)
+----
+
+//tag::installation[]
+== Usage in Antora
+
+Install this extension so it is visible to Antora.
+
+=== Global installation
+
+This is most useful if your project is not developed by a lot of people who need automated setup.
+
+Run `npm i -g @djencks/asciidoctor-template`.
+This will fetch and install the extension usable in all your Antora projects.
+
+=== Local installation
+
+This provides automated setup for your project from a git clone, all your users have to do is run `npm i`.
+However, while it provides more precise version control of your dependencies, it adds a node_modules directory in your playbook project.
+
+Add a package.json file for your Antora project, next to the playbook.
+Here's an example:
+
+[source,json,subs="+attributes"]
+----
+{
+  "private": true,
+  "scripts": {
+    "build": "antora antora-playbook.yml --fetch --stacktrace"
+  },
+  "devDependencies": {
+    "@djencks/asciidoctor-template": "^{version}"
+  }
+}
+----
+
+The script is unnecessary but convenient.
+You can also list the antora cli and site-generator-default in devDependencies and use this to install Antora.
+
+* Run `npm i` to install this extension
+** With the above, run `npm run build` to run Antora to build your site.
+
+=== Add the extension to the playbook
+
+* List the extension in the antora playbook:
+----
+asciidoc:
+  extensions:
+  - '@djencks/asciidoctor-template'
+----
+//end::installation[]
+
+//tag::usage[]
+== Configuration and Usage
+
+This extension provides two block processors, `blockTemplate` and `inlineTemplate`.
+They are configured identically, with a name and list of positional parameters.
+The following block becomes the template.
+The processor registers either a block macro or inline macro under the provided name, with the specified positional parameters.
+
+For instance:
+
+[source,adoc]
+--
+[blockTemplate,section,'subject,importance']
+----
+== Section dealing with {subject}
+
+The subject of {subject} is of {importance} importance.
+----
+--
+
+To use this template:
+
+[source,adoc]
+----
+
+section::[earnestness,dramatic]
+
+----
+
+The `inlineTemplate` block processor is used similarly, except as the registered processor is an inline macro the calling syntax only has one colon.
+
+=== Semantics of parameters and scoping
+
+Inside the template, parameters are referenced using attribute syntax `\{attribute-name}`, as seen above.
+The value for the parameter comes from one of three places:
+
+. A positional parameter named in the template block configuration.
+Such a positional parameter must be configured in the block or inline macro use; "ambient" values from document attributes will be ignored.
+However, the parameter may be set either in the appropriate position or as a named parameter.
+. A named parameter specified in the block or inline macro use, after the slots for positional parameters.
+For example, `section::[lightheartedess,,importance=serious]`.
+. Other attributes defined in the document may be used in the template.
+They will have the value as of the block or inline macro use.
+
+Values supplied as positional or named parameters, and attributes defined inside the template, are scoped to the template use and are not visible elsewhere in the document.
+
+=== Tables
+
+A block template may include a table, but is processed partially as a nested table.
+Although the table delimiter `|===` is used, the default cell delimiter is `!`.
+To use the normal `|` cell delimiter, include `separator=|` in the table declaration, e.g. `[cols='3,2,5',separator=|]`.
+
+//end::usage[]
+
+== Antora Example project
+
+An example project showing some uses of this extension is under extensions/template-extension in `https://gitlab.com/djencks/simple-examples`.

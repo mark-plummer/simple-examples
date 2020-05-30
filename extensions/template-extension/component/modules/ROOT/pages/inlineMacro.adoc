@@ -1,0 +1,21 @@
+= Inline Macro Template Examples
+
+[inlineTemplate,poly,'size,shape']
+a {size} polyhedron of {shape} shape
+
+[inlineTemplate,double,'first,second']
+If not _{first} and {second}_ then *{first} and {second}*.
+
+== Introduction to inline templates
+
+An inline template may be used in a sentence, for instance about poly:[large 15 sided,irregular].
+
+An inline template may also be used in a paragraph.
+double:[tried,true]
+Here's a final sentence for our paragraph.
+
+An inline template may be used as a paragraph.
+
+double:[untried,false]
+
+And this concludes our presentation.

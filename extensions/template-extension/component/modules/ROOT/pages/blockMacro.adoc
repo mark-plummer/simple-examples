@@ -1,0 +1,49 @@
+= Block Macro Template Examples
+
+[blockTemplate,par,'author,license']
+This work was concocted by {author} and is licensed under the {license} license.
+
+[blockTemplate,section,'subject,importance']
+----
+== Section dealing with {subject}
+
+The subject of {subject} is of {importance} importance.
+----
+
+[blockTemplate,table,'term,priority,description']
+----
+=== A section concerning {term}
+
+[cols='3,2,5',separator=|]
+|===
+|*Term*
+|Priority
+|_Description_
+
+|{term}
+|{priority}
+|{description}
+|===
+----
+
+== Introduction to block template usage
+
+Here are a couple of simple examples of block templates.
+
+par::[David Jencks,MIT]
+
+=== Here is a subsection
+
+par::[djencks,ISC]
+
+== A section main section
+
+With a bit of content
+
+section::[Earnestness,dramatic]
+
+== A section with a table
+
+table::[Earnestness,dramatic,The importance of being]
+
+And this ends the document.

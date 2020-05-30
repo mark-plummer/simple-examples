@@ -1,0 +1,3 @@
+* xref:index.adoc[]
+* xref:blockMacro.adoc[]
+* xref:inlineMacro.adoc[]
