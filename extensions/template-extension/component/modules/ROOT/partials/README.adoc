@@ -9,6 +9,11 @@ The parameter values are isolated from the outside document.
 
 Available soon through npm as `@djencks/asciidoctor-template`.
 
+Currently available through a line like this in `package.json`:
+
+[source,json]
+    "@djencks/asciidoctor-template": "https://experimental-repo.s3-us-west-1.amazonaws.com/djencks-asciidoctor-template-v0.0.1.tgz",
+
 The project git repository is: https://gitlab.com/djencks/asciidoctor-template
 //end::intro[]
 == Usage in Asciidoctor.js
