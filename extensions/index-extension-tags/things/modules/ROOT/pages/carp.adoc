@@ -1,0 +1,8 @@
+= Carp
+:tag: animal
+
+One may carp at carp in the goldfish pond.
+
+== Related Pages
+
+indexList::[attributes='tag=animal']

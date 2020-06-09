@@ -1,0 +1,8 @@
+= Epiphyte
+:tag: vegetable
+
+Epiphytes are symbiotes.
+
+== Related Pages
+
+indexList::[attributes='tag=vegetable']

@@ -1,0 +1,8 @@
+= Ant
+:tag: animal
+
+The ant provides useful soil excavation services with picnic annoyances.
+
+== Related Pages
+
+indexList::[attributes='tag=animal']

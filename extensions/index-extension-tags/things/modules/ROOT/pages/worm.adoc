@@ -1,0 +1,8 @@
+= Worms
+:tag: animal
+
+Worms are a wriggly life form that comprise many types such as the supremely important earthworm.
+
+== Related Pages
+
+indexList::[attributes='tag=animal']

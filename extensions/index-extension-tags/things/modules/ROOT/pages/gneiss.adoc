@@ -1,0 +1,8 @@
+= Gneiss
+:tag: mineral
+
+Gneiss is a high-grade metamorphic rock with distinct foliation.
+
+== Related Pages
+
+indexList::[attributes='tag=mineral']

@@ -1,0 +1,8 @@
+= Lily
+:tag: vegetable
+
+Lilies appear in an astonishing variety of sizes, shapes, and colors.
+
+== Related Pages
+
+indexList::[attributes='tag=vegetable']

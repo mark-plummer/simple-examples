@@ -1,0 +1,16 @@
+= Things that are Animal, Vegetable, or Mineral
+
+This site is an example of using tags with the `@djencks/asciidoctor-antora-indexer` extension.
+Currently this provides blog-like "related pages" functionality when there is at most one tag per page.
+
+== Animal
+
+indexList::[attributes='tag=animal']
+
+== Vegetable
+
+indexList::[attributes='tag=vegetable']
+
+== Mineral
+
+indexList::[attributes='tag=mineral']
