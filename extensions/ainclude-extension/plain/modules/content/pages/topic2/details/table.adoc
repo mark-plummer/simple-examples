@@ -1,0 +1,15 @@
+= A Table of Conceptual Importance
+
+[options=header,separator=|]
+|===
+|Concept|Importance
+
+|Content
+|Utmost
+
+|Understanding
+|Primary
+
+|Conceptuality
+|Theoretical
+|===

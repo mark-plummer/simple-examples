@@ -1,0 +1,16 @@
+= A Unified Treatise On Content
+
+ainclude::content:introduction.adoc[+1]
+
+== The Essential Topic 1
+
+ainclude::content:topic1/page1.adoc[+2]
+ainclude::content:topic1/page2.adoc[+2]
+
+== The Abstruse Topic 2
+
+ainclude::content:topic2/page1.adoc[+2]
+ainclude::content:topic2/details/details.adoc[+3]
+ainclude::content:topic2/page2.adoc[+2]
+
+ainclude::content:conclusion.adoc[+1]

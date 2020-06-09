@@ -1,0 +1,5 @@
+= Almost First concepts of Topic 2
+
+The importance of Topic 2 is hidden in the details.
+
+ainclude::topic2/details/table.adoc[+1]

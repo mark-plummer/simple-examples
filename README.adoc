@@ -71,3 +71,4 @@ The links will only work locally if you view this page in an asciidoc enabled br
 ** Using the @djencks/asciidoctor-antora-indexer extension to create index lists and tables of pages selected from the Antora content catalog link:extensions/index-extension/build/site/index.html[]
 ** Using the asciidoctor-kroki extension, demonstrating especially inline/interactive svg link:extensions/kroki-extension/build/site/index.html[]
 ** Using the @djencks/asciidoctor-template extension for block and inline templates link:extensions/template-extension/build/site/index.html[].
+** Using the @djencks/asciidoctor-ainclude extension for including subdocuments link:extensions/ainclude-extension/build/site/index.html[].

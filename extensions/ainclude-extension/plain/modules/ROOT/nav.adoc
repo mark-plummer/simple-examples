@@ -1,0 +1,16 @@
+* xref:index.adoc[Home Page]
+
+* A multi-page treatise on content
+** xref:content:introduction.adoc[]
+** Topic 1
+*** xref:content:topic1/page1.adoc[]
+*** xref:content:topic1/page2.adoc[]
+** Topic 2
+*** xref:content:topic2/page1.adoc[]
+**** xref:content:topic2/details/details.adoc[]
+*** xref:content:topic2/page2.adoc[]
+**** xref:content:topic2/details/table.adoc[]
+** xref:content:conclusion.adoc[]
+
+* A single-page treatise on content
+** xref:treatise.adoc[]
