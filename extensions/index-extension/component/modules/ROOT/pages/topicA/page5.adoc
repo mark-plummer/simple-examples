@@ -13,6 +13,7 @@ page-module: {page-module}
 
 page-relative: {page-relative}
 
+description: {description}
 
 == A page
 

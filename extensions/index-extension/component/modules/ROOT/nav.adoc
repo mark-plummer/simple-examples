@@ -1,3 +1,6 @@
 * xref:index.adoc[Home Page]
-* xref:table.adoc[Table page]
-* xref:count.adoc[Counter page]
+* xref:list.adoc[]
+* xref:ordered-list.adoc[]
+* xref:description-list.adoc[]
+* xref:table.adoc[]
+* xref:count.adoc[]

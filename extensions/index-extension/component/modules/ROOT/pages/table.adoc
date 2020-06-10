@@ -1,4 +1,5 @@
-= {page-component-title}
+= {description}
+:description: indexTable Examples
 
 == Page Coordinates
 
@@ -12,6 +13,8 @@ page-relative: {page-relative}
 
 
 == Examples of `indexTable` block macro
+
+Only the `indexTable` configuration is shown, not the preceding table definition with headers.
 
 [source,adoc]
 indexTable::[cells="$xref,description"]

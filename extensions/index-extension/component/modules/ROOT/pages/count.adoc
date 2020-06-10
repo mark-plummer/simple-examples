@@ -1,4 +1,5 @@
-= {page-component-title}
+= {description}
+:description: indexCount Examples
 
 == Page Coordinates
 

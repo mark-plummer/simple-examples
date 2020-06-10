@@ -1,57 +1,54 @@
-= {page-component-title}
-:description: Index page
+= {description}
+:description: The asciidoctor-antora-indexer Extension
 
-== Page Coordinates
+== Purpose
 
+The `@djencks/asciidoctor-antora-indexer` asciidoctor extension queries the "database" of the Antora content catalog.
+The results of the query are a set of pages, which are then sorted by lower-cased doctitle.
+This list of pages is then presented as a list, a description list, or a table, or aggregated to a count.
 
-page-component-name: component
+The query can match the Antora page coordinates and the header attributes of the page.
 
-page-component-version: 1.0
+== Examples
 
-page-module: ROOT
+The examples are organized by the macros used.
 
-page-relative: {page-relative}
+=== indexList
 
+The selected pages are presented as a unordered list.
+The nesting level of the list may be specified.
+The macro takes account of preceding lists and inserts the generated list at the appropriate nesting level after the preceding list item.
 
-== Examples of `indexList` block macro
+xref:list.adoc[]
 
-Next we expect a list:
+=== indexOrderedList
 
-* this is a first list item
+The selected pages are presented as a ordered list.
+The nesting level of the list may be specified.
+The macro takes account of preceding lists and inserts the generated list at the appropriate nesting level after the preceding list item.
 
-indexList::[level=1]
+xref:ordered-list.adoc[]
 
-* this is a second list item
-** this is a sub item
-*** third level
+=== indexDescriptionList
 
-indexList::[level=1]
+The selected pages are presented as a description list.
+The nesting level of the list may be specified.
+The macro takes account of preceding lists and inserts the generated list at the appropriate nesting level after the preceding list item.
+The term is the xref to the target page, and the description is taken from a specified attribute.
 
-* this is a third list item
-** this is a sub item
-*** third level
+xref:description-list.adoc[]
 
-indexList::[level=2]
+=== indexTable
 
-* this is a fourth list item
-** this is a sub item
-*** third level
+The selected pages are presented as a table.
+The attributes mapped to the columns of the table are specified in the macro.
+This relies on an immediately preceding table to set up the column structure and headers.
 
-indexList::[level=3]
+xref:table.adoc[]
 
-* this is a fifth list item
-** this is a sub item
-*** third level
+=== indexCount and indexUniqueCount
 
-indexList::[level=4]
+For indexCount, the selected pages are counted.
+For indexUniqueCount, the number of unique values of a specified attribute are counted.
 
-this is not a list item
-
-* next should be separate
-
-indexList::[module=module1]
-
-next has relative filter
-
-indexList::[component=*,version=*,module=*,relative=topic*/*.adoc]
-
+xref:count.adoc[]

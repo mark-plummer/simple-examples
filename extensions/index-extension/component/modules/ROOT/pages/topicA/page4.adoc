@@ -12,6 +12,7 @@ page-module: ROOT
 
 page-relative: {page-relative}
 
+description: {description}
 
 == A page
 

@@ -1,0 +1,60 @@
+= {description}
+:description: indexList Examples
+
+== Page Coordinates
+
+
+page-component-name: component
+
+page-component-version: 1.0
+
+page-module: ROOT
+
+page-relative: {page-relative}
+
+
+== Examples of `indexList` block macro
+
+indexList::[level=1,style=square]
+
+Next we expect a list:
+
+[square]
+* this is a first list item
+
+indexList::[level=1]
+
+* this is a second list item
+** this is a sub item
+*** third level
+
+indexList::[level=1,style=square]
+
+* this is a third list item
+** this is a sub item
+*** third level
+
+indexList::[level=2]
+
+* this is a fourth list item
+** this is a sub item
+*** third level
+
+indexList::[level=3]
+
+* this is a fifth list item
+** this is a sub item
+*** third level
+
+indexList::[level=4]
+
+this is not a list item
+
+* next should be separate
+
+indexList::[module=module1,style=square]
+
+next has relative filter
+
+indexList::[component=*,version=*,module=*,relative=topic*/*.adoc,style=square]
+

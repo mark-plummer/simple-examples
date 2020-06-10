@@ -1,0 +1,94 @@
+= {description}
+:description: indexDescriptionList Examples
+
+== Page Coordinates
+
+
+page-component-name: component
+
+page-component-version: 1.0
+
+page-module: ROOT
+
+page-relative: {page-relative}
+
+== How do description lists in unordered lists render?
+
+Term0::
+Term0:: description 0
+Term00::: description 00
+Term000:::: description 000
+Term0000:: description 0000
+Term00000:::::: description 00000
+Term000000::: description 000000
+Term0000000:::: description 0000000
+
+//
+
+* Item 1
+Term1:: description 1
+** Item 2
+Term2::: description 2
+* Item 3
+** Item 4
+Term3::: description 3
+Term4:: description 4
+Term5:::: description 5
+Term6::: description 6
+
+== Examples of `indexDescriptionList` block macro
+
+First, a plain description list:
+
+[source,adoc]
+indexDescriptionList::[descAttribute=description,style=horizontal]
+
+indexDescriptionList::[descAttribute=description,style=horizontal]
+
+Next we expect a list:
+
+[source,adoc]
+----
+* this is a first list item
+
+indexDescriptionList::[level=1,descAttribute=description,style=horizontal]
+----
+
+* this is a first list item
+
+indexDescriptionList::[level=1,descAttribute=description,style=horizontal]
+
+* this is a second list item
+** this is a sub item
+*** third level A
+
+indexDescriptionList::[level=1,descAttribute=description,style=horizontal]
+
+* this is a third list item
+** this is a sub item
+*** third level B
+
+indexDescriptionList::[level=2,descAttribute=description,style=horizontal]
+
+* this is a fourth list item
+** this is a sub item
+*** third level C
+
+indexDescriptionList::[level=3,descAttribute=description,style=horizontal]
+
+* this is a fifth list item
+** this is a sub item
+*** third level D
+
+indexDescriptionList::[level=4,descAttribute=description,style=horizontal]
+
+this is not a list item
+
+* next should be separate
+
+indexDescriptionList::[module=module1,descAttribute=doctitle,style=horizontal]
+
+next has relative filter
+
+indexDescriptionList::[component=*,version=*,module=*,relative=topic*/*.adoc,descAttribute=description,style=horizontal]
+
