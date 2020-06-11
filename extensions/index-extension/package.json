@@ -6,6 +6,6 @@
   "devDependencies": {
     "@antora/cli": "^2.3.3",
     "@antora/site-generator-default": "^2.3.3",
-    "@djencks/asciidoctor-antora-indexer": "file:///Users/david/projects/antora/plugins/antora-index-asciidoctor-extension/djencks-asciidoctor-antora-indexer-v0.0.2.tgz"
+    "@djencks/asciidoctor-antora-indexer": "^0.0.3"
   }
 }

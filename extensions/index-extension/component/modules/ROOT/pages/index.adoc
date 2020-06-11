@@ -38,6 +38,12 @@ The term is the xref to the target page, and the description is taken from a spe
 
 xref:description-list.adoc[]
 
+=== Mixed list types
+
+This page presents a few examples of mixing list types and index macros.
+
+xref:mixed-list.adoc[]
+
 === indexTable
 
 The selected pages are presented as a table.

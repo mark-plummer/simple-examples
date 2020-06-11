@@ -1,0 +1,78 @@
+= {description}
+:description: Mixed List Examples
+
+== Page Coordinates
+
+
+page-component-name: component
+
+page-component-version: 1.0
+
+page-module: ROOT
+
+page-relative: {page-relative}
+
+== Examples of mixed list block macro usage
+
+First a ulist followed by a dlist at level 1:
+
+[source,adoc]
+----
+* this is a first list item
+
+indexDescriptionList::[level=1,descAttribute=description,style=horizontal]
+----
+
+* this is a first list item
+
+indexDescriptionList::[level=1,descAttribute=description,style=horizontal]
+
+Now a dlist with sublists followed by a dlist:
+
+This is dlist item:: Second Example!
+.. this is a sub item
+*** third level A
+
+indexDescriptionList::[level=1,descAttribute=description,style=horizontal]
+
+Now a ulist, dlist, olist nesting, with generated additional dlist content
+
+* this is a third list item
+This is a sub item of type:: dlist
+... third level B followed by level 2 dlist content
+
+indexDescriptionList::[level=2,descAttribute=description,style=horizontal]
+
+Now an olist, ulist, ulist, followed by a dlist at level 3 (a separate list at the same level as the ulist).
+
+. this is an olist item
+** this is a sub item
+*** third level C
+
+indexDescriptionList::[level=3,descAttribute=description,style=horizontal]
+
+Now an olist, ulist, ulist, followed by a dlist at level 4.
+Then we see that the list macro breaks the olist, starting a new one.
+
+. this is an olist item
+** this is a sub item
+*** third level D
+
+indexDescriptionList::[level=4,descAttribute=description,style=horizontal]
+
+. Item 1, unfortunately a new olist
+
+indexDescriptionList::[level=2,descAttribute=description,style=horizontal]
+
+Here's a indexed olist followed by a nested indexed dlist.
+
+indexOrderedList::[]
+
+indexDescriptionList::[level=2,descAttribute=description,style=horizontal]
+
+And the inverse, an indexed dlist followed by a nested indexed olist.
+The peculiar indentation of the nested list appears to be a consequence of how the horizontal style is rendered as a table with the nested olist inside the cell.
+
+indexDescriptionList::[descAttribute=description,style=horizontal]
+
+indexOrderedList::[level=2,style=lowergreek]

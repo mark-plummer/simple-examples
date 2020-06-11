@@ -2,5 +2,6 @@
 * xref:list.adoc[]
 * xref:ordered-list.adoc[]
 * xref:description-list.adoc[]
+* xref:mixed-list.adoc[]
 * xref:table.adoc[]
 * xref:count.adoc[]

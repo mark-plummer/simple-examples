@@ -12,31 +12,10 @@ page-module: ROOT
 
 page-relative: {page-relative}
 
-== How do description lists in unordered lists render?
-
-Term0::
-Term0:: description 0
-Term00::: description 00
-Term000:::: description 000
-Term0000:: description 0000
-Term00000:::::: description 00000
-Term000000::: description 000000
-Term0000000:::: description 0000000
-
-//
-
-* Item 1
-Term1:: description 1
-** Item 2
-Term2::: description 2
-* Item 3
-** Item 4
-Term3::: description 3
-Term4:: description 4
-Term5:::: description 5
-Term6::: description 6
-
 == Examples of `indexDescriptionList` block macro
+
+All `indexDescriptionList` uses specify `style=horizontal`.
+Whether it has an effect depends on whether the use creates a new dlist or appends to an existing one.
 
 First, a plain description list:
 
@@ -49,46 +28,51 @@ Next we expect a list:
 
 [source,adoc]
 ----
-* this is a first list item
+This is a dlist item:: First!
 
 indexDescriptionList::[level=1,descAttribute=description,style=horizontal]
 ----
 
-* this is a first list item
+This is a dlist item:: First!
+Next is level 1
 
 indexDescriptionList::[level=1,descAttribute=description,style=horizontal]
 
-* this is a second list item
-** this is a sub item
-*** third level A
+This is a dlist item:: Second!
+This is a sub item::: Sub1!
+Third level A:::: SubSub1!
+Next is level 1
 
 indexDescriptionList::[level=1,descAttribute=description,style=horizontal]
 
-* this is a third list item
-** this is a sub item
-*** third level B
+This is a dlist item:: Third!
+This is a sub item::: Sub1!
+Third level B:::: SubSub1!
+Next is level 2
 
 indexDescriptionList::[level=2,descAttribute=description,style=horizontal]
 
-* this is a fourth list item
-** this is a sub item
-*** third level C
+This is a dlist item:: Fourth!
+This is a sub item::: Sub1!
+Third level C:::: SubSub1!
+Next is level 3
 
 indexDescriptionList::[level=3,descAttribute=description,style=horizontal]
 
-* this is a fifth list item
-** this is a sub item
-*** third level D
+This is a dlist item:: Fifth!
+This is a sub item::: Sub1!
+Third level D:::: SubSub1!
+Next is level 4 (which doesn't work well using .adoc source)
 
 indexDescriptionList::[level=4,descAttribute=description,style=horizontal]
 
 this is not a list item
 
-* next should be separate
+next should be:: separate (no level)
 
 indexDescriptionList::[module=module1,descAttribute=doctitle,style=horizontal]
 
-next has relative filter
+next has relative filter (no level)
 
 indexDescriptionList::[component=*,version=*,module=*,relative=topic*/*.adoc,descAttribute=description,style=horizontal]
 
