@@ -1,8 +1,9 @@
 = Schist
 :tag: mineral
+:description: Schist is a medium grade metamorphic rock with sufficient foliation that it may be split along the layers.
 
-Schist is a medium grade metamorphic rock with sufficient foliation that it may be split along the layers.
+{description}
 
 == Related Pages
 
-indexList::[attributes='tag=mineral']
+indexDescriptionList::[attributes='tag=mineral',descAttribute=description,style=horizontal]

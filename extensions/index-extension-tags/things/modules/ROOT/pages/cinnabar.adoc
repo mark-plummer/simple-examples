@@ -1,8 +1,9 @@
 = Cinnabar
 :tag: mineral
+:description: Cinnabar produces the beautiful vermillion color.
 
-Cinnabar produces the beautiful vermillion color.
+{description}
 
 == Related Pages
 
-indexList::[attributes='tag=mineral']
+indexDescriptionList::[attributes='tag=mineral',descAttribute=description,style=horizontal]

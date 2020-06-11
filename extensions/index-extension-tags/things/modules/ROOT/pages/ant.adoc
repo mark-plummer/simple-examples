@@ -1,8 +1,9 @@
 = Ant
 :tag: animal
+:description: The ant provides useful soil excavation services with picnic annoyances.
 
-The ant provides useful soil excavation services with picnic annoyances.
+{description}
 
 == Related Pages
 
-indexList::[attributes='tag=animal']
+indexDescriptionList::[attributes='tag=animal',descAttribute=description,style=horizontal]

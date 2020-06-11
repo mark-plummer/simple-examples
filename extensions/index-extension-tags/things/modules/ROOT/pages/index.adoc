@@ -5,12 +5,12 @@ Currently this provides blog-like "related pages" functionality when there is at
 
 == Animal
 
-indexList::[attributes='tag=animal']
+indexDescriptionList::[attributes='tag=animal',descAttribute=description,style=horizontal]
 
 == Vegetable
 
-indexList::[attributes='tag=vegetable']
+indexDescriptionList::[attributes='tag=vegetable',descAttribute=description,style=horizontal]
 
 == Mineral
 
-indexList::[attributes='tag=mineral']
+indexDescriptionList::[attributes='tag=mineral',descAttribute=description,style=horizontal]

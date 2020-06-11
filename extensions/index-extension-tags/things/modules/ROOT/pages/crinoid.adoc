@@ -1,8 +1,9 @@
 = Crinoid
 :tag: animal
+:description: Although permanently affixed to a substrate, the crinoid still lives in the sea.
 
-Although permanently affixed to a substrate, the crinoid still lives in the sea.
+{description}
 
 == Related Pages
 
-indexList::[attributes='tag=animal']
+indexDescriptionList::[attributes='tag=animal',descAttribute=description,style=horizontal]

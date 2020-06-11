@@ -1,8 +1,9 @@
 = Carp
 :tag: animal
+:description: One may carp at carp in the goldfish pond.
 
-One may carp at carp in the goldfish pond.
+{description}
 
 == Related Pages
 
-indexList::[attributes='tag=animal']
+indexDescriptionList::[attributes='tag=animal',descAttribute=description,style=horizontal]

@@ -1,8 +1,9 @@
 = Epiphyte
 :tag: vegetable
+:description: Epiphytes are symbiotes.
 
-Epiphytes are symbiotes.
+{description}
 
 == Related Pages
 
-indexList::[attributes='tag=vegetable']
+indexDescriptionList::[attributes='tag=vegetable',descAttribute=description,style=horizontal]

@@ -1,8 +1,9 @@
 = Peony
 :tag: vegetable
+:description: Although both herbaceous and tree peonies have been cultivated for hundreds or perhaps thousands of years, recently hybrids between them have been developed, combining many of the best features of both.
 
-Although both herbaceous and tree peonies have been cultivated for hundreds or perhaps thousands of years, recently hybrids between them have been developed, combining many of the best features of both.
+{description}
 
 == Related Pages
 
-indexList::[attributes='tag=vegetable']
+indexDescriptionList::[attributes='tag=vegetable',descAttribute=description,style=horizontal]
