@@ -2,17 +2,20 @@ site:
   title: Antora Example template-extension
   url: http://example.com
   start_page: templates::index.adoc
+
 content:
   sources:
   - url: ./../../
     start_path:  extensions/template-extension/component
 
+asciidoc:
+  extensions:
+    - '@djencks/asciidoctor-template'
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
 output:
   clean: true
-asciidoc:
-  extensions:
-    - '@djencks/asciidoctor-template'

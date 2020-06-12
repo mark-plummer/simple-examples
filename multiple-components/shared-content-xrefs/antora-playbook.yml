@@ -2,19 +2,20 @@ site:
   title: Antora Example multiple-components/shared-content-xrefs
   url: http://example.com
   start_page: component1::index.adoc
+
 content:
   sources:
   - url: ./../../
-    start_path: multiple-components/shared-content-xrefs/shared
-  - url: ./../../
-    start_path: multiple-components/shared-content-xrefs/component1
-  - url: ./../../
-    start_path: multiple-components/shared-content-xrefs/component2
-  - url: ./../../
-    start_path: multiple-components/shared-content-xrefs/confusion
+    start_paths:
+    - multiple-components/shared-content-xrefs/shared
+    - multiple-components/shared-content-xrefs/component1
+    - multiple-components/shared-content-xrefs/component2
+    - multiple-components/shared-content-xrefs/confusion
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
 output:
   clean: true

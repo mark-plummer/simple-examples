@@ -2,13 +2,18 @@ site:
   title: Antora Example distributed-components/simple-distributed
   url: http://example.com
   start_page: simple-distributed-component::index.adoc
+
 content:
   sources:
   - url: ./../../
-    start_path: distributed-components/simple-distributed/source1
-  - url: ./../../
-    start_path: distributed-components/simple-distributed/source2
+    start_paths:
+    - distributed-components/simple-distributed/source1
+    - distributed-components/simple-distributed/source2
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
+output:
+  clean: true

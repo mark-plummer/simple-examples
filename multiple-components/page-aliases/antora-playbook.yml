@@ -2,16 +2,20 @@ site:
   title: Antora Example multiple-components/page-aliases
   url: http://example.com
   start_page: v1@component1::index.adoc
+
 content:
   sources:
   - url: ./../../
     start_paths: multiple-components/page-aliases/component*/version*
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
 urls:
   html_extension_style: default
   redirect_facility: static
+
 output:
   clean: true

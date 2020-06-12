@@ -1,26 +1,68 @@
 = Simple Examples
 
-This repository contains simple examples of Antora projects showing single features in isolation. They all use the Antora Default UI.
+This repository contains simple examples of Antora projects showing single features in isolation.
+They all use the Antora Default UI.
 
-== Beware
+NOTE: In order to demonstrate many features in minimal space, all these projects employ a compressed layout.
+This works, but is unsuitable for any but the smallest projects.
+Usually at least the playbook project and the content should be in separate git repositories.
 
-In order to demonstrate many features in minimal space, all these projects employ a compressed layout. This works, but is unsuitable for any but the smallest projects.  For any real project, at least the playbook project and the content should be in separate git repositories.
+== Prerequisites and Usage
 
-== Prerequisites
-
-You must have Antora installed, preferably globally.
+You must have git, Node and npm installed.
 
 Clone this repo locally.
 
-== Usage
+Setup:: `find . -name antora-playbook.yml -execdir npm i \;`
+Build everything:: `find . -name antora-playbook.yml -execdir npm run build \;`
 
-* cd `example-directory`
-* antora antora-playbook.yml
-* Examine the results in build/
+=== Catalog
+
+The links will only work locally if you view this page in an asciidoc enabled browser, after building all the projects.
+
+link:simplest/build/site/simplest-component/1.0/index.html[]:: simplest: minimal example that produces a site with content and navigation. Note there is no site start_page.
+//* tiny: adds a site start page, site.xml, robots.txt
+
+one-components:: Examples with one component
+link:one-components/topic-module/build/site/index.html[]:::  Topics compared to modules, resulting in the same paths.
+link:one-components/no-root/build/site/index.html[]::: A component may lack a ROOT module.
+link:one-components/underscore-include/build/site/index.html[]::: Including hidden files whose names start with '_' underscore.
+link:one-components/multiple-uses/build/site/index.html[]::: Including the same content in multiple nav positions or flows using include stubs.
+link:one-components/nav-fragments/build/site/index.html[]::: Fragments in nav files.
+
+multiple-components:: Examples with multiple components
+link:multiple-components/two-components/build/site/index.html[]::: Two components.
+link:multiple-components/links-between-components/build/site/index.html[]::: Links between two components.
+link:multiple-components/versions/build/site/index.html[]::: Version sorting, prerelease, and versionless for two similar copies of one component, one with plain versions and one with explicit display versions.
+link:multiple-components/xrefs/build/site/index.html[]::: Xref examples showing the 8 possibilities and their effects.
+link:multiple-components/page-aliases/build/site/index.html[]::: Page Alias examples showing all the possible page-aliases specifications.
+link:multiple-components/includes/build/site/index.html[]::: Include examples, mostly showing including 'examples' content.
+link:multiple-components/shared-content-xrefs/build/site/index.html[]::: Including shared content into several components demonstrating xrefs between partials.
+
+distributed-components:: Examples with distributed components.
+link:distributed-components/simple-distributed/build/site/index.html[]::: One component, two source trees.
+link:distributed-components/module-per-source/build/site/index.html[]::: One component, two source trees, and each of three modules in one of the sources
+
+extensions:: Examples using asciidoctor extensions.
+link:extensions/ainclude-extension/build/site/index.html[]::: Using the @djencks/asciidoctor-ainclude extension for including subdocuments.
+link:extensions/index-extension/build/site/index.html[]::: Using the @djencks/asciidoctor-antora-indexer extension to create index lists and tables of pages selected from the Antora content catalog.
+link:extensions/index-extension-tags/build/site/index.html[]::: Using the @djencks/asciidoctor-antora-indexer extension with page tags to create 'related pages' functionality.
+link:extensions/kroki-extension/build/site/index.html[]::: Using the asciidoctor-kroki extension, demonstrating especially inline/interactive svg.
+link:extensions/mathjax-extension/build/site/index.html[]::: Using the @djencks/asciidoctor-mathjax.js extension for server-side stem rendering.
+link:extensions/template-extension/build/site/index.html[]::: Using the @djencks/asciidoctor-template extension for block and inline templates.
+
+== Comments
+
+The projects are set up with `package.json` files to install all needed dependencies, and to run Antora from this Antora installation.
+Any individual project may be built using `npm run build` in the project directory.
+Inspect the `package.json` file to see the Antora command line used.
+
+Generally comparing the asciidoc source with the generated site will illustrate the concepts most thoroughly.
 
 == Contributing
 
-* An easy starting point is to use the antora-schematics example schematic to set up your Antora example with the components it needs. The schematic will create the path, put the antora-playbook.yml file there, and put the components there.
+* An easy starting point is to use the https://gitlab.com/djencks/antora-schematics[antora-schematics] example schematic to set up your Antora example with the components it needs.
+The schematic will create the path, put the antora-playbook.yml file there, and put the components there.
 * Name the directory to clearly describe the examples purpose.
 * Use the pages of the example to clearly describe the effects of the demonstrated configuration.
 
@@ -32,44 +74,4 @@ Specifying "`--authorName=<git Author> --authorEmail=<gitEmail>`" once will put 
 In any case, all new files should be added: if the name/email configuration is present they will also be committed.
 To avoid any git activity, use the -noGit=true flag.
 
-== To build everything:
 
-----
-find . -name antora-playbook.yml|xargs -n 1 antora
-----
-
-== To clean
-----
-find . -name build |xargs rm -rf
-----
-
-=== Catalog
-
-The links will only work locally if you view this page in an asciidoc enabled browser, after building all the projects.
-
-* simplest: minimal example that produces a site with content and navigation link:simplest/build/site/simplest-component/1.0/index.html[]. Note there is no site start_page.
-//* tiny: adds a site start page, site.xml, robots.txt
-* One component: one-components
-** Topics compared to modules, resulting in the same paths link:one-components/topic-module/build/site/index.html[]
-** A component may lack a ROOT module link:one-components/no-root/build/site/index.html[]
-** Including hidden files whose names start with '_' underscore link:one-components/underscore-include/build/site/index.html[]
-** Including the same content in multiple nav positions or flows using include stubs link:one-components/multiple-uses/build/site/index.html[]
-** Fragments in nav files link:one-components/nav-fragments/build/site/index.html[]
-* Multiple components: multiple-components
-** Two components link:multiple-components/two-components/build/site/index.html[]
-** Links between two components link:multiple-components/links-between-components/build/site/index.html[]
-** Version sorting, prerelease, and versionless for two similar copies of one component, one with plain versions and one with explicit display versions link:multiple-components/versions/build/site/index.html[]
-** Xref examples showing the 8 possibilities and their effects link:multiple-components/xrefs/build/site/index.html[]
-** Page Alias examples showing all the possible page-aliases specifications link:multiple-components/page-aliases/build/site/index.html[]
-** Include examples, mostly showing including 'examples' content link:multiple-components/includes/build/site/index.html[]
-** Including shared content into several components demonstrating xrefs between partials link:multiple-components/shared-content-xrefs/build/site/index.html[]
-* Distributed components: distributed-components
-** One component, two source trees link:distributed-components/simple-distributed/build/site/index.html[]
-** One component, two source trees, and each of three modules in one of the sources link:distributed-components/module-per-source/build/site/index.html[]
-* Extensions: extensions
-** Using the @djencks/asciidoctor-ainclude extension for including subdocuments link:extensions/ainclude-extension/build/site/index.html[].
-** Using the @djencks/asciidoctor-antora-indexer extension to create index lists and tables of pages selected from the Antora content catalog link:extensions/index-extension/build/site/index.html[]
-** Using the @djencks/asciidoctor-antora-indexer extension with page tags to create 'related pages' functionality link:extensions/index-extension-tags/build/site/index.html[]
-** Using the asciidoctor-kroki extension, demonstrating especially inline/interactive svg link:extensions/kroki-extension/build/site/index.html[]
-** Using the @djencks/asciidoctor-mathjax.js extension for server-side stem rendering link:extensions/mathjax-extension/build/site/index.html[]
-** Using the @djencks/asciidoctor-template extension for block and inline templates link:extensions/template-extension/build/site/index.html[].

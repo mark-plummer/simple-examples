@@ -2,23 +2,24 @@ site:
   title: Antora Example extensions/kroki-extension
   url: http://example.com
   start_page: plantuml::index.adoc
+
 content:
   sources:
   - url: ./../../
     start_path: extensions/kroki-extension/component
-ui:
-  bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
-    snapshot: true
-output:
-  clean: true
+
 asciidoc:
   extensions:
     - asciidoctor-kroki
   attributes:
     plantuml-server-url: 'http://www.plantuml.com/plantuml'
-#    plantuml-server-url: 'http://localhost:8080/plantuml'
-#    plantuml-fetch-diagram: true
-#    plantuml-default-format: svg
     allow-uri-read: true
-#    safe: false
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+
+output:
+  clean: true
+

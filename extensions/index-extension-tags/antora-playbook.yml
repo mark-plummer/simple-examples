@@ -2,10 +2,12 @@ site:
   title: Antora Example index-extension-tags
   url: http://example.com
   start_page: 1.0@things:ROOT:index.adoc
+
 content:
   sources:
   - url: ./../../
     start_path:  extensions/index-extension-tags/things
+
 asciidoc:
   extensions:
     - '@djencks/asciidoctor-antora-indexer'
@@ -14,3 +16,6 @@ ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
+output:
+  clean: true

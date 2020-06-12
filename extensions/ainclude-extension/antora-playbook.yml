@@ -2,6 +2,7 @@ site:
   title: Antora Example ainclude-extension
   url: http://example.com
   start_page: 1.0@plain:ROOT:index.adoc
+
 content:
   sources:
   - url: ./../../
@@ -19,3 +20,6 @@ ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
+output:
+  clean: true
