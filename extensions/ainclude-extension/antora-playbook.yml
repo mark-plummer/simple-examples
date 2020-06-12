@@ -5,11 +5,11 @@ site:
 content:
   sources:
   - url: ./../../
-    start_path:  extensions/ainclude-extension/plain
-  - url: ./../../
-    start_path:  extensions/ainclude-extension/header
-  - url: ./../../
-    start_path:  extensions/ainclude-extension/component
+    start_paths:
+      - extensions/ainclude-extension/plain
+      - extensions/ainclude-extension/header
+      - extensions/ainclude-extension/component
+      - extensions/ainclude-extension/original-ids
 
 asciidoc:
   extensions:

@@ -1,4 +1,12 @@
-= {page-component-title}
+= `header_attributes` Attribute Visibility
+
+== The `header` component.
+
+This component illustrates the `header_attributes` behavior, where attributes from the playbook or component descriptor and header attributes are visible.
+A 'treatise' is assembled using `ainclude` from a lot of pages, otherwise presented in the nav pane.
+
+xref:treatise.adoc#_1_0_plain_content_page_topic1/attributes/attributes_adoc_attribute_visibility[Here] is the table illustrating `all_attributes` default attribute visibility.
+
 
 == Page Coordinates
 
@@ -11,6 +19,3 @@ page-module: {page-module}
 page-relative: {page-relative}
 
 
-== A page
-
-And some content.

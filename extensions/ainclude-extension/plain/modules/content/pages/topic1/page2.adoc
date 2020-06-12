@@ -1,3 +1,7 @@
 = The Ultimate Concepts in Topic 1
 
 Ultimate understanding of Topic 1 can be achieved only through experience.
+
+== Abstract
+
+To abstract is not to subtract.

@@ -1,4 +1,71 @@
-= {page-component-title}
+= The Asciidoc-Include blockMacro Extension
+
+The `@djencks/asciidoctor-ainclude` blockMacro processor extension includes target asciidoc as a subdocument.
+This assures that entire blocks are included, and provides isolation between attributes in the main and included document.
+The subdocument attributes are always isolated from the including document.
+
+Usage is of the form:
+[source,adoc]
+ainclude::target[+1,'header_attributes,original_ids',myAttr=foo]
+
+`target`:: The meaning of `target depends on the environment.
+For use with Antora, this is an Antora resource id.
+First positional attribute `leveloffset`:: This works the same as with the `include::` preprocessor instruction.
+Second positional attribute `opts`:: controls attribute visibility and id generation.
+
+* There are several settings for attribute visibility in the subdocument.
+
+Explicit attributes::: specified in the blockMacro are always visible in the subdocument.
+`all_attributes`::: By default, all attributes visible at the blockMacro use are visible in the subdocument.
+`header_attributes`::: attributes defined in the document header are visible in the included subdocument.
+`attribute_overrides`::: only attributes passed in to asciidoctor are visible in the included subdocument.
+
+* Id generation.
+
+`unique_ids`::: By default, the target is encoded and combined with generated ids to assure unique values.
+`original_ids`::: Generated ids are unmodified.
+
+Other attributes:: Other attributes are passed in to the subdocument.
+
+== The `plain` component.
+
+This component illustrates the default behavior.
+A 'treatise' is assembled using `ainclude` from a lot of pages, otherwise presented in the nav pane.
+
+xref:treatise.adoc#_1_0_plain_content_page_topic1/attributes/attributes_adoc_attribute_visibility[Here] is the table illustrating `all_attributes` default attribute visibility.
+
+== `unigue_ids` (default) behavior
+
+Links into the treatise `Abstract` sections.
+The unigue ids here, while not directly supported by Antora, can easily be computed from an xref to the section in the original page.
+
+. xref:treatise.adoc#_1_0_plain_content_page_topic1/page1_adoc_abstract[#_1_0_plain_content_page_topic1/page1_adoc_abstract]
+. xref:treatise.adoc#_1_0_plain_content_page_topic1/page2_adoc_abstract[#_1_0_plain_content_page_topic1/page2_adoc_abstract]
+. xref:treatise.adoc#_1_0_plain_content_page_topic2/page1_adoc_abstract[#_1_0_plain_content_page_topic2/page1_adoc_abstract]
+. xref:treatise.adoc#_1_0_plain_content_page_topic1/page2_adoc_abstract[#_1_0_plain_content_page_topic1/page2_adoc_abstract]
+
+
+
+== Attribute substitution in `target`
+
+Attribute substitution may be used in the `target`.
+This could be used, for example, to include different pages based on the value of a `language` attribute.
+Here we demonstrate with a number.
+
+[source,adoc]
+----
+:number: 1
+ainclude::content:topic{number}/page{number}.adoc[+2]
+:number: 2
+ainclude::content:topic{number}/page{number}.adoc[+2]
+----
+
+:number: 1
+ainclude::content:topic{number}/page{number}.adoc[+2]
+:number: 2
+ainclude::content:topic{number}/page{number}.adoc[+2]
+
+(end of ainclude content)
 
 == Page Coordinates
 
@@ -10,7 +77,3 @@ page-module: {page-module}
 
 page-relative: {page-relative}
 
-
-== A page
-
-And some content.

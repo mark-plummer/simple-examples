@@ -1,3 +1,13 @@
 = The First Concepts in Topic 1
+:header-attribute: A clear explanation
 
 The essentials of Topic 1 can be explained clearly only without language.
+
+
+== Abstract
+
+Even the most rudimentary abstract of this subject would require an infinite number of words.
+
+:doc-attribute: No language!
+
+ainclude::topic1/attributes/attributes.adoc[+1,block-attribute='No conceptuality']

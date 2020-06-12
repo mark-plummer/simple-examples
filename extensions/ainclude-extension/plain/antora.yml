@@ -1,6 +1,9 @@
-name: plain 
-title: Component plain 
-version: '1.0' 
-start_page: ROOT:index.adoc 
-nav: 
+name: plain
+title: Component plain
+version: '1.0'
+start_page: ROOT:index.adoc
+nav:
 - modules/ROOT/nav.adoc
+asciidoc:
+  attributes:
+    attribute-override: all is one.

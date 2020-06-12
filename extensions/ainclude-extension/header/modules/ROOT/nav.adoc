@@ -1,1 +1,2 @@
-* xref:index.adoc[Home Page]
+* xref:index.adoc[]
+* xref:treatise.adoc[]

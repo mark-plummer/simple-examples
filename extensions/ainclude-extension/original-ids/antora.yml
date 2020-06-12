@@ -1,10 +1,10 @@
-name: component
-title: Component component
+name: original-ids
+title: Component original-ids
 version: '1.0'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
 asciidoc:
   attributes:
-    ainclude-default-options: attribute_overrides
+    ainclude-default-options: original_ids
     attribute-override: all is none.

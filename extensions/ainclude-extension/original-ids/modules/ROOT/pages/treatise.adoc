@@ -1,0 +1,17 @@
+= A Unified Treatise On Content
+:toc:
+
+ainclude::plain:content:introduction.adoc[+1]
+
+== The Essential Topic 1
+
+ainclude::plain:content:topic1/page1.adoc[+2]
+ainclude::plain:content:topic1/page2.adoc[+2]
+
+== The Abstruse Topic 2
+
+ainclude::plain:content:topic2/page1.adoc[+2]
+ainclude::plain:content:topic2/details/details.adoc[+3]
+ainclude::plain:content:topic2/page2.adoc[+2]
+
+ainclude::plain:content:conclusion.adoc[+1]

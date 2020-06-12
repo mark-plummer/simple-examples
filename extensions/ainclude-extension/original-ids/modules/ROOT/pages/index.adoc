@@ -1,0 +1,25 @@
+= `original_ids` option
+
+In the treatise, each page has an `Abstract` section.
+With the `original_ids` option, this results naively in duplicate generated ids.
+Asciidoctor resolves that by adding a suffix to make the ids unique.
+As a result, there's no way to predict how to link into the assembled document.
+
+Links into the treatise `Abstract` sections.
+
+. xref:treatise.adoc#_abstract[#_abstract]
+. xref:treatise.adoc#_abstract_2[#_abstract_2]
+. xref:treatise.adoc#_abstract_3[#_abstract_3]
+. xref:treatise.adoc#_abstract_4[#_abstract_4]
+
+
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+

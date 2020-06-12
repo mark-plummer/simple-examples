@@ -1,0 +1,22 @@
+= A Unified Treatise On Content
+:header-attribute: header attribute header
+:toc:
+
+:doc-attribute: doc attribute header
+
+ainclude::plain:content:topic1/attributes/attributes.adoc[+1,block-attribute='No conceptuality']
+
+ainclude::plain:content:introduction.adoc[+1]
+
+== The Essential Topic 1
+
+ainclude::plain:content:topic1/page1.adoc[+2]
+ainclude::plain:content:topic1/page2.adoc[+2]
+
+== The Abstruse Topic 2
+
+ainclude::plain:content:topic2/page1.adoc[+2]
+ainclude::plain:content:topic2/details/details.adoc[+3]
+ainclude::plain:content:topic2/page2.adoc[+2]
+
+ainclude::plain:content:conclusion.adoc[+1]

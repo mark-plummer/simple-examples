@@ -3,3 +3,7 @@
 The importance of Topic 2 is hidden in the details.
 
 ainclude::topic2/details/table.adoc[+1]
+
+== Abstract
+
+With no details, all is clear and unimportant.

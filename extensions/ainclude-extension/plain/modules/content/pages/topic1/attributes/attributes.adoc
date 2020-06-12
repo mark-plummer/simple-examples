@@ -1,0 +1,27 @@
+= Attribute visibility
+
+This table illustrates the visibility of attributes.
+If `{attr}` appears in the `value` column, the attribute is not visible in this subdocument.
+
+[cols='5,3,2',separator=|]
+|===
+| Attribute Description
+| Attribute Name
+| Attribute Value or visibility
+
+| An attribute set in the blockMacro itself
+| block-attribute
+| {block-attribute}
+
+| An attribute set in the body of the including document
+| doc-attribute
+| {doc-attribute}
+
+| An attribute set in the header of the including document
+| header-attribute
+| {header-attribute}
+
+| An attribute set in the component descriptor
+| attribute-override
+| {attribute-override}
+|===
