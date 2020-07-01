@@ -5,7 +5,7 @@
 
 === Explicit block attributes
 
-`:plantuml-fetch-diagram:` is not yet set on this page, so this uses a remote URL to the plantuml server.
+`:kroki-fetch-diagram:` is not yet set on this page, so this uses a remote URL to the plantuml server.
 
 .As svg
 [plantuml]
@@ -14,9 +14,9 @@ alice -> bob
 bob -> alice
 ----
 
-`:plantuml-fetch-diagram:` is now set on this page, so any further links will be to downloaded diagrams in `_images`.
+`:kroki-fetch-diagram:` is now set on this page, so the next link will be to downloaded diagrams in `_images`.
 
-:plantuml-fetch-diagram:
+:kroki-fetch-diagram:
 
 .As svg
 [plantuml,target=ab-embedded-e1]
@@ -24,6 +24,10 @@ bob -> alice
 alice -> bobby
 bobby -> alice
 ----
+
+Inline/interactive requires unsetting `kroki-fetch-diagram` via `:kroki-fetch-diagram!:`
+
+:kroki-fetch-diagram!:
 
 .As svg inline
 [plantuml,options=inline]
@@ -39,9 +43,11 @@ alicia -> bob
 bob -> alicia
 ----
 
-=== Default page attribute `:plantuml-default-options: inline`
+=== Default page attribute `:kroki-default-options: inline`
 
-:plantuml-default-options: inline
+This is not yet implemented
+
+:kroki-default-options: inline
 
 .As svg inline from page attribute
 [plantuml]

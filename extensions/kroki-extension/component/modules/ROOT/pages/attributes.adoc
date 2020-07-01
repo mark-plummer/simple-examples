@@ -11,37 +11,37 @@ include::partial$ab.puml[]
 .no set attributes block macro.
 plantuml::partial$ab.puml[]
 
-.target named attribute, without plantuml-fetch-diagrams set, as block.
+.target named attribute, without `kroki-fetch-diagram` set, as block.
 [plantuml, target=ab-block]
 ----
 include::partial$ab.puml[]
 ----
 
-.target named attribute, without plantuml-fetch-diagrams set, as block macro.
+.target named attribute, without `kroki-fetch-diagram` set, as block macro.
 plantuml::partial$ab.puml[target=ab-blockmacro]
 
-.format named attribute, inline, without plantuml-fetch-diagrams set, as block.
+.format named attribute, inline, without `kroki-fetch-diagram` set, as block.
 [plantuml, format=svg, options=inline]
 ----
 include::partial$ab.puml[]
 ----
 
-.format named attribute, inline, without plantuml-fetch-diagrams set, as block macro.
+.format named attribute, inline, without `kroki-fetch-diagram` set, as block macro.
 plantuml::partial$ab.puml[format=svg, options=inline]
 
-.format named attribute, without plantuml-fetch-diagrams set, as block.
+.format named attribute, without `kroki-fetch-diagram` set, as block.
 [plantuml, format=svg]
 ----
 include::partial$ab.puml[]
 ----
 
-.format named attribute, without plantuml-fetch-diagrams set, as block macro.
+.format named attribute, without `kroki-fetch-diagram` set, as block macro.
 plantuml::partial$ab.puml[format=svg]
 
 === Simplest
 
-:plantuml-default-format: svg
-:plantuml-default-options: inline
+:kroki-default-format: svg
+:kroki-default-options: inline
 
 [plantuml]
 ----
@@ -52,14 +52,16 @@ include::partial$ab.puml[]
 plantuml::partial$ab.puml[]
 
 
-=== With fetched diagrams (plantuml-fetch-diagram set)
+=== With fetched diagrams (kroki-fetch-diagram set)
 
-.format named attribute, without plantuml-fetch-diagrams set, as block.
+:kroki-fetch-diagram:
+
+.format named attribute, with `kroki-fetch-diagram` set, as block.
 [plantuml, format=svg]
 ----
 include::partial$ab.puml[]
 ----
 
-.format named attribute, without plantuml-fetch-diagrams set, as block macro.
+.format named attribute, with `kroki-fetch-diagram` set, as block macro.
 plantuml::partial$ab.puml[format=svg]
 

@@ -2,19 +2,19 @@
 
 == Similar links from a topic page.
 
-`:plantuml-fetch-diagram:` is not set on this page, so all diagrams use remote URLs to the plantuml server.
+`:kroki-fetch-diagram:` is not set on this page, so all diagrams use remote URLs to the plantuml server.
 
 === Embedded
 
 .As svg
-[plantuml,ab-embedded,svg]
+[plantuml,ab-embedded-svg,svg]
 ----
 alice -> bob
 bob -> alice
 ----
 
 .As png
-[plantuml,ab-embedded,png]
+[plantuml,ab-embedded-png,png]
 ----
 alice -> bob
 bob -> alice
@@ -39,7 +39,7 @@ include::example$ab-all.puml[]
 === Diagram contents in an example
 
 .As png
-[plantuml,ab-example]
+[plantuml,ab-example,png]
 ----
 include::example$ab.puml[]
 ----

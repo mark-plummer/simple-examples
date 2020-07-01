@@ -1,9 +1,9 @@
 = {page-component-title}
-:plantuml-fetch-diagram:
+:kroki-fetch-diagram:
 
 == Choices of diagram source location
 
-`:plantuml-fetch-diagram:` is set on this page, so all diagrams are downloaded during the build to local files accessed at `_images`.
+`:kroki-fetch-diagram:` is set on this page, so all diagrams are downloaded during the build to local files accessed at `_images`.
 
 === Diagram Source Embedded
 

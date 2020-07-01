@@ -12,7 +12,6 @@ asciidoc:
   extensions:
     - asciidoctor-kroki
   attributes:
-    plantuml-server-url: 'http://www.plantuml.com/plantuml'
     allow-uri-read: true
 
 ui:
