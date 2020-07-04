@@ -7,9 +7,9 @@
 === Embedded
 
 .As svg
-[plantuml,ab-embedded-svg,svg]
+[plantuml,ab-embedded-svg,svg,options=interactive,subs=+macros]
 ----
-alice -> bob
+alice -> bob kref:index.adoc[]
 bob -> alice
 ----
 

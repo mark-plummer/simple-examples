@@ -45,8 +45,10 @@ bob -> alicia
 
 === Default page attribute `:kroki-default-options: inline`
 
-This is not yet implemented
+This is not yet implemented.
+kroki-fetch-diagram off will be required.
 
+:kroki-fetch-diagram!:
 :kroki-default-options: inline
 
 .As svg inline from page attribute

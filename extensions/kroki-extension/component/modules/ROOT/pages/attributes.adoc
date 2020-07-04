@@ -20,6 +20,8 @@ include::partial$ab.puml[]
 .target named attribute, without `kroki-fetch-diagram` set, as block macro.
 plantuml::partial$ab.puml[target=ab-blockmacro]
 
+:kroki-fetch-diagram!:
+
 .format named attribute, inline, without `kroki-fetch-diagram` set, as block.
 [plantuml, format=svg, options=inline]
 ----
@@ -39,9 +41,6 @@ include::partial$ab.puml[]
 plantuml::partial$ab.puml[format=svg]
 
 === Simplest
-
-:kroki-default-format: svg
-:kroki-default-options: inline
 
 [plantuml]
 ----

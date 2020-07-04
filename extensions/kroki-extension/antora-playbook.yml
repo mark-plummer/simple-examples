@@ -7,12 +7,15 @@ content:
   sources:
   - url: ./../../
     start_path: extensions/kroki-extension/component
+    branches: HEAD
 
 asciidoc:
   extensions:
     - asciidoctor-kroki
+    - '@djencks/asciidoctor-antora-kref'
   attributes:
     allow-uri-read: true
+#    kroki-fetch-diagram@: true
 
 ui:
   bundle:
