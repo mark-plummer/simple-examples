@@ -6,12 +6,30 @@
 
 === Embedded
 
-.As svg
-[plantuml,ab-embedded-svg,svg,options=interactive,subs=+macros]
+.As svg inline with kref (works)
+[plantuml,ab-embedded-svg1,svg,options=inline,subs=+macros]
 ----
 alice -> bob kref:index.adoc[]
 bob -> alice
 ----
+
+:kroki-fetch-diagram:
+
+.As svg interactive with kref (works)
+[plantuml,ab-embedded-svg2,svg,options=interactive,subs='+macros,attributes']
+----
+alice -> bob kref:index.adoc[]
+bob -> alice
+----
+
+.As plain downloaded svg with kref (does not work)
+[plantuml,ab-embedded-svg3,svg,subs=+macros]
+----
+alice -> bob kref:index.adoc[]
+bob -> alice
+----
+
+:kroki-fetch-diagram!:
 
 .As png
 [plantuml,ab-embedded-png,png]
