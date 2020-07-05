@@ -1,0 +1,32 @@
+= Kroki examples with graphviz and kref
+
+:kroki-default-format: svg
+:kroki-default-options: inline
+
+These are mostly inline for easy examination of the generated xml.
+
+.graphviz example without kref.
+[graphviz,subs="+macros,attributes"]
+----
+digraph foo {
+  node [style=rounded]
+  node1 [shape=box]
+  node2 [fillcolor=yellow, style="rounded,filled", shape=diamond]
+  node3 [shape=record, label="{ a | b | c }"]
+
+  node1 -> node2 -> node3
+}
+----
+
+.graphviz example with kref.
+[graphviz,subs="+macros,attributes"]
+----
+digraph foo {
+  node [style=rounded] kref:index.adoc[node]
+  node1 [shape=box]
+  node2 [fillcolor=yellow, style="rounded,filled", shape=diamond]
+  node3 [shape=record, label="{ a | b | c }"] kref:embedding.adoc[Embedding page]
+
+  node1 -> node2 -> node3
+}
+----

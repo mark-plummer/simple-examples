@@ -1,8 +1,10 @@
 = Kroki examples with plantuml and kref
 :kroki-default-format: svg
-:kroki-default-optins: interactive
+:kroki-default-options: inline
 
-.Actor diagram with links
+These are mostly inline for easy examination of the generated xml.
+
+.Actor diagram with links (works)
 [plantuml,subs='+macros,attributes']
 ----
 Actor "Alice" as alice
@@ -11,3 +13,27 @@ alice -> bob
 note over alice,bob: See also kref:embedding.adoc[Embedding page].
 bob -> alice
 ----
+
+.As svg inline with kref (works)
+[plantuml,ab-embedded-svg1,svg,options=inline,subs=+macros]
+----
+alice -> bob kref:index.adoc[]
+bob -> alice
+----
+
+:kroki-fetch-diagram:
+
+.As svg interactive with kref (works)
+[plantuml,ab-embedded-svg2,svg,options=interactive,subs='+macros,attributes']
+----
+alice -> bob kref:#_diagram_contents_in_an_example[]
+bob -> alice
+----
+
+.As plain downloaded svg with kref (does not work)
+[plantuml,ab-embedded-svg3,options=none,svg,subs=+macros]
+----
+alice -> bob kref:index.adoc[]
+bob -> alice
+----
+

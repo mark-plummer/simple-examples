@@ -4,4 +4,5 @@
 * xref:embeddingblockmacro.adoc[Choices for generated html, using the block macro]
 * xref:attributes.adoc[Choices for positional, named, and page/global attributes]
 * xref:topic/index.adoc[Similar diagrams on a topic page]
-* xref:kref/plantuml.adoc[plantuml diagrams using kref]
+* xref:kref/graphviz.adoc[]
+* xref:kref/plantuml.adoc[]
