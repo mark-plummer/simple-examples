@@ -1,0 +1,13 @@
+= Kroki examples with plantuml and kref
+:kroki-default-format: svg
+:kroki-default-optins: interactive
+
+.Actor diagram with links
+[plantuml,subs='+macros,attributes']
+----
+Actor "Alice" as alice
+Actor "kref:index.adoc[Bob]" as bob
+alice -> bob
+note over alice,bob: See also kref:embedding.adoc[Embedding page].
+bob -> alice
+----
