@@ -1,16 +1,16 @@
 = Block Macro Template Examples
 
-[blockTemplate,par,'author,license']
+[blockMacroTemplate,par,'author,license']
 This work was concocted by {author} and is licensed under the {license} license.
 
-[blockTemplate,section,'subject,importance']
+[blockMacroTemplate,section,'subject,importance']
 ----
 == Section dealing with {subject}
 
 The subject of {subject} is of {importance} importance.
 ----
 
-[blockTemplate,table,'term,priority,description']
+[blockMacroTemplate,table,'term,priority,description']
 ----
 === A section concerning {term}
 
