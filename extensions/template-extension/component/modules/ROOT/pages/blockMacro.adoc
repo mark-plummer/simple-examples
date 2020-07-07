@@ -26,9 +26,9 @@ The subject of {subject} is of {importance} importance.
 |===
 ----
 
-== Introduction to block template usage
+== Introduction to block macro template usage
 
-Here are a couple of simple examples of block templates.
+Here are a couple of simple examples of block macro templates.
 
 par::[David Jencks,MIT]
 

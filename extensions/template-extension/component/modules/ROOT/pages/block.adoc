@@ -1,0 +1,83 @@
+= Block Template Examples
+:block-macro-attribute: par::[David Jencks,AL2]
+
+[blockMacroTemplate,par,'author,license']
+This work was concocted by {author} and is licensed under the {license} license.
+
+[blockMacroTemplate,section,'subject,importance']
+----
+== Section dealing with {subject}
+
+The subject of {subject} is of {importance} importance.
+----
+
+[blockMacroTemplate,table,'term,priority,description']
+----
+=== A section concerning {term}
+
+[cols='3,2,5',separator=|]
+|===
+|*Term*
+|Priority
+|_Description_
+
+|{term}
+|{priority}
+|{description}
+|===
+----
+
+[inlineTemplate,poly,'size,shape']
+a {size} polyhedron of {shape} shape
+
+
+[blockTemplate,sample]
+----
+'''
+== A sample section
+
+[source,subs=+attributes]
+--
+{content}
+--
+
+{content}
+
+'''
+----
+
+== Introduction to block template usage
+
+Here is a of simple example of a block template.
+
+.The block template
+[source,adoc]
+------
+[blockTemplate,sample]
+----
+'''
+== A sample section
+
+[source,subs=+attributes]
+--
+{content}
+--
+
+{content}
+
+'''
+----
+------
+
+[sample]
+some unadorned text.
+
+[sample]
+----
+par::[David Jencks,MIT]
+----
+
+[sample]
+----
+poly:[large 15 sided,irregular]
+----
