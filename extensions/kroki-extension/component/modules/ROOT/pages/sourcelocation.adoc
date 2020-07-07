@@ -1,5 +1,7 @@
-= {page-component-title}
+= Diagram Source Location
 :kroki-fetch-diagram:
+
+include::partial$sample.adoc[]
 
 == Choices of diagram source location
 
@@ -7,40 +9,58 @@
 
 === Diagram Source Embedded
 
+[sample]
+--
 .As svg [plantuml,target=ab-embedded-1,format=svg]
 [plantuml,target=ab-embedded-1,format=svg]
 ----
 alice -> bob
 bob -> alice
 ----
+--
 
-.As png [plantuml,target=ab-embedded-2,format=png]
+[sample]
+--
+.As png
 [plantuml,target=ab-embedded-2,format=png]
 ----
 alice -> bob
 bob -> alice
 ----
+--
 
 === Entire Diagram in a partial, adoc extension
 
+[sample]
+--
 include::partial$ab-all.adoc[]
+--
 
 === Diagram contents in a partial, puml extension
 
+[sample]
+--
 .As svg [plantuml,target=ab-partial-1,format=svg]
 [plantuml,target=ab-partial-1,format=svg]
 ----
 include::partial$ab.puml[]
 ----
+--
 
 === Entire Diagram in an example, puml extension
 
+[sample]
+--
 include::example$ab-all.puml[]
+--
 
 === Diagram contents in an example, puml extension
 
+[sample]
+--
 .As svg [plantuml,ab-example-1,svg]
 [plantuml,ab-example-1,svg]
 ----
 include::example$ab.puml[]
 ----
+--

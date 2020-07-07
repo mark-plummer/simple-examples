@@ -1,5 +1,8 @@
-= {page-component-title}
-:kroki-fetch-diagram:
+= Just like the index page but in a topic
+//:kroki-fetch-diagram:
+
+include::partial$sample.adoc[]
+
 == Similar links from a topic page.
 
 `:kroki-fetch-diagram:` is not set on this page, so all diagrams use remote URLs to the plantuml server.
@@ -10,40 +13,57 @@
 
 === Diagram Source Embedded
 
-.As svg [plantuml,target=ab-embedded-1,format=svg]
+[sample]
+--
+.As svg
 [plantuml,target=ab-embedded-1,format=svg]
 ----
 alice -> bob
 bob -> alice
 ----
+--
 
-.As png [plantuml,target=ab-embedded-2,format=png]
+[sample]
+--
+.As png
 [plantuml,target=ab-embedded-2,format=png]
 ----
 alice -> bob
 bob -> alice
 ----
+--
 
 === Entire Diagram in a partial, adoc extension
 
+[sample]
+--
 include::partial$ab-all.adoc[]
+--
 
 === Diagram contents in a partial, puml extension
 
-.As svg [plantuml,target=ab-partial-1,format=svg]
+[sample]
+--
+.As svg
 [plantuml,target=ab-partial-1,format=svg]
 ----
 include::partial$ab.puml[]
 ----
+--
 
 === Entire Diagram in an example, puml extension
 
+[sample]
+--
 include::example$ab-all.puml[]
-
+--
 === Diagram contents in an example, puml extension
 
-.As svg [plantuml,ab-example-1,svg]
+[sample]
+--
+.As svg
 [plantuml,ab-example-1,svg]
 ----
 include::example$ab.puml[]
 ----
+--

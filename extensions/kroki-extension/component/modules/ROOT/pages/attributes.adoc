@@ -1,66 +1,112 @@
-= {page-component-title}
+= Choices for positional, named, and page/global attributes (PlantUML)
+
+include::partial$sample.adoc[]
 
 == Positional, named, and page/global attribute settings for the plantuml block and block macro
 
+
+[sample]
+--
 .no set attributes block.
 [plantuml]
 ----
 include::partial$ab.puml[]
 ----
+--
 
+[sample]
+--
 .no set attributes block macro.
 plantuml::partial$ab.puml[]
+--
 
+[sample]
+--
 .target named attribute, without `kroki-fetch-diagram` set, as block.
 [plantuml, target=ab-block]
 ----
 include::partial$ab.puml[]
 ----
+--
 
+[sample]
+--
 .target named attribute, without `kroki-fetch-diagram` set, as block macro.
 plantuml::partial$ab.puml[target=ab-blockmacro]
+--
+
+[source,adoc]
+:kroki-fetch-diagram!:
 
 :kroki-fetch-diagram!:
 
+[sample]
+--
 .format named attribute, inline, without `kroki-fetch-diagram` set, as block.
 [plantuml, format=svg, options=inline]
 ----
 include::partial$ab.puml[]
 ----
+--
 
+[sample]
+--
 .format named attribute, inline, without `kroki-fetch-diagram` set, as block macro.
 plantuml::partial$ab.puml[format=svg, options=inline]
+--
 
+[sample]
+--
 .format named attribute, without `kroki-fetch-diagram` set, as block.
 [plantuml, format=svg]
 ----
 include::partial$ab.puml[]
 ----
+--
 
+[sample]
+--
 .format named attribute, without `kroki-fetch-diagram` set, as block macro.
 plantuml::partial$ab.puml[format=svg]
+--
 
 === Simplest
 
+
+[sample]
+--
 [plantuml]
 ----
 include::partial$ab.puml[]
 ----
+--
 
+[sample]
+--
 .no set attributes block macro.
 plantuml::partial$ab.puml[]
-
+--
 
 === With fetched diagrams (kroki-fetch-diagram set)
 
+[source,adoc]
+----
+:kroki-fetch-diagram:
+----
+
 :kroki-fetch-diagram:
 
+[sample]
+--
 .format named attribute, with `kroki-fetch-diagram` set, as block.
 [plantuml, format=svg]
 ----
 include::partial$ab.puml[]
 ----
+--
 
+[sample]
+--
 .format named attribute, with `kroki-fetch-diagram` set, as block macro.
 plantuml::partial$ab.puml[format=svg]
-
+--

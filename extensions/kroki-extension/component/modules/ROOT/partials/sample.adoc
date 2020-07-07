@@ -1,0 +1,14 @@
+[blockTemplate,sample]
+----
+'''
+
+.Source
+[source,adoc]
+--
+{content}
+--
+
+{content}
+
+'''
+----

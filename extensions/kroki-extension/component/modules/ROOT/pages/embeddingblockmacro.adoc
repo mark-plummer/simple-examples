@@ -1,5 +1,7 @@
-= {page-component-title}
-:plantuml-default-format: svg
+= Plantuml block macro diagrams
+:kroki-default-format: svg
+
+include::partial$sample.adoc[]
 
 == Choices for the generated html.
 
@@ -7,33 +9,67 @@
 
 `:kroki-fetch-diagram:` is not yet set on this page, so this uses a remote URL to the plantuml server.
 
+[sample]
+--
 .As svg
 plantuml::partial$ab.puml[]
+--
 
 `:kroki-fetch-diagram:` is now set on this page, so any further links will be to downloaded diagrams in `_images`.
 
+[source,adoc]
+----
+:kroki-fetch-diagram:
+----
+
 :kroki-fetch-diagram:
 
+
+[sample]
+--
 .As svg
 plantuml::partial$ab.puml[target=ab-embedded-em1]
+--
 
 Inline/interactive requires unsetting `kroki-fetch-diagram` via `:kroki-fetch-diagram!:`
 
+[source,adoc]
+----
+:kroki-fetch-diagram!:
+----
+
 :kroki-fetch-diagram!:
 
+
+[sample]
+--
 .As svg inline
 plantuml::partial$ab.puml[options=inline]
+--
 
+[sample]
+--
 .As svg interactive
 plantuml::partial$ab.puml[options=interactive]
+--
 
 === Default page attribute `:kroki-default-options: inline`
 
 This is not yet implemented
 kroki-fetch-diagram off will be required.
 
+[source,adoc]
+----
+:kroki-fetch-diagram!:
+:kroki-default-options: inline
+----
+
 :kroki-fetch-diagram!:
 :kroki-default-options: inline
 
+
+[sample]
+--
 .As svg inline from page attribute
 plantuml::partial$ab.puml[]
+--

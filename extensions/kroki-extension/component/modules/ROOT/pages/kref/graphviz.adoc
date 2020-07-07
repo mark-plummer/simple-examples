@@ -1,10 +1,14 @@
 = Kroki examples with graphviz and kref
-
 :kroki-default-format: svg
 :kroki-default-options: inline
 
+include::partial$sample.adoc[]
+
 These are mostly inline for easy examination of the generated xml.
 
+
+[sample]
+--
 .graphviz example without kref.
 [graphviz,subs="+macros,attributes"]
 ----
@@ -17,7 +21,10 @@ digraph foo {
   node1 -> node2 -> node3
 }
 ----
+--
 
+[sample]
+--
 .graphviz example with kref.
 [graphviz,subs="+macros,attributes"]
 ----
@@ -30,3 +37,4 @@ digraph foo {
   node1 -> node2 -> node3
 }
 ----
+--

@@ -1,5 +1,7 @@
-= {page-component-title}
-:plantuml-default-format: svg
+= Plantuml block diagrams
+:kroki-default-format: svg
+
+include::partial$sample.adoc[]
 
 == Choices for the generated html.
 
@@ -7,53 +9,84 @@
 
 `:kroki-fetch-diagram:` is not yet set on this page, so this uses a remote URL to the plantuml server.
 
+[sample]
+--
 .As svg
 [plantuml]
 ----
 alice -> bob
 bob -> alice
 ----
+--
 
 `:kroki-fetch-diagram:` is now set on this page, so the next link will be to downloaded diagrams in `_images`.
 
+[source,adoc]
+----
+:kroki-fetch-diagram:
+----
+
 :kroki-fetch-diagram:
 
+[sample]
+--
 .As svg
 [plantuml,target=ab-embedded-e1]
 ----
 alice -> bobby
 bobby -> alice
 ----
+--
 
-Inline/interactive requires unsetting `kroki-fetch-diagram` via `:kroki-fetch-diagram!:`
+Inline requires unsetting `kroki-fetch-diagram` via `:kroki-fetch-diagram!:`
+
+[source,adoc]
+----
+:kroki-fetch-diagram!:
+----
 
 :kroki-fetch-diagram!:
 
+[sample]
+--
 .As svg inline
 [plantuml,options=inline]
 ----
 alice -> robert
 robert -> alice
 ----
+--
 
+[sample]
+--
 .As svg interactive
 [plantuml,options=interactive]
 ----
 alicia -> bob
 bob -> alicia
 ----
-
+--
 === Default page attribute `:kroki-default-options: inline`
 
 This is not yet implemented.
 kroki-fetch-diagram off will be required.
 
+
+[source,adoc]
+----
+:kroki-fetch-diagram!:
+:kroki-default-options: inline
+----
+
 :kroki-fetch-diagram!:
 :kroki-default-options: inline
 
+[sample]
+--
 .As svg inline from page attribute
 [plantuml]
 ----
 alice -> robert
 robert -> alice
 ----
+--
