@@ -5,5 +5,6 @@
 * xref:attributes.adoc[]
 * xref:topic/index.adoc[]
 * kref examples
+** xref:kref/bytefield.adoc[]
 ** xref:kref/graphviz.adoc[]
 ** xref:kref/plantuml.adoc[]

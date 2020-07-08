@@ -1,0 +1,27 @@
+= Kroki examples with bytefield and kref (not exactly working yet)
+:kroki-default-format: svg
+:kroki-default-options: inline
+
+include::partial$sample.adoc[]
+
+[bytefield]
+....
+(draw-column-headers)
+(draw-box "Address" {:span 4})
+(draw-box "Size" {:span 2})
+(draw-box 0 {:span 2})
+(draw-gap "Payload")
+(draw-bottom)
+....
+
+
+[bytefield,subs="+macros,attributes"]
+....
+(draw-column-headers)
+(append-svg [:a kref:index.adoc[] [:text "Address"]])
+(draw-box "Size" {:span 2})
+(draw-box 0 {:span 2})
+(draw-gap "Payload")
+(draw-bottom)
+....
+//(append-svg [:a {:href "../index.html"} [:text "testing"]])
