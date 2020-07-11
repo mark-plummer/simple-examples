@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "clean-build": "npm run clean-install;npm run build",
+    "clean-install": "rm -rf node_modules/ .cache/ package-lock.json ;npm i --cache=.cache/npm",
+    "build": "node_modules/.bin/antora antora-playbook.yml --stacktrace --fetch"
+  },
+  "devDependencies": {
+    "@antora/cli": "^2.3.3",
+    "@antora/site-generator-default": "^2.3.3",
+    "@djencks/asciidoctor-jsonpath": "https://experimental-repo.s3-us-west-1.amazonaws.com/djencks-asciidoctor-jsonpath-v0.0.1.tgz",
+    "@djencks/asciidoctor-template": "^0.0.2"
+  }
+}

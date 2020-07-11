@@ -1,0 +1,35 @@
+= jsonpathCount examples
+
+include::partial$sample.adoc[]
+
+== Simple
+
+Note that it is often necessary to escape close brackets in query expressions.
+
+[sample]
+----
+There are jsonpathCount:example$json/simple.json['$.rows[*\]'] rows.
+
+----
+
+[sample]
+----
+There are jsonpathCount:example$json/simple.json['nodes$.object.*'] objects.
+
+----
+
+== More realistic
+
+The data file for this sample, borrowed from Apache Camel, is presumably AL2 licensed.
+
+[sample]
+----
+There are jsonpathCount:example$json/camel.json['nodes$.componentProperties.*'] componentProperties.
+
+----
+
+[sample]
+----
+There are jsonpathCount:example$json/camel.json['nodes$.component.*'] component attributes.
+
+----

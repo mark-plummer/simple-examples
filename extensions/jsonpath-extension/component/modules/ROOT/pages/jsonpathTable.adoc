@@ -1,0 +1,53 @@
+= jsonpathTable examples
+
+include::partial$sample.adoc[]
+
+== Simple
+
+[sample]
+----
+[cols='1,2',options="header",separator=|]
+|===
+|name
+|description
+|===
+
+jsonpathTable::example$json/simple.json['$.rows[*]', 'name,description']
+----
+
+[sample]
+----
+[cols='1,2',options="header",separator=|]
+|===
+|name
+|description
+|===
+
+jsonpathTable::example$json/simple.json['$.rows[*]', 'the $\{name} described by,the description $\{description}']
+----
+
+[sample]
+----
+[cols='1,2,3',options="header",separator=|]
+|===
+|name
+|p1
+|p2
+|===
+
+jsonpathTable::example$json/simple.json['nodes$.object.*', '${path[2]},${value.p1},${value.p2}']
+----
+
+== More realistic
+
+The data file for this sample, borrowed from Apache Camel, is presumably AL2 licensed.
+
+[sample]
+----
+[cols="2,5,^1,2",options="header",separator=|]
+|===
+| Name | Description | Default | Type
+|===
+
+jsonpathTable::example$json/camel.json['nodes$.componentProperties.*', '*${path[2]}* (${value.group}),${value.description},${value.default || ""},${value.type}']
+----

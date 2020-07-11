@@ -1,0 +1,51 @@
+= jsonpathBlock examples
+
+include::partial$sample.adoc[]
+
+== Simple
+
+[sample]
+------
+[jsonpathBlock,example$json/simple.json, '$.rows[*]', 'name,description']
+----
+== Section \{name}
+
+\{description}
+----
+------
+
+[sample]
+------
+[jsonpathBlock,example$json/simple.json, 'nodes$.object.*', 'name=path[2],p1=value.p1,p2=value.p2']
+----
+== Section \{name}
+
+Subject \{p1}:: with description \{p2}.
+
+* \{p1}
+** \{p2}
+
+----
+------
+
+== More realistic
+
+The data file for this sample, borrowed from Apache Camel, is presumably AL2 licensed.
+
+[sample]
+------
+== Component Properties
+
+[jsonpathBlock,example$json/camel.json, 'nodes$.componentProperties.*', 'name=path[2],group=value.group,configurationclass=value.configurationClass || \'none\',description=value.description,default=value.default || \'none\',javatype=value.javaType', leveloffset=1]
+----
+== Component Property \{name}
+
+\{description}
+
+group:: \{group}
+configurationClass:: \{configurationclass}
+default value:: \{default}
+java type:: \{javatype}
+
+----
+------

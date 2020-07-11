@@ -1,0 +1,34 @@
+= jsonpathList examples
+
+include::partial$sample.adoc[]
+
+== Simple
+
+[sample]
+----
+jsonpathList::example$json/simple.json['$.rows[*]', 'name']
+----
+
+[sample]
+----
+jsonpathList::example$json/simple.json['$.rows[*]', 'the $\{name} described by the description $\{description}']
+----
+
+[sample]
+----
+jsonpathList::example$json/simple.json['nodes$.object.*', '${path[2]} ${value.p1} ${value.p2}']
+----
+
+== More realistic
+
+The data file for this sample, borrowed from Apache Camel, is presumably AL2 licensed.
+
+[sample]
+----
+jsonpathList::example$json/camel.json['nodes$.componentProperties.*', '*${path[2]}* (${value.group})']
+----
+
+[sample]
+----
+jsonpathList::example$json/camel.json['nodes$.component.*', '*${path[2]}*: ($\{value})']
+----

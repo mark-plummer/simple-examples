@@ -1,0 +1,31 @@
+{
+  "rows": [
+    {
+      "name": "foo",
+      "description": "fooish",
+      "uniqueish": 1
+    },
+    {
+      "name": "bar",
+      "description": "barish",
+      "uniqueish": 2
+    }
+  ],
+  "object": {
+    "field1": {
+      "p1": "a",
+      "p2": "b",
+      "uniqueish": 1
+    },
+    "field2": {
+      "p1": "c",
+      "p2": "d",
+      "uniqueish": 1
+    },
+    "field3": {
+      "p1": "e",
+      "p2": "f",
+      "uniqueish": 2
+    }
+  }
+}

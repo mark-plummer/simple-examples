@@ -1,0 +1,11 @@
+[blockTemplate,sample]
+--
+'''
+[subs=+attributes]
+----
+{content}
+----
+
+{content}
+'''
+--

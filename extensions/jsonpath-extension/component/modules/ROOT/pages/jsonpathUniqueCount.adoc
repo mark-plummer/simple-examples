@@ -1,0 +1,35 @@
+= jsonpathUniqueCount examples
+
+include::partial$sample.adoc[]
+
+== Simple
+
+Note that it is often necessary to escape close brackets in query expressions.
+
+[sample]
+----
+There are jsonpathUniqueCount:example$json/simple.json['$.rows[*\]', 'uniqueish'] uniqueish values.
+
+----
+
+[sample]
+----
+There are jsonpathUniqueCount:example$json/simple.json['nodes$.object.*', 'uniqueish'] uniqueish values.
+
+----
+
+== More realistic
+
+The data file for this sample, borrowed from Apache Camel, is presumably AL2 licensed.
+
+[sample]
+----
+There are jsonpathUniqueCount:example$json/camel.json['nodes$.componentProperties.*', '${value.javaType}'] distinct java types.
+
+----
+
+[sample]
+----
+There are jsonpathUniqueCount:example$json/camel.json['nodes$.component.*', '$\{value}'] distinct component attribute descriptions.
+
+----

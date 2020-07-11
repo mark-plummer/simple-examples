@@ -1,0 +1,31 @@
+{
+  "component": {
+    "kind": "component",
+    "name": "activemq",
+    "title": "ActiveMQ",
+    "description": "Send messages to (or consume from) Apache ActiveMQ. This component extends the Camel JMS component.",
+    "deprecated": false,
+    "firstVersion": "1.0.0",
+    "label": "messaging",
+    "javaType": "org.apache.camel.component.activemq.ActiveMQComponent",
+    "supportLevel": "Stable",
+    "groupId": "org.apache.camel",
+    "artifactId": "camel-activemq",
+    "version": "3.5.0-SNAPSHOT",
+    "scheme": "activemq",
+    "extendsScheme": "jms",
+    "syntax": "activemq:destinationType:destinationName",
+    "async": true,
+    "consumerOnly": false,
+    "producerOnly": false,
+    "lenientProperties": false
+  },
+  "componentProperties": {
+    "brokerURL": { "kind": "property", "displayName": "Broker URL", "group": "common", "label": "common", "required": false, "type": "string", "javaType": "java.lang.String", "deprecated": false, "deprecationNote": "", "secret": false, "description": "Sets the broker URL to use to connect to ActiveMQ. If none configured then localhost:61616 is used by default (however can be overridden by configuration from environment variables)" },
+    "clientId": { "kind": "property", "displayName": "Client Id", "group": "common", "label": "", "required": false, "type": "string", "javaType": "java.lang.String", "deprecated": false, "secret": false, "configurationClass": "org.apache.camel.component.jms.JmsConfiguration", "configurationField": "configuration", "description": "Sets the JMS client ID to use. Note that this value, if specified, must be unique and can only be used by a single JMS connection instance. It is typically only required for durable topic subscriptions. If using Apache ActiveMQ you may prefer to use Virtual Topics instead." },
+    "connectionFactory": { "kind": "property", "displayName": "Connection Factory", "group": "common", "label": "", "required": false, "type": "object", "javaType": "javax.jms.ConnectionFactory", "deprecated": false, "secret": false, "configurationClass": "org.apache.camel.component.jms.JmsConfiguration", "configurationField": "configuration", "description": "The connection factory to be use. A connection factory must be configured either on the component or endpoint." },
+    "disableReplyTo": { "kind": "property", "displayName": "Disable Reply To", "group": "common", "label": "", "required": false, "type": "boolean", "javaType": "boolean", "deprecated": false, "secret": false, "defaultValue": false, "configurationClass": "org.apache.camel.component.jms.JmsConfiguration", "configurationField": "configuration", "description": "Specifies whether Camel ignores the JMSReplyTo header in messages. If true, Camel does not send a reply back to the destination specified in the JMSReplyTo header. You can use this option if you want Camel to consume from a route and you do not want Camel to automatically send back a reply message because another component in your code handles the reply message. You can also use this option if you want to use Camel as a proxy between different message brokers and you want to route message from one system to another." },
+    "durableSubscriptionName": { "kind": "property", "displayName": "Durable Subscription Name", "group": "common", "label": "", "required": false, "type": "string", "javaType": "java.lang.String", "deprecated": false, "secret": false, "configurationClass": "org.apache.camel.component.jms.JmsConfiguration", "configurationField": "configuration", "description": "The durable subscriber name for specifying durable topic subscriptions. The clientId option must be configured as well." },
+    "jmsMessageType": { "kind": "property", "displayName": "Jms Message Type", "group": "common", "label": "", "required": false, "type": "object", "javaType": "org.apache.camel.component.jms.JmsMessageType", "enum": [ "Bytes", "Map", "Object", "Stream", "Text" ], "deprecated": false, "secret": false, "configurationClass": "org.apache.camel.component.jms.JmsConfiguration", "configurationField": "configuration", "description": "Allows you to force the use of a specific javax.jms.Message implementation for sending JMS messages. Possible values are: Bytes, Map, Object, Stream, Text. By default, Camel would determine which JMS message type to use from the In body type. This option allows you to specify it." }
+  }
+}
