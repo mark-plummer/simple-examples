@@ -1,5 +1,5 @@
 = A Unified Treatise On Content
-:toc:
+//:toc:
 
 ainclude::plain:content:introduction.adoc[+1]
 

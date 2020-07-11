@@ -1,6 +1,6 @@
 = A Unified Treatise On Content
 :header-attribute: header attribute header
-:toc:
+//:toc:
 
 :doc-attribute: doc attribute header
 
