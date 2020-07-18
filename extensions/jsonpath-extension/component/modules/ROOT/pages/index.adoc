@@ -1,16 +1,316 @@
-= {page-component-title}
-
-== Page Coordinates
-
-page-component-name: {page-component-name}
-
-page-component-version: {page-component-version}
-
-page-module: {page-module}
-
-page-relative: {page-relative}
+= Asciidoctor {extension} Extension
+:extension: jsonpath
+:extension-version: 0.0.1
+:source-repository: https://gitlab.com/djencks/asciidoctor-{extension}
+:description: This asciidoctor extension provides several ways to use `jsonpath` to query a json document and format the results as lists, tables, counts, and repeating blocks.
 
 
-== A page
+WARNING:: This is based on link:https://github.com/dchester/jsonpath[jsonpath] and link:https://github.com/browserify/static-eval[static-eval].
+Neither of these should be allowed to execute arbitrary user-supplied code.
+For this reason, THIS EXTENSION SHOULD ONLY BE USED ON KNOWN AND TRUSTED CONTENT!.
 
-And some content.
+== Description
+
+{description}
+
+<<jsonpathTable,jsonpathTable>>::
+A block macro to be used immediately after a table.
+The results of the query are appended as rows to the table.
+
+<<jsonpathLists,jsonpathList>>::
+A block macro to be used standalone or immediately after a possibly nested list.
+The results of the query are appended as list items in a new or existing unordered list.
+
+<<jsonpathLists,jsonpathOrderedList>>::
+A block macro to be used standalone or immediately after a possibly nested list.
+The results of the query are appended as list items in a new or existing ordered list.
+
+<<jsonpathDescriptionList,jsonpathDescriptionList>>::
+A block macro to be used standalone or immediately after a possibly nested list.
+The results of the query are appended as list items in a new or existing description list.
+
+<<jsonpathAttributes,jsonpathAttributes>>::
+A block macro that adds the specified results of the query to the document as attributes and header attributes.
+Use as part of the header.
+
+<<jsonpathCount,jsonpathCount>>::
+An inline macro that returns the count of the results of the query.
+
+<<jsonpathUniqueCount,jsonpathUniqueCount>>::
+An inline macro that returns the number of unique values of the results of the query.
+
+<<jsonpathBlock,jsonpathBlock>>::
+A block that, for each item returned by the query, substitutes the values into the block contents, used as a template.
+
+The code is located at link:{source-repository}[]
+
+ifndef:[page-component-name]
+== Installation for Asciidoctor.js
+
+To use in your Asciidoctor documentation project, the simplest way is to have a package.json like this:
+
+[source,json,subs="+attributes"]
+----
+{
+  "description": "---",
+  "devDependencies": {
+    "@djencks/asciidoctor-{extension}": "^(version}",
+    "@asciidoctor/core": "^2.2.0",
+    "@asciidoctor/cli": "^2.2.0"
+  }
+}
+----
+
+Other than the code in the tests, I don't know how to use this in standalone asciidoctor.js.
+
+== Installation for Antora
+
+To use in your Antora documentation project, the simplest way is to have a package.json like this:
+
+[source,json,subs="+attributes"]
+----
+{
+  "description": "---",
+  "scripts": {
+    "build": "antora antora-playbook.yml --stacktrace --fetch"
+  },
+  "devDependencies": {
+    "@djencks/asciidoctor-{extension}": "https://experimental-repo.s3-us-west-1.amazonaws.com/djencks-asciidoctor-{extension}-v{extension-version}.tgz",
+  }
+}
+----
+
+and to include this in your `antora-playbook.yml` playbook:
+
+[source,yml,subs="+attributes"]
+----
+asciidoc:
+  extensions:
+    - "@djencks/asciidoctor-{extension}"
+----
+endif:[]
+
+== Usage
+
+All processors require configuration with a target json document, a query expression, and generally mapping information for the results.
+
+For information on the format of jsonpath query expressions, see link:https://github.com/dchester/jsonpath[jsonpath].
+
+The results of a jsonpath query are in an array, with objects of various complexity.
+Since these objects are generally not flat, but require javascript expressions to extract the data of interest, `static-eval` is used to extract data.
+As a side effect, the data may be combined in format strings of arbitrary complexity.
+However, as noted in the warning, the use of static-eval means that this extension MUST ONLY BE USED ON TRUSTED CONTENT!
+
+In general, the parameters in the square brackets are positional.
+However, you may use names (as used in the descriptions) instead.
+The include macro currently requires named parameters.
+
+[#jsonpathTable]
+=== jsonpathTable (block macro)
+
+This is used immediately after an existing table, to which it appends rows.
+
+[source,adoc,subs=-m]
+jsonpathTable::<target>[<query>,<cellformats>]
+
+target::
+The location of the json data file.
+query::
+The jsonpath query expression.
+cellformats::
+A single string, comma separated list of expressions for the table cells.
+The number of these expressions is expected to match the number of columns in the preceding table.
+
+Example:
+
+[source,adoc]
+----
+[cols='1,2',options="header"]
+|===
+|name
+|description
+|===
+
+jsonpathTable::example$data1.json['$.rows[*]', 'the ${name} described by the description,description']
+----
+
+
+[#jsonpathLists]
+=== jsonpathList and jsonpathOrderedList (block macros)
+
+These differ only in the type of list produced.
+This is used standalone or after an existing list.
+If the level parameter is supplied, the list items will be added at the appropriate level, if possible.
+
+[source,adoc,subs=-m]
+jsonpathList::<target>[<query>,<format>[,level=<level>]]
+
+target::
+The location of the json data file.
+query::
+The jsonpath query expression.
+format::
+A single field, javascript path expression, or template expression providing the list item content.
+level::
+(optional) The nesting level relating to preceding lists.
+The 'level' parameter name is required.
+
+Examples:
+
+[source,adoc]
+jsonpathList::example$data1.json['nodes$.object.*', '${path[2]}: ${value.p1} and ${value.p2}']
+
+[source,adoc]
+jsonpathOrderedList::example$data1.json['$.rows[*]', '${name}: ${description}']
+
+[#jsonpathDescriptionList]
+=== jsonpathDescriptionList (block macro)
+
+This is used standalone or after an existing list.
+If the level parameter is supplied, the list items will be added at the appropriate level, if possible.
+
+[source,adoc,subs=-m]
+jsonpathDescriptionList::<target>[<query>,<subjectformat>,<descriptionformat>[,level=<level>]]
+
+target::
+The location of the json data file.
+query::
+The jsonpath query expression.
+subjectformat::
+A single field, javascript path expression, or template expression providing the content of the description list item subject.
+descriptionformat::
+A single field, javascript path expression, or template expression providing the content of the description list item description.
+level::
+(optional) The nesting level relating to preceding lists.
+The 'level' parameter name is required.
+
+Example:
+
+[source,adoc]
+jsonpathDescriptionList::example$data1.json['nodes$.object.*', '${path[2]}', '${value.p1} and ${value.p2}']
+
+[#jsonpathAttributes]
+=== jsonpath include (include processor)
+
+Currently, to avoid complexity, all attributes extracted from the query are added to both the doc attributes and doc header attributes.
+
+In Antora, this cannot currently be used in the document header.
+
+[source,adoc,subs=-m]
+\include::jsonpath$<target>[query=<query>,formats=<formats>]
+
+The token `jsonpath$` must be prepended to the target; this is what the include processor uses to recognize what it should handle.
+
+target::
+The location of the json data file.
+query::
+The jsonpath query expression.
+formats::
+A comma-separated list of attribute expressions.
+An attribute expression may be in one of the forms:
+
+`name`:::
+The object property with the specified name is added as an attribute to the document.
+This is best used with queries returning one object.
+The attribute name is lowercased.
+
+`name-expr=key-expr`:::
+The `name-expr` is evaluated and lower-cased to form the attribute name, and the `key-expr` is evaluated to form the attribute value.
+Some examples include:
+
+`name=key`::::
+This renames the `key` to `name`.
+This can be used to rename object properties with names that conflict with built-in attributes, such as 'title'.
+
+`name=key-expr`::::
+This can be used with single non-flat objects.
+
+`name-expr=key-expr`::::
+Both the attribute name and attribute value are extracted from the query results, using the provided expressions.
+This can be used with queries that return multiple results.
+
+`templated-name-expr=templated-key-expr`::::
+Formatted strings may be used in both the `name-expr` and `key-expr` to provide more control over the resulting attribute.
+
+Examples:
+
+Simple object query with renaming:
+[source,adoc]
+\include::jsonpath$example$data2.json[query='$.component', formats='kind,name,mytitle=title,description']
+
+Attribute name and value from expressions:
+[source,adoc]
+\include::jsonpath$example$data2.json[query='nodes$.componentProperties.*', formats='path[2]=value.description']
+
+Attribute name from template expression:
+[source,adoc]
+\include::jsonpath$example$data2.json[query='nodes$.componentProperties.*', formats='`${path[2]}-description`=value.description,`${path[2]}-javatype`=value.javaType']
+
+[#jsonpathCount]
+=== jsonpathCount (inline macro)
+
+[source,adoc,subs=-m]
+jsonpathCount:<target>[<query>]
+
+target::
+The location of the json data file.
+query::
+The jsonpath query expression.
+
+It is often necessary to escape the close brackets in the query expression.
+
+Example:
+
+[source,adoc]
+jsonpathCount:example$data1.json['nodes$.object.*']
+
+[#jsonpathUniqueCount]
+=== jsonpathUniqueCount (inline macro)
+
+[source,adoc,subs=-m]
+jsonpathUniqueCount:<target>[<query>,<format>]
+
+target::
+The location of the json data file.
+query::
+The jsonpath query expression.
+format::
+A field or javascript path expression or template string to count the unique values of.
+
+It is often necessary to escape the close brackets in the query expression.
+
+Example:
+
+[source,adoc]
+jsonpathUniqueCount:example$data1.json['$.rows[*\]', 'uniqueish']
+
+Note that closing square brackets in the query and value must be escaped.
+
+[#jsonpathBlock]
+=== jsonpathBlock (block)
+
+[source,adoc,subs=-m]
+[jsonpathBlock,<target>,<query>,<formats>]
+
+target::
+The location of the json data file.
+query::
+The jsonpath query expression.
+formats::
+A comma separated list of expressions that can be either:
+* a field name
+* an expression of the form `<name>=<value>` where the name is a string and the value a javascript path expression or template string.
+
+In either case the name translates to an attribute of that name for use in the following block template.
+
+Example:
+
+[source,adoc]
+....
+[jsonpathBlock, example$data1.json, 'nodes$.object.*', 'name=path[2],p1=value.p1,p2=value.p2']
+----
+== Section {name}
+
+Attribute p1 has value {p1}, whereas attribute p2 has value {p2}.
+----
+....

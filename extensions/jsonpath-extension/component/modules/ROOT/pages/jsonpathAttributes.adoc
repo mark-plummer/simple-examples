@@ -1,0 +1,64 @@
+= jsonpathAttributes include processor examples
+
+NOTE: Unfortunately, this include processor cannot be used in Antora in document headers, as headers are parsed initially without extensions.
+Furthermore, the Antora include processor blows up rather than letting someone else have a try.
+
+include::jsonpath$example$json/camel.json[query='$.component', formats='kind,name,mytitle=title,description']
+include::jsonpath$example$json/camel.json[query='nodes$.componentProperties.*', formats='path[2]=value.description']
+include::jsonpath$example$json/camel.json[query='nodes$.componentProperties.*', formats='`${path[2]}-description`=value.description,`${path[2]}-javatype`=value.javaType']
+
+== jsonpathAttributes include processor usage on this page.
+
+[source,adoc,subs=]
+----
+\include::jsonpath$example$json/camel.json[query='$.component', formats='kind,name,mytitle=title,description']
+\include::jsonpath$example$json/camel.json[query='nodes$.componentProperties.*', formats='path[2]=value.description']
+\include::jsonpath$example$json/camel.json[query='nodes$.componentProperties.*', formats='`${path[2]}-description`=value.description,`${path[2]}-javatype`=value.javaType']
+----
+
+== Attributes derived from the 'component' object
+
+[source,adoc,subs=]
+----
+* kind: {kind}
+* name: {name}
+* title: {mytitle}
+* description: {description}
+----
+
+* kind: {kind}
+* name: {name}
+* title: {mytitle}
+* description: {description}
+
+== Attributes derived simply from the `componentProperties` complex object
+
+[source,adoc,subs=]
+----
+* brokerURL: {brokerurl}
+* clientId: {clientid}
+* connectionFactory: {connectionfactory}
+----
+
+* brokerURL: {brokerurl}
+* clientId: {clientid}
+* connectionFactory: {connectionfactory}
+
+== Attributes derived using template expressions from the `componentProperties` complex object
+
+[source,adoc,subs=]
+----
+* brokerURL description: {brokerurl-description}
+* brokerURL type: {brokerurl-javatype}
+* clientId description: {clientid-description}
+* clientId type: {clientid-javatype}
+* connectionFactory description: {connectionfactory-description}
+* connectionFactory type: {connectionfactory-javatype}
+----
+
+* brokerURL description: {brokerurl-description}
+* brokerURL type: {brokerurl-javatype}
+* clientId description: {clientid-description}
+* clientId type: {clientid-javatype}
+* connectionFactory description: {connectionfactory-description}
+* connectionFactory type: {connectionfactory-javatype}

@@ -1,0 +1,10 @@
+= Indexing the attributes from jsonpathAttributes include processor
+
+This uses the `@djencks/asciidoctor-antora-indexer` extension to query pages based on attributes added by the jsonpathAttributes include processor.
+
+Since the include processor cannot be in the document header, this doesn't currently work.
+
+|===
+| Component | Name | Kind | Type | Description
+|===
+indexTable::[attributes=kind,cells="$xref,name,kind,mytype,description"]

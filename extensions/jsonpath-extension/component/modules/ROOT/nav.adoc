@@ -4,6 +4,7 @@
 ** xref:jsonpathList.adoc[]
 ** xref:jsonpathOrderedList.adoc[]
 ** xref:jsonpathDescriptionList.adoc[]
+** xref:jsonpathAttributes.adoc[]
 ** xref:jsonpathCount.adoc[]
 ** xref:jsonpathUniqueCount.adoc[]
 ** xref:jsonpathBlock.adoc[]
