@@ -1,0 +1,7 @@
+= Component Glossary
+:page-rendering-rank: 10
+
+The glossary entries are unlikely to be present unless convert-documents is modifed to sort the glossary page last.
+
+glossary::[]
+

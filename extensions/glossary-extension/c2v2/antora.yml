@@ -1,0 +1,10 @@
+name: c2
+title: Component c2
+version: '2.0'
+start_page: ROOT:index.adoc
+nav:
+- modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    glossary-page: zzzzz-glossary.adoc

@@ -1,0 +1,19 @@
+= Glossary extension example
+
+This simple-example demonstrates the `@djencks/asciidoctor-glossary` extension.
+This extension allows defining glossary terms inline, as they are used, and generates a glossary elsewhere including the terms available as of rendering.
+On a single page, as demonstrated in component c1, the `glossary::[]` block macro must be after all glossary terms.
+On multiple page components, the glossary page must be rendered after all pages with glossary terms.
+This may be possible to arrange with suitable page naming (this component, c2, version 2.0) although this is unlikely to be reliable.
+Alternatively, the Antora convert-documents step may be modified to sort glossary pages last.
+
+In any case, in Antora, the extension assumes that there is one glossary per component-version.
+
+
+== Multi-page Glossary
+
+In this component, the two pages page-1 and page-2 include glossary terms.
+The glossary itself is on the xref:zzzzz-glossary.adoc[zzzzz-glossary.adoc] page.
+Due to its name, it is likely to be rendered last, thus having the glossary entries available for inclusion.
+
+This is not a reliable method.

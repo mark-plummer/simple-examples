@@ -1,0 +1,26 @@
+site:
+  title: Antora Example glossary-extension
+  url: http://example.com
+  start_page: 2.0@c2:ROOT:index.adoc
+content:
+  sources:
+  - url: ./../../
+    start_path:  extensions/glossary-extension/c1v1
+  - url: ./../../
+    start_path:  extensions/glossary-extension/c1v2
+  - url: ./../../
+    start_path:  extensions/glossary-extension/c2v1
+  - url: ./../../
+    start_path:  extensions/glossary-extension/c2v2
+
+asciidoc:
+  extensions:
+    '@djencks/asciidoctor-glossary'
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+
+output:
+  clean: true

@@ -1,0 +1,16 @@
+= Multiple page glossary example, page 2
+
+Here the glossary terms and glossary are not on the same page.
+
+== The Glossary as an explicatory device
+
+
+We might drink glossterm:usquebaugh[a product of the Highlands] when solving bugs.
+
+This is a sentence with the term glossterm:negligible[not a whole lot] to be defined.
+This is a sentence with the term glossterm:likely[not apt to not occur] used appropriately.
+
+When the glossterm:usquebaugh[] is all gone, we can switch to armagnac.
+
+Finally, in another paragraph we consider the glossterm:mome rath[an outgraber].
+

@@ -1,0 +1,19 @@
+= Single page glossary example
+
+Here the glossary terms and glossary are on the same page.
+
+== The Glossary as an explicatory device
+
+We might drink glossterm:whiskey[a product of Scotland] when solving bugs.
+
+This is a sentence with the term glossterm:infinitude[a whole lot] to be defined.
+This is a sentence with the term glossterm:unlikely[apt to not occur] used appropriately.
+
+When the glossterm:whiskey[] is all gone, we can switch to gin.
+
+Finally, in another paragraph we consider the glossterm:jabberwock[a poetical beast].
+
+== Glossary
+
+glossary::[]
+

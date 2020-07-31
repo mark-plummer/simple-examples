@@ -45,6 +45,7 @@ link:distributed-components/module-per-source/build/site/index.html[]::: One com
 
 extensions:: Examples using asciidoctor extensions.
 link:extensions/ainclude-extension/build/site/index.html[]::: Using the @djencks/asciidoctor-ainclude extension for including subdocuments.
+link:extensions/glossary-extension/build/site/index.html[]::: Using the @djencks/asciidoctor-glossary extension to construct a per-component glossary, where terms are defined inline.
 link:extensions/index-extension/build/site/index.html[]::: Using the @djencks/asciidoctor-antora-indexer extension to create index lists and tables of pages selected from the Antora content catalog.
 link:extensions/index-extension-tags/build/site/index.html[]::: Using the @djencks/asciidoctor-antora-indexer extension with page tags to create 'related pages' functionality.
 link:extensions/jsonpath-extension/build/site/index.html[]::: Using the @djencks/asciidoctor-jsonpath extension to create index lists and tables from json documents.

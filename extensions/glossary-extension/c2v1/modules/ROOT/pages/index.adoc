@@ -1,0 +1,39 @@
+= Multi-page Glossary
+
+In this component, the two pages page-1 and page-2 include glossary terms.
+The glossary itself is on the xref:glossary.adoc[glossary.adoc] page.
+Due to its name, it is likely to be rendered first, thus having the glossary entries unavailable for inclusion.
+
+See link:https://gitlab.com/antora/antora/-/issues/660[Consider a partial ordering on content catalog pages].
+A simple solution is to modify convert-documents.js to sort pages in between rendering phases:
+
+[source,js]
+----
+diff --git a/packages/document-converter/lib/convert-documents.js b/packages/document-converter/lib/convert-documents.js
+index 0694ba8c..2115c7e9 100644
+--- a/packages/document-converter/lib/convert-documents.js
++++ b/packages/document-converter/lib/convert-documents.js
+@@ -55,6 +55,7 @@ function convertDocuments (contentCatalog, siteAsciiDocConfig = {}) {
+       }
+       return page
+     })
++    .sort((a, b) => rank(a) - rank(b))
+     .map((page) =>
+       page.mediaType === 'text/asciidoc'
+         ? convertDocument(page, contentCatalog, mainAsciiDocConfigs.get(buildCacheKey(page.src)) || siteAsciiDocConfig)
+@@ -63,6 +64,12 @@ function convertDocuments (contentCatalog, siteAsciiDocConfig = {}) {
+     .map((page) => delete page.src.contents && page)
+ }
+
++function rank (page) {
++  return page.mediaType === 'text/asciidoc'
++    ? page.asciidoc.attributes['page-rendering-rank'] || 0
++    : 0
++}
++
+ function buildCacheKey ({ component, version }) {
+   return version + '@' + component
+ }
+----
+
+This functionality could perhaps be better implemented as a pipeline extension.
