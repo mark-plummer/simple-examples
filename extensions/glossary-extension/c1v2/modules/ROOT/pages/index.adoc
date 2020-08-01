@@ -1,6 +1,8 @@
 = Single page glossary example
+:glossary-tooltip: title
 
 Here the glossary terms and glossary are on the same page.
+Tooltips are enabled using the `title` built-in browser functionality.
 
 == The Glossary as an explicatory device
 

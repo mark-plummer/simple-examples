@@ -1,6 +1,8 @@
 = Single page glossary example
+:glossary-tooltip: true
 
 Here the glossary terms and glossary are on the same page.
+Here tooltips are potentially enabled for js/css tooltip solutions that could be supplied in the UI bundle with the `glossary-tooltip` value `true`, resulting in the attribute `data-glossary-tooltip` containing the definition.
 
 == The Glossary as an explicatory device
 
