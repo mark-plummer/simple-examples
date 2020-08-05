@@ -5,3 +5,4 @@
 * xref:mixed-list.adoc[]
 * xref:table.adoc[]
 * xref:count.adoc[]
+* xref:block.adoc[]

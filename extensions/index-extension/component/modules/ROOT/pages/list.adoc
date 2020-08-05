@@ -1,5 +1,7 @@
 = {description}
 :description: indexList Examples
+//Uncomment to see lists logged to the console.
+//:antora-indexer-log-lists:
 
 == Page Coordinates
 
@@ -12,6 +14,7 @@ page-module: ROOT
 
 page-relative: {page-relative}
 
+NOTE: This page can use the header attribute `antora-indexer-log-lists` to log the text .adoc representation of the generated lists to the console.
 
 == Examples of `indexList` block macro
 
@@ -58,3 +61,6 @@ next has relative filter
 
 indexList::[component=*,version=*,module=*,relative=topic*/*.adoc,style=square]
 
+Finally we show a format expression
+
+indexList::[`Link: ${$xref} ($\{description})`,component=*,version=*,module=*,relative=topic*/*.adoc,style=square]

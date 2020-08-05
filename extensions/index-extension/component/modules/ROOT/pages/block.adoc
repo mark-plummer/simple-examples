@@ -1,0 +1,39 @@
+= {description}
+:description: indexBlock Examples
+
+== Page Coordinates
+
+page-component-name: {page-component-name}
+
+page-component-version: {page-component-version}
+
+page-module: {page-module}
+
+page-relative: {page-relative}
+
+
+== Examples of `indexBlock` block processor
+
+
+[indexBlock, 'xref,description']
+----
+=== Link to {xref}
+
+Description: {description}
+
+----
+
+'''
+This silly example shows using static eval to manipulate the description attribute with `slice(6)`.
+
+
+[indexBlock, 'xref,description,d2=description.slice(6)']
+----
+=== Link to {xref}
+
+Description: {description}
+
+Description as list: {d2}
+
+----
+

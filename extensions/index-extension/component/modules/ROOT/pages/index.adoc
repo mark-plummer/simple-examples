@@ -5,7 +5,7 @@
 
 The `@djencks/asciidoctor-antora-indexer` asciidoctor extension queries the "database" of the Antora content catalog.
 The results of the query are a set of pages, which are then sorted by lower-cased doctitle.
-This list of pages is then presented as a list, a description list, or a table, or aggregated to a count.
+This list of pages is then presented as a list, a description list, or a table, or a repeating template block or aggregated to a count.
 
 The query can match the Antora page coordinates and the header attributes of the page.
 
@@ -58,3 +58,9 @@ For indexCount, the selected pages are counted.
 For indexUniqueCount, the number of unique values of a specified attribute are counted.
 
 xref:count.adoc[]
+
+=== indexBlock
+
+The indicated block is used as a template for each selected page, with the specified attributes or expressions supplied as attributes to the template.
+
+xref:block.adoc[]
