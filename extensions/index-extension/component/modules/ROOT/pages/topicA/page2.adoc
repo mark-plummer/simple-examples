@@ -1,6 +1,7 @@
 = Title component 1.0 ROOT topicA/page2.adoc
 :description: Page A2
 :page-name: page2
+:odd: false
 
 == Page Coordinates
 

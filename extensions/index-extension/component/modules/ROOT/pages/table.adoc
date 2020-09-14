@@ -45,3 +45,25 @@ indexTable::[attributes=!odd,cells="$xref,description"]
 |Column 2
 |===
 indexTable::[attributes=!odd,cells="$xref,description"]
+
+[source,adoc]
+indexTable::[attributes=!odd,cells="$xref,=`description: $\{description}`"]
+
+[cols="1,1"]
+|===
+|Column 1
+|Column 2
+|===
+indexTable::[attributes=!odd,cells="$xref,=`description: $\{description}`"]
+
+[source,adoc]
+indexTable::[cells="$xref,=odd==='true'?'odd':'even'"]
+
+I don't understand why the pages without the `odd` attribute at all show nothing in column 2.
+
+[cols="1,1"]
+|===
+|Column 1
+|Column 2
+|===
+indexTable::[cells="$xref,=odd==='true'?'odd':'even'"]
